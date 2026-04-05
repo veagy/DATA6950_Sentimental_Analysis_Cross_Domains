@@ -3,3 +3,14 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .hypothesis/
+
+# Model weights and configs under checkpoints (use Google Drive; see Other/checkpoints/README.md)
+Other/checkpoints/2-labels/all-data/
+Other/checkpoints/3-labels/
+Other/checkpoints/b11_cnn_lstm_stack_gelu_ddp/
+Other/checkpoints/deep_learning/
+Other/checkpoints/hrm/
+Other/checkpoints/mlp_geLU_head_ddp/
+Other/checkpoints/moe/
+Other/checkpoints/pretrain/
+Other/checkpoints/transformer/
