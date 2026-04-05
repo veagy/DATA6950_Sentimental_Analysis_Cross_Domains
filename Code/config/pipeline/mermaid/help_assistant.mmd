@@ -1,0 +1,14 @@
+graph TD
+    %% Help Assistant FSM
+    %% Architecture: RAG-based LLM routing (Query -> Retrieve Context -> LLM Generate)
+
+    A[DATA_API_INPUT: User Query] --> B[TEXT_CLEANUP]
+    B --> C[INTENT_CLASSIFIER]
+    
+    C -- "General Chat" --> D[LLM_GENERATOR]
+    C -- "Knowledge Question" --> E[VECTOR_SEARCH_RETRIEVAL]
+    
+    E --> F[PROMPT_BUILDER]
+    F --> D
+    
+    D --> G[JSON_OUTPUT: Assistant Response]

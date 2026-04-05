@@ -1,0 +1,33 @@
+{
+  "TreeRNNCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "non_linearity": "tanh",
+    "funcs": null,
+    "n_branching": 2,
+    "bias": true,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "TreeLSTMCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "funcs": null,
+    "n_branching": 2,
+    "bias": true,
+    "proj_size": 0,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "TreeGRUCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "funcs": null,
+    "n_branching": 2,
+    "bias": true,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

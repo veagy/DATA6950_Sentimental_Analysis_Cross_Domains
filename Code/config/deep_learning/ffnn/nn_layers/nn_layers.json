@@ -1,0 +1,21 @@
+{
+  "KANLayer": {
+    "in_features": null,
+    "out_features": null,
+    "num_intervals": 5,
+    "spline_order": 3,
+    "func": "silu",
+    "bias": true,
+    "grid_strategy": "clamped",
+    "grid_momentum": 0.9,
+    "device": null,
+    "dtype": null
+  },
+  "SlimLinear": {
+    "max_in_features": null,
+    "max_out_features": null,
+    "bias": true,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "ParameterGrid": {
+    "param_grid": null
+  },
+  "ParameterSampler": {
+    "param_distributions": null,
+    "n_iter": null,
+    "random_state": null
+  },
+  "BaseSearchCV": {
+    "estimator": null,
+    "scoring": null,
+    "n_jobs": null,
+    "refit": true,
+    "cv": null,
+    "cv_config": null,
+    "verbose": 0,
+    "pre_dispatch": "2*n_jobs",
+    "error_score": "float('nan')",
+    "return_train_score": false,
+    "store_cv_values": false,
+    "return_estimators": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "GridSearchCV": {
+    "estimator": null,
+    "param_grid": null,
+    "scoring": null,
+    "n_jobs": null,
+    "refit": true,
+    "cv": null,
+    "cv_config": null,
+    "verbose": 0,
+    "pre_dispatch": "2*n_jobs",
+    "error_score": "float('nan')",
+    "return_train_score": false,
+    "store_cv_values": false,
+    "return_estimators": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "RandomizedSearchCV": {
+    "estimator": null,
+    "param_distributions": null,
+    "n_iter": 10,
+    "scoring": null,
+    "n_jobs": null,
+    "refit": true,
+    "cv": null,
+    "cv_config": null,
+    "verbose": 0,
+    "pre_dispatch": "2*n_jobs",
+    "random_state": null,
+    "error_score": "float('nan')",
+    "return_train_score": false,
+    "store_cv_values": false,
+    "return_estimators": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

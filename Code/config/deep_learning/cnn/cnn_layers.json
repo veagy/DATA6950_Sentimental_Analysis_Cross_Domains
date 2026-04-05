@@ -1,0 +1,54 @@
+{
+  "CapsNetsLayer": {
+    "in_channels": null,
+    "out_channels": null,
+    "in_capsules": null,
+    "out_capsules": null,
+    "routing_iter": 3,
+    "func": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "GroupEquivariantConvolutionalLayer": {
+    "in_channels": null,
+    "out_channels": null,
+    "kernel_size": null,
+    "rot_groups": null,
+    "dimensionality": null,
+    "is_first": true,
+    "bias": false,
+    "stride": 1,
+    "dilation": 1,
+    "groups": 1,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "ShiftNetLayer": {
+    "in_channels": null,
+    "out_channels": null,
+    "kernel_size": null,
+    "dimensionality": 2,
+    "stride": 1,
+    "padding": 0,
+    "dilation": 1,
+    "groups": 1,
+    "bias": true,
+    "padding_mode": "zeros",
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "DeformableConvLayer": {
+    "in_channels": null,
+    "out_channels": null,
+    "kernel_size": 3,
+    "dimensionality": 2,
+    "stride": 1,
+    "padding": 1,
+    "dilation": 1,
+    "groups": 1,
+    "bias": true,
+    "padding_mode": "zeros",
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

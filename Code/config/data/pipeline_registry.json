@@ -1,0 +1,56 @@
+{
+  "description": "Maps data source patterns to preprocessing pipeline configurations.",
+  "version": "1.0",
+  "source_patterns": {
+    "tabular": {
+      "extensions": [".csv", ".tsv", ".parquet", ".json", ".feather", ".xlsx", ".pkl"],
+      "cloud_prefixes": ["s3://", "gs://", "az://", "gdrive://"],
+      "pipeline": "tabular",
+      "default_preprocessing": {
+        "clean": true,
+        "scale": "StandardScaler",
+        "paradigm": "supervised"
+      }
+    },
+    "image_folder": {
+      "pattern": "folder_with_subdirs",
+      "pipeline": "image_folder",
+      "default_preprocessing": {
+        "clean": false,
+        "scale": null,
+        "paradigm": "supervised"
+      }
+    },
+    "text_file": {
+      "extensions": [".txt", ".jsonl"],
+      "pipeline": "streaming_text",
+      "default_preprocessing": {
+        "clean": false,
+        "scale": null,
+        "paradigm": "generative"
+      }
+    }
+  },
+  "paradigm_handlers": {
+    "supervised": {
+      "split": "stratified",
+      "class_balance": "optional",
+      "description": "Stratified train/val split, optional class weighting"
+    },
+    "unsupervised": {
+      "split": "random",
+      "class_balance": "none",
+      "description": "Random split, no target"
+    },
+    "semi_supervised": {
+      "split": "stratified",
+      "class_balance": "optional",
+      "description": "Contrastive pair formation"
+    },
+    "generative": {
+      "split": "sequential",
+      "class_balance": "none",
+      "description": "Document packing, deduplication"
+    }
+  }
+}

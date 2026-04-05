@@ -1,0 +1,20 @@
+{
+  "Complex": {
+    "data": null,
+    "dim": null,
+    "dtype": "@torch.float32",
+    "device": null,
+    "arrangement": "split",
+    "is_stacked_flag": false
+  },
+  "ComplexLinear": {
+    "in_features": null,
+    "out_features": null,
+    "bias": true,
+    "dim": -1,
+    "device": "cpu",
+    "dtype": "@torch.float32",
+    "arrangement": "split",
+    "is_stacked_flag": false
+  }
+}

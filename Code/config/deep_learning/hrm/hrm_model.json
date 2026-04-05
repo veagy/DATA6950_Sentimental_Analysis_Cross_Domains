@@ -1,0 +1,20 @@
+{
+  "LexicalReasoningHead": {
+    "input_size": null,
+    "hidden_size": null
+  },
+  "SyntacticReasoningHead": {
+    "hidden_size": null
+  },
+  "SemanticReasoningHead": {
+    "hidden_size": null
+  },
+  "PragmaticReasoningHead": {
+    "hidden_size": null
+  },
+  "HierarchicalReasoningModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "n_classes": null
+  }
+}

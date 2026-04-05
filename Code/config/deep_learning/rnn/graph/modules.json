@@ -1,0 +1,40 @@
+{
+  "GraphRecurrentUnitModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "non_linearity": "tanh",
+    "funcs": null,
+    "bias": true,
+    "proj_size": null,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "batch_first": false,
+    "cell_type": "rnn",
+    "gcn_type": "gcn",
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "DynamicGraphRecurrentUnitModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "non_linearity": "tanh",
+    "funcs": null,
+    "bias": true,
+    "proj_size": null,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "batch_first": false,
+    "cell_type": "rnn",
+    "sim_type": "attn",
+    "dist_type": "dist",
+    "p": 2,
+    "gamma": 1.0,
+    "beta": null,
+    "max_iter": 100,
+    "soft_threshold": 0.5,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

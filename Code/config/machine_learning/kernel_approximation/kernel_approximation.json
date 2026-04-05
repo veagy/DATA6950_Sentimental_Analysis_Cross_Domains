@@ -1,0 +1,45 @@
+{
+  "AdditiveChi2Sampler": {
+    "sample_steps": 2,
+    "sample_interval": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "SkewedChi2Sampler": {
+    "skewedness": 1.0,
+    "n_components": 100,
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "Nystroem": {
+    "kernel": "rbf",
+    "gamma": null,
+    "coef0": null,
+    "degree": null,
+    "kernel_params": null,
+    "n_components": 100,
+    "random_state": null,
+    "n_jobs": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "RBFSampler": {
+    "gamma": null,
+    "n_components": 100,
+    "random_state": null,
+    "n_jobs": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "PolynomialCountSketch": {
+    "gamma": null,
+    "coef0": null,
+    "degree": null,
+    "n_components": 100,
+    "random_state": null,
+    "n_jobs": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

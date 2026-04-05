@@ -1,0 +1,20 @@
+{
+  "GaussianRandomProjection": {
+    "n_components": "auto",
+    "eps": 0.1,
+    "compute_inverse_components": false,
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "SparseRandomProjection": {
+    "n_components": "auto",
+    "density": "auto",
+    "eps": 0.1,
+    "dense_output": false,
+    "compute_inverse_components": false,
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

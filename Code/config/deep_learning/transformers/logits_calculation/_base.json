@@ -1,0 +1,6 @@
+{
+  "BaseLogitsHead": {
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

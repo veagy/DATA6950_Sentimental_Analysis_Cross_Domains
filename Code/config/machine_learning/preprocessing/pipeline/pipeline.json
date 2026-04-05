@@ -1,0 +1,10 @@
+{
+  "Pipeline": {
+    "steps": null,
+    "transform_input": null,
+    "memory": "torch",
+    "verbose": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

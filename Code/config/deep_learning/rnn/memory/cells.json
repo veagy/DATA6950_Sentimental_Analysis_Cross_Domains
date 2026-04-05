@@ -1,0 +1,33 @@
+{
+  "ESNCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "func": null,
+    "bias": true,
+    "leaking_rate": 0.8,
+    "spectral_radius": 0.9,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "NTMCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "mem_rows": null,
+    "mem_columns": null,
+    "funcs": null,
+    "bias": true,
+    "proj_size": 0,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "HopfieldNetworkCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "bias": true,
+    "beta": 1.0,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

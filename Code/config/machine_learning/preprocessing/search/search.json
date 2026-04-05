@@ -1,0 +1,14 @@
+{
+  "NearestNeighbors": {
+    "n_neighbors": 5,
+    "radius": 1.0,
+    "algorithm": "auto",
+    "leaf_size": 30,
+    "metric": "minkowski",
+    "p": 2,
+    "metric_params": null,
+    "n_jobs": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

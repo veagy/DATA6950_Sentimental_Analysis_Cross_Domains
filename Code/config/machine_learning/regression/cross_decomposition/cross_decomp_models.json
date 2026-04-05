@@ -1,0 +1,40 @@
+{
+  "CCA": {
+    "n_components": 2,
+    "scale": true,
+    "max_iter": 500,
+    "tol": 1e-06,
+    "copy": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "PLSCanonical": {
+    "n_components": 2,
+    "scale": true,
+    "algorithm": "nipals",
+    "max_iter": 500,
+    "tol": 1e-06,
+    "copy": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "PLSRegression": {
+    "n_components": 2,
+    "scale": true,
+    "max_iter": 500,
+    "tol": 1e-06,
+    "copy": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "PLSSVD": {
+    "n_components": 2,
+    "scale": true,
+    "copy": true,
+    "algorithm": "full",
+    "max_iter": 500,
+    "tol": 1e-06,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "ColumnTransformer": {
+    "transformers": null,
+    "name": null,
+    "transformer": null,
+    "columns": null,
+    "remainder": "drop",
+    "sparse_threshold": 0.3,
+    "n_jobs": null,
+    "transformer_weights": null,
+    "verbose": false,
+    "verbose_feature_names_out": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "KNeighborsTransformer": {
+    "mode": "distance",
+    "n_neighbors": 5,
+    "algorithm": "auto",
+    "leaf_size": 30,
+    "metric": "minkowski",
+    "p": 2,
+    "metric_params": null,
+    "n_jobs": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "RadiusNeighborsTransformer": {
+    "mode": "distance",
+    "radius": 1.0,
+    "algorithm": "auto",
+    "leaf_size": 30,
+    "metric": "minkowski",
+    "p": 2,
+    "metric_params": null,
+    "n_jobs": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "RandomTreesEmbeddings": {
+    "n_estimators": 100,
+    "max_depth": 5,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "min_weight_fraction_leaf": 0.0,
+    "max_leaf_nodes": null,
+    "min_impurity_decrease": 0.0,
+    "sparse_output": true,
+    "n_jobs": null,
+    "random_state": null,
+    "verbose": 0,
+    "warm_start": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "FeatureUnion": {
+    "transformers": null,
+    "n_jobs": null,
+    "transformer_weights": null,
+    "verbose": false,
+    "verbose_feature_names_out": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

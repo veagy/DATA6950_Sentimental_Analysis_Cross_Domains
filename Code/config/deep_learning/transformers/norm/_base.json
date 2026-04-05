@@ -1,0 +1,6 @@
+{
+  "BaseNorm": {
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}
