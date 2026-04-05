@@ -1,0 +1,61 @@
+Checking which knobs the training code exposes so recommendations match the project.
+
+Here are practical ways to make HRM pretrain faster, ordered by impact vs effort, and tied to how this repo actually trains (train_single.py, datasets.py).
+
+HRM E-HRM1 configs use seq_len 512 (long context). Attention memory scales roughly with sequence length squared; use a smaller per-GPU --batch_size (THESIS_HRM_BATCH) than you would for seq_len 128.
+
+Estimating HRM MLM hours per epoch (no single answer without a quick benchmark): let N be the number of text rows in the pretrain parquet, G the number of DDP processes, B the per-process --batch_size. Approximate optimizer steps per epoch is ceil(N / (G * B)). After 100–200 warm-up steps, record average seconds per step t; hours per epoch ≈ (steps * t) / 3600. Tokenization inside _hrm_mlm_step and num_workers dominate t as much as the GPU; measure on the target machine.
+
+1. Turn the GPUs (batch size, DDP, math mode)
+Raise --batch_size until you are just under OOM on each A100. Fewer steps dominates everything else (you already saw global batch 64×2).
+
+Use DDP on all GPUs you have (WORLD_SIZE / torchrun); throughput scales roughly with GPU count if the dataloader keeps up.
+
+On A100, enable TF32 for matmul (often free speedup):
+
+torch.set_float32_matmul_precision("high")
+Run once at process start (today the script does not set this; you can add it next to the existing cudnn.benchmark block or set the usual PyTorch env vars for TF32).
+
+Prefer bf16 autocast on A100 if you change the code from generic autocast() to dtype=torch.bfloat16 where supported—often similar or better speed/stability than fp16 on Ampere.
+
+2. Cut Python overhead per step
+--gc_every: the HRM MLM loop runs gc.collect() and torch.cuda.empty_cache() every N steps 1. That can hurt throughput. Try --gc_every 0 (or a much larger value) if you are not fighting fragmentation OOMs.
+
+DDP find_unused_parameters=True is set in wrap_ddp. If your graph does not need it, find_unused_parameters=False reduces allreduce overhead (only safe if no unused params in backward).
+
+3. Fix the data path (biggest “hidden” limit)
+Default --num_workers is 0, so the main process does all dataloader work. Use --num_workers 4 (or 8) so batches are prefetched while the GPU runs.
+Tokenization runs inside _hrm_mlm_step every step (GPU side of the step waits on tokenizer(...)). That is a common bottleneck. Faster options (require code changes): tokenize in a collate_fn running in workers, or a cached/pre-tokenized dataset.
+ParquetTextDataset loads the entire parquet into a Python list at init 2 and uses iterrows(), which is slow to build and memory-heavy. For throughput after load the list is fast; for startup / RAM a lazy / PyArrow-streaming dataset would help. For 9.5M rows, improving load + tokenization pipeline matters a lot.
+4. Model / PyTorch compiler (code changes, can be large wins)
+torch.compile(model, mode="reduce-overhead") (PyTorch 2+) on the HRM module can cut step time after warmup.
+If you move the inner stacks to FlashAttention / SDPA (F.scaled_dot_product_attention with a flash-capable backend), transformer blocks get faster—not wired in this HRM encoder by default, so this is an implementation upgrade.
+5. What does not magically speed up 8 epochs
+Gradient accumulation keeps the same number of sample updates if you keep the same effective batch; it only helps when batch size is limited by memory.
+Fewer epochs is the only way to use less wall time for the same data coverage.
+Practical first knobs to try (no architecture rewrite): largest stable --batch_size, DDP on all GPUs, --num_workers 4–8, --gc_every 0, TF32 (and optionally bf16), then measure seconds/step and adjust.
+
+what if I tokenize the entire text column and then pass it to hrm for pretraining can the time be reduced???
+
+Yes, it can reduce wall time, but how much depends on whether tokenization is limiting you today.
+
+Why it can help
+Right now, MLM in this project tokenizes on every training step inside _hrm_mlm_step (Hugging Face tokenizer(...) over the batch of raw strings). That work is mostly CPU and often single-threaded relative to the GPU. If the GPU sometimes waits for the next batch, or GPU utilization is uneven, precomputing input_ids (and usually attention_mask) once and only doing collate + masking on the GPU removes that repeated cost from the hot loop.
+
+The expensive parts that stay the same:
+
+HRM forward / backward (unchanged).
+MLM noise (random mask positions) must still be done each step; that is cheap compared to full BPE/tokenization.
+So pre-tokenization attacks CPU + Python string/tokenizer overhead, not model FLOPs.
+
+When the win is small
+If you already use num_workers > 0 and tokenize in workers (or the GPU is 100% busy and the dataloader never stalls), pre-tokenizing everything might only save a modest fraction (sometimes single-digit percent to low tens of percent), because the bottleneck is then the HRM recurrence on GPU.
+
+Tradeoffs you accept
+Disk / RAM: For ~9.5M rows and length 128, storing int32 token ids is on the order of multiple GB (plus masks, optional labels). Feasible, but you need a compact format (e.g. memmapped .npy, Arrow, or chunked parquet with fixed-length arrays), not millions of Python strings.
+One-time cost: Building the tokenized table is a large offline job (hours), but you pay it once per tokenizer/version.
+Flexibility: Changing max_length, tokenizer, or normalization means re-tokenizing.
+Bottom line
+Pre-tokenizing the full text column can reduce pretrain time when tokenizer + dataloader are part of the critical path (very plausible with num_workers=0 and in-loop tokenization). It does not reduce the core HRM compute; for that you still need larger batch, better GPU kernels, torch.compile, etc.
+
+If you want the best of both worlds without storing everything twice: tokenize in a collate_fn with num_workers > 0 often gets most of the benefit with simpler engineering than materializing the whole corpus on disk.

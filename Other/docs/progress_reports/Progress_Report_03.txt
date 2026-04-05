@@ -1,0 +1,35 @@
+
+Project Name: Sentiment Analysis using Hierarchical Reasoning Models and Mixture-of-Experts Architecture: Experimental Results and Analysis
+Name: Rohan Pratap Reddy Ravula
+Date: 25 March 2026
+
+Tasks Completed (This Week):
+
+1. Deep Learning Model Training:
+   - Completed training runs for deep learning baselines defined under `Code/thesis/config/` (transformer, CNN, and RNN families for 2-label and 3-label sentiment tasks), using the thesis training entrypoints in `Code/thesis/train/` (e.g. `train_single.py`, `train_all.py`, `train_stack.py`) with checkpoints and logs directed per project conventions under `checkpoints/` and `logs/`.
+   - Remote and multi-GPU workflows are documented in `scripts/README.md` (archived shell/PowerShell helpers replaced by copy-pastable `torch.distributed.run`, nohup, screen, and tmux patterns) for detached runs on the dual-GPU training environment.
+
+2. Classical Machine Learning Model Training:
+   - Trained traditional ML baselines configured in `Code/thesis/config/ml/` (e.g. Logistic Regression, Linear SVC) on the transformed tabular features pipeline, using the same thesis training orchestration so results stay comparable to deep learning runs.
+
+3. Hierarchical Reasoning Model (HRM) Training (In Progress):
+   - HRM training is underway using configs under `Code/thesis/config/hrm/` and the implementation under `Code/models/deep_learning/hrm/`, following the project specification (e.g. BERT-base-uncased tokenizer, four-level HRM stack, parameter budget verified with `Code/thesis/calculate_params.py`). Mixture-of-experts stacking is not yet executed; it remains on the next agenda.
+
+4. Thesis Report (Draft Advancement):
+   - The thesis document is being written with all major sections addressed except the **Results** chapter, which is deferred until HRM training, MoE experiments, and final metrics tables and figures are available.
+
+5. Validation and Quality Checks:
+   - Continued use of thesis-side validation (e.g. `Code/thesis/test/validate_all.py`) and existing deep learning unit tests under `Code/test/unittests/deep_learning/` to keep training and packaging paths consistent with the repository layout described in `docs/task.txt`.
+
+Total Hours: [User to Input]
+
+Plan for Next Week:
+
+1. Mixture-of-Experts (MoE) — Next Agenda:
+   - Implement and run MoE stacking and fine-tuning using `Code/thesis/train/train_moe.py` and expert definitions under `Code/thesis/config/moe/` (e.g. `example_experts.json`), aligned with `docs/task.txt` (ensemble MoE fine-tuning after per-model training).
+
+2. HRM Completion and Empirical Evaluation:
+   - Finish remaining HRM training runs if any are still in progress; then consolidate empirical evaluation (metrics, comparisons across baselines, HRM, and eventual MoE) on validation and held-out sentiment subsets.
+
+3. Thesis Results Chapter and Inference Standardization:
+   - Draft the **Results** section with tables and figures from completed experiments; standardize inference and reporting APIs where needed for reproducible sentiment scoring on validation data.

@@ -1,0 +1,25 @@
+Dataset Analysis Points for Progress_Report_01.pdf
+
+1. Yelp Academic Dataset (General Domain / Pre-training)
+   - Scale: The extensive size of the dataset (~7 million reviews, 1.9M users) makes it an ideal candidate for domain-adaptive pre-training (DAPT) or rigorous sentiment baseline establishment.
+   - Text Length: Reviews are substantial in length (avg ~567 characters), providing rich context for language modeling compared to short-text datasets (like tweets).
+   - Sentiment Distribution (5-Class): The dataset is heavily skewed towards positive reviews, which mimics real-world rating distributions but poses a class imbalance challenge.
+     * 5 Stars: ~44% (Dominant class)
+     * 4 Stars: ~22%
+     * 1 Star:  ~16% (Strong negative signal)
+     * 3 Stars: ~10%
+     * 2 Stars: ~8%  (Minority class)
+   
+2. Financial PhraseBank (Domain Specific)
+   - Source: Sentences from financial news, widely used benchmark for financial sentiment.
+   - Size: 4,846 total samples.
+   - Class Distribution: The dataset exhibits a significant skew towards neutral statements, reflecting the objective nature of financial reporting.
+     * Neutral:  2,879 (59.4%)
+     * Positive: 1,363 (28.1%)
+     * Negative: 604   (12.5%)
+   - Implication: Models trained here must be robust to "neutral" noise and not over-predict polarity.
+
+3. Healthcare & Medical Datasets (High-Stakes Domain)
+   - Composition: A mix of social media health signals (HRAST, ~27k samples) and clinical judgments (PatientStatements, ~2k; MedicalSentiment, ~400).
+   - Diversity: Covers both informal patient language (social media) and formal clinical text, allowing for evaluation of robustness across register shifts in the medical domain.
+   - Analysis: Preliminary data inspections reveal structured formats (CSV) ready for immediate fine-tuning pipelines.

@@ -1,0 +1,71 @@
+Files / Folders:
+   
+   -> all models are in @Code/models
+   -> all data in @data. in that pre-processed data in @data/processed where cleaning of text is done. while transformed data in @data/transformed where the text column data is converted into dimensional embeddings using sentence transformers and then reduced to 100 dimensions using umap dimensionality reduction.
+   -> model checkpoints must be stored in @checkpoints folder for the given models to be trained.
+
+Rules:
+   
+   hrm's, tranfomer models:
+
+      -> all the transformer models, hrms in this project must use processed data (refer above files/folders).
+      -> also transformer models, hrm's must follow the following process for target prediction: first convert the text columns into dimensional embeddings => then use a dense network (single layer neural network) to transform it into output dimensions based on number of classification labels (so for nerural network must be for (in dim, out dim) as: (in emb dim, 2) for 2 label, (in emb dim, 3) for 3 label) => then either sigmoid or SoftMax must be applied to get the prediction probabilities for target prediction.
+      -> the above process is same for all hrm's, transformer models during training as well as inference as well.
+
+   other models:
+      -> other models must use transformed data for classification tasks directly.
+
+   checkpoints:
+      -> all models' checkpoints must be stored as .safetensors format only.
+      -> also all 2 label based models must be stored in /checkpoints/2-labels/ folder, all 3 label models must be stored in /checkpoints/3-labels/ folder. all the models training of the dataset must be stored under their respective dataset named folder under their respective labels folder.
+
+   logs:
+      -> all logs must be stored in /logs/ folder only.
+   models:
+     -> use tqdm library to show progress bar for all system training. Also write proper code such that training can be done very fast based on limited resources without breaking any hardware limitations.
+
+Tasks:
+   -> First write the model configs based on their number of params required and store them in /Code/thesis/config/ folder. (flush the files in them before you write new ones. Old ones are wrong and are corrupted.)
+   -> thoroughly check whether number of params are closer to as defined.
+   -> write training (pre-training, fine-tuning) in /Code/thesis/train/ folder. (Flush the files before writing new ones). same for inference/validation/testing in Code/thesis/test/ folder.
+   -> NOTE: for hrms specifically do unsupervised/supervised pre-training them with all the text columns from all the datasets. and for transformer models only pre-train the neural network layer connected to it. also for hrm model use bert-base-uncased tokenizer. also make the hrm 4-layer model only with about 140 million parameters.
+   -> then I have created a folder for mock training, inference named /DUMMY/. Now use this folder to do mock training, inference for each dataset for both 2 label, 3 labels of max 100 samples and stored their checkpoints, logs, outputs in this folder as well. then test for any issues, bugs, errors and fix them.
+   -> NOTE: the training will be done on a remote system with dual Nvidia RTX 3090 GPU with 24 GB vram each. so write proper distributed training code to use all this throughput without wasting any time, resources.
+   -> write a proper shell, batch, power-shell scripts so that I can run the scripts directly.
+   -> after this training is done, the given models are stacked based on the mixture-of-experts architecture and fine-tuning is done using the same datasets. write separate script files for this as well.
+   -> make all the scripts to use either nohap, tmux, screen commands so the training can be detached in the background in the remote system so even when personal system shuts down or disconnected to network training will not stop.
+
+@UPDATE (DATE MODIFIED: 03/28/2026)
+   Training Plan:
+       Pre-training:
+          -> update the hrm config to be encoder only model or sentence transformer (where they do text to embeddings conversion).
+          -> use @data/processed/all-data.parquet file text column only to do the unsupervised pre-training. (use distributed computing).
+          -> Next write the supervised pretraining for deep-learning models (except hrm, transformers), machine-learning models for 2-label, 3-label separately for each dataset in @data/transformed.
+          -> use distributed computation for it to be trained on multiple gpu hardware at almost full usage and faster.
+          -> first train the hrm model then deep-learning models (except hrm, transformers), machine-learning models on queue (no pretraining of transformers is required here)
+          -> write a shell script to use detachment into background using tmux/screen/nohop commands so that even if I exit from ssh session my vm will be running in the background without termination.
+          -> Also update the code files, shell scripts such that if the training process is interrupted due to any errors, overload... so on then use @logs/ to store the training meta data so that process can be resumed in training of models instead of starting from beginning.
+          -> Also in the script, code files write batching, garbage collection such that while utilizing all hardware resoures and also making sure training doesn't have any bottleneck due to hardware limitations.
+          -> Also write the shell script such that it can detech the number of gpu's, vram for those gpus and then decide the batching, batch size and making the training flexible, adaptable without making it rigid.
+          -> Also write this commands into a single shell script which can be runnable. I do not want to confuse with multiple shell scripts.
+      Fine-Tuning:
+          -> for hrm, transformer models attach a simple neural network that is built using torch.nn.Linear class object and then while keeping hrm, transformer models weights' frozen train the neural network for 2-label, 3-label separately for each dataset in @data/processed (except all-data.parquet). for the neural network for output layer activation use sigmoid or softmax based on 2-label or 3-label same goes for its output neurons.
+          -> Do not do any fine-tuning for deep-learning models (except hrm, transformers), machine-learning models.
+          -> Later read @docs and see pipeline from @Code/models/models.py and write a proper stacking mixture-of-experts architecture and then use quantized-low-rank-adaptation to fine-tune these models for 2-label, 3-label separately for each dataset (decide whether to use @data/processed or @data/transformed accordingly).
+          -> use distributed computation for it to be trained on multiple gpu hardware at almost full usage and faster.
+          -> follow the above steps accordingly for queueing.
+          -> write a shell script to use detachment into background using tmux/screen/nohop commands so that even if I exit from ssh session my vm will be running in the background without termination.
+          -> Also update the code files, shell scripts such that if the training process is interrupted due to any errors, overload... so on then use @logs/ to store the training meta data so that process can be resumed in training of models instead of starting from beginning.
+          -> Also in the script, code files write batching, garbage collection such that while utilizing all hardware resoures and also making sure training doesn't have any bottleneck due to hardware limitations.
+          -> Also write the shell script such that it can detech the number of gpu's, vram for those gpus and then decide the batching, batch size and making the training flexible, adaptable without making it rigid.
+          -> Also write this commands into a single shell script which can be runnable. I do not want to confuse with multiple shell scripts (this shell script must be separate from the pre-train script).
+   @model storage:
+       -> use @checkpoints/ folder to store all these model checkpoints.
+   @testing:
+       -> Use DUMMY/ folder for testing on a random sub-set of datasets.
+   @logs:
+       -> store all logs in @logs/ folder.
+
+          
+  
+  
