@@ -1,0 +1,14 @@
+[
+  {
+    "name": "distil",
+    "config": "Code/thesis/config/transformers/2_labels/B3_E_DL1_DistilBERT.json",
+    "checkpoint": "checkpoints/2-labels/IMDB_Dataset/B3_E_DL1_DistilBERT.safetensors",
+    "modality": "text"
+  },
+  {
+    "name": "cnn",
+    "config": "Code/thesis/config/cnn/2_labels/B9_CNN_Text.json",
+    "checkpoint": "checkpoints/2-labels/IMDB_Dataset/B9_CNN_Text.safetensors",
+    "modality": "dense"
+  }
+]

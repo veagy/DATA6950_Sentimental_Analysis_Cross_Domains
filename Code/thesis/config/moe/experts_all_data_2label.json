@@ -1,0 +1,32 @@
+[
+  {
+    "name": "feat_ffn",
+    "config": "Code/thesis/config/feature_encoder/2_labels/FeatEnc_FFN.json",
+    "checkpoint": "checkpoints/2-labels/all-data/FeatEnc_FFN.safetensors",
+    "modality": "dense"
+  },
+  {
+    "name": "feat_cnn",
+    "config": "Code/thesis/config/feature_encoder/2_labels/FeatEnc_CNN.json",
+    "checkpoint": "checkpoints/2-labels/all-data/FeatEnc_CNN.safetensors",
+    "modality": "dense"
+  },
+  {
+    "name": "feat_gru",
+    "config": "Code/thesis/config/feature_encoder/2_labels/FeatEnc_GRU.json",
+    "checkpoint": "checkpoints/2-labels/all-data/FeatEnc_GRU.safetensors",
+    "modality": "dense"
+  },
+  {
+    "name": "feat_lstm",
+    "config": "Code/thesis/config/feature_encoder/2_labels/FeatEnc_LSTM.json",
+    "checkpoint": "checkpoints/2-labels/all-data/FeatEnc_LSTM.safetensors",
+    "modality": "dense"
+  },
+  {
+    "name": "feat_rnn",
+    "config": "Code/thesis/config/feature_encoder/2_labels/FeatEnc_RNN.json",
+    "checkpoint": "checkpoints/2-labels/all-data/FeatEnc_RNN.safetensors",
+    "modality": "dense"
+  }
+]

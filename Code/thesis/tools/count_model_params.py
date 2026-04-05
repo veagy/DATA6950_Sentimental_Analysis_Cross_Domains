@@ -1,0 +1,163 @@
+#!/usr/bin/env python3
+"""
+Count trainable/total parameters for each thesis JSON config (same build path as training).
+
+Run from repository root:
+  python Code/thesis/tools/count_model_params.py
+  python Code/thesis/tools/count_model_params.py --markdown-out docs/thesis_parameter_counts.md
+
+Skips: Code/thesis/config/moe/example_experts.json (not a model_factory config).
+"""
+from __future__ import annotations
+
+import argparse
+import logging
+import os
+import sys
+from pathlib import Path
+
+os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
+os.environ.setdefault("HF_HUB_DISABLE_TELEMETRY", "1")
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("huggingface_hub").setLevel(logging.WARNING)
+
+_REPO = Path(__file__).resolve().parents[3]
+if str(_REPO) not in sys.path:
+    sys.path.insert(0, str(_REPO))
+
+from Code.thesis.common.pkg_bootstrap import install_lazy_code_models
+
+install_lazy_code_models(_REPO)
+
+from Code.models.utils.utils import MLModule
+from Code.thesis.common.model_factory import build_model_from_config_dict, load_config
+
+
+def n_classes_from_config_path(config_path: Path) -> int:
+    p = str(config_path).replace("\\", "/")
+    if "/2_labels/" in p:
+        return 2
+    if "/3_labels/" in p:
+        return 3
+    if "/hrm/E_HRM1_4Level.json" in p:
+        return 2  # shared encoder config; +101 trainable if trained with --n_classes 3
+    raise ValueError(f"Cannot infer n_classes from path: {config_path}")
+
+
+# Approximate targets from docs/Model_Parameters_and_Stacking.md and docs/models_overview.md
+DOC_TARGETS: dict[str, str] = {
+    "B3_E_DL1_DistilBERT": "~66M (E-DL1)",
+    "B4_E_DL3_BERT": "~110M (E-DL3)",
+    "B5_E_DL2_RoBERTa": "~125M (E-DL2)",
+    "B6_BART": "~139M (B6)",
+    "E_HRM1_4Level": "~105M (E-HRM1; table uses n_classes=2; +101 if 3)",
+    "B9_CNN_Text": "~180K (B9)",
+    "B10_LSTM": "~420K (B10)",
+    "B8_GRU": "~550K (B8, doc: GRU+Attn; impl: plain GRU)",
+    "B7_BiLSTM": "~750K (B7, doc: BiLSTM+Attn; impl: plain BiLSTM)",
+    "B11_CNN_LSTM_v1": "~550K–800K (doc: hybrid; impl: CNNetworks same as B9)",
+    "E_ML1_LogisticRegression": "N/A (statistical)",
+    "E_ML2_LinearSVC": "N/A (statistical)",
+}
+
+
+def doc_target_for_stem(stem: str) -> str:
+    for key, val in DOC_TARGETS.items():
+        if key in stem:
+            return val
+    return "—"
+
+
+def iter_model_configs(cfg_dir: Path) -> list[Path]:
+    out: list[Path] = []
+    for p in sorted(cfg_dir.rglob("*.json")):
+        s = str(p).replace("\\", "/")
+        if "/config/moe/" in s or p.name == "example_experts.json":
+            continue
+        # Skip non single-object configs (JSON array)
+        try:
+            data = load_config(p)
+        except Exception:
+            continue
+        if not isinstance(data, dict) or not data:
+            continue
+        if isinstance(next(iter(data.values())), list) and p.parent.name == "moe":
+            continue
+        first = next(iter(data.keys()))
+        if first == "name":  # stray list-like expert entry
+            continue
+        out.append(p)
+    return out
+
+
+def count_module(model) -> tuple[int, int]:
+    total = sum(p.numel() for p in model.parameters())
+    trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    return total, trainable
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--markdown-out", type=Path, default=None, help="Write markdown table to this path")
+    ap.add_argument("--quiet", action="store_true", help="No stdout table (use with --markdown-out)")
+    args = ap.parse_args()
+
+    cfg_dir = _REPO / "Code" / "thesis" / "config"
+    rows: list[tuple[str, str, str, str, str, str]] = []
+
+    for cfg_path in iter_model_configs(cfg_dir):
+        rel = cfg_path.relative_to(_REPO)
+        cfg = load_config(cfg_path)
+        class_name = next(iter(cfg))
+        stem = cfg_path.stem
+        doc_tgt = doc_target_for_stem(stem)
+
+        try:
+            n_cls = n_classes_from_config_path(cfg_path)
+        except ValueError:
+            rows.append((str(rel), class_name, stem, "—", "—", "skip: path has no 2_labels/3_labels"))
+            continue
+
+        try:
+            model, _ = build_model_from_config_dict(cfg, n_cls, "")
+        except Exception as e:
+            rows.append((str(rel), class_name, stem, "—", "—", f"build error: {e}"))
+            continue
+
+        if isinstance(model, MLModule):
+            tot, trn = count_module(model)
+            note = f"MLModule torch params (pre-fit may be 0); doc: {doc_tgt}"
+            if tot == 0:
+                note = f"0 params before fit; doc: {doc_tgt}"
+            rows.append((str(rel), class_name, stem, str(tot), str(trn), note))
+            continue
+
+        tot, trn = count_module(model)
+        rows.append((str(rel), class_name, stem, f"{tot:,}", f"{trn:,}", doc_tgt))
+
+    lines = [
+        "# Thesis config parameter counts",
+        "",
+        "Generated by `python Code/thesis/tools/count_model_params.py`.",
+        "Doc targets reference `docs/Model_Parameters_and_Stacking.md` and `docs/models_overview.md`.",
+        "",
+        "| Config | Class | Stem | Total params | Trainable | Notes / doc target |",
+        "|--------|-------|------|-------------:|----------:|--------------------|",
+    ]
+    for rel, cls, stem, tot, trn, note in rows:
+        lines.append(f"| `{rel}` | {cls} | {stem} | {tot} | {trn} | {note} |")
+
+    text = "\n".join(lines) + "\n"
+
+    if not args.quiet:
+        print(text)
+
+    if args.markdown_out:
+        args.markdown_out.parent.mkdir(parents=True, exist_ok=True)
+        args.markdown_out.write_text(text, encoding="utf-8")
+        if not args.quiet:
+            print(f"Wrote {args.markdown_out}", file=sys.stderr)
+
+
+if __name__ == "__main__":
+    main()

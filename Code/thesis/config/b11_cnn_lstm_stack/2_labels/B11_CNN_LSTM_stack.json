@@ -1,0 +1,15 @@
+{
+  "_comment": "Frozen CNN→LSTM pretrain stack (100-D each stage) + trainable 100→400→GELU→2. Pretrain: checkpoints/pretrain/pretrain_cnn.safetensors + pretrain_lstm.safetensors. Run with torchrun after other DDP jobs finish.",
+  "B11StackedCNNLSTMGeLUHeadDDP": {
+    "n_labels": 2,
+    "dataset_stem": "all-data",
+    "pretrain_cnn_ckpt": null,
+    "pretrain_lstm_ckpt": null,
+    "hidden_dim": 400,
+    "epochs": 2,
+    "batch_size": 512,
+    "lr": 0.001,
+    "num_workers": 2,
+    "batch_read": 8192
+  }
+}

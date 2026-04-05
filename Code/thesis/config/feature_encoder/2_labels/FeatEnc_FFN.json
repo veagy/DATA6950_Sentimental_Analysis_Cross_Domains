@@ -1,0 +1,7 @@
+{
+  "FeatureEncoderClassifier": {
+    "architecture": "ffnn",
+    "input_dim": 100,
+    "latent_dim": 100
+  }
+}
