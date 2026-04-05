@@ -1,0 +1,191 @@
+{
+  "classification": {
+    "Linear Models": [
+      "LogisticRegression",
+      "LogisticRegressionCV",
+      "RidgeClassifier",
+      "LassoClassifier",
+      "ElasticNetClassifier",
+      "LarsClassifier",
+      "RidgeLarsClassifier",
+      "LassoLarsClassifier",
+      "ElasticNetLarsClassifier",
+      "RidgeClassifierCV",
+      "LassoClassifierCV",
+      "ElasticNetClassifierCV",
+      "LarsClassifierCV",
+      "RidgeLarsClassifierCV",
+      "LassoLarsClassifierCV",
+      "ElasticNetLarsClassifierCV",
+      {
+        "SGD Optimizer Models": [
+          "Perceptron",
+          "PassiveAggressiveClassifier",
+          "SGDClassifier",
+          "BGDClassifier",
+          "MGDClassifier",
+          "AdaGradClassifier",
+          "RMSPropClassifier",
+          "AdamClassifier",
+          "AdadeltaClassifier",
+          "AdafactorClassifier",
+          "AdamWClassifier",
+          "AdamaxClassifier",
+          "LBFGSClassifier",
+          "MuonClassifier",
+          "NAdamClassifier",
+          "RAdamClassifier",
+          "RpropClassifier",
+          "BFGSClassifier",
+          "NewtonCGClassifier",
+          "SLSQPClassifier",
+          "LionClassifier",
+          "ShampooClassifier",
+          "SophiaClassifier",
+          "AdanClassifier",
+          "COBYLAClassifier",
+          "NelderMeadClassifier",
+          "LAMBClassifier",
+          "LookaheadClassifier",
+          "AdEMAMixClassifier",
+          "ScheduleFreeClassifier",
+          "MARSClassifier",
+          "PowellClassifier",
+          "TNCClassifier",
+          "TrustNCGClassifier",
+          "DoglegClassifier",
+          "CGClassifier",
+          "TRPOClassifier",
+          "MadgradClassifier",
+          "YogiClassifier",
+          "LARSClassifier",
+          "DAdaptationClassifier",
+          "SignSGDClassifier",
+          "ProdigyClassifier",
+          "QNSVRGClassifier",
+          "DifferentialEvolutionClassifier",
+          "BasinhoppingClassifier",
+          "DualAnnealingClassifier",
+          "SHGOClassifier",
+          "CMAESClassifier",
+          "BayesianOptimizationClassifier",
+          "PSOClassifier",
+          "FireflyClassifier"
+        ]
+      },
+      {
+        "Discriminant Analysis": [
+          "LinearDiscriminantAnalysis",
+          "QuadraticDiscriminantAnalysis"
+        ]
+      },
+      {
+        "Naive Bayes": [
+          "GaussianNB",
+          "MultinomialNB",
+          "BernoulliNB",
+          "ComplementNB",
+          "CategoricalNB",
+          "PoissonNB",
+          "KernelNB",
+          "HiddenNB",
+          "FlexibleNB",
+          "AODENB",
+          "SemiNaiveNB",
+          "TANNB",
+          "WeightingNB",
+          "MixedNB",
+          "RobustNB",
+          "DiscriminativeNB",
+          "HierarchicalNB",
+          "CostSensitiveNB",
+          "FuzzyNB",
+          "UniversalNB",
+          "LocalNB",
+          "SelectiveNB",
+          "AnDE",
+          "SemiSupervisedNB",
+          "DynamicNB",
+          "BANNB",
+          "LBRNB",
+          "FunctionalNB",
+          "DeepNB",
+          "MaxEntNB",
+          "IntervalNB",
+          "TransferNB"
+        ]
+      },
+      {
+        "Gaussian Process": ["GaussianProcessClassifier"]
+      }
+    ],
+    "Tree Models": ["DecisionTreeClassifier", "ExtraTreeClassifier"],
+    "Support Vector Machines": [
+      "SVC",
+      "LinearSVC",
+      "NuSVC",
+      {
+        "Kernel Methods": []
+      }
+    ],
+    "Neighbors Models": [
+      "KNeighborsClassifier",
+      "RadiusNeighborsClassifier",
+      "NearestCentroid"
+    ],
+    "Ensemble Models": [
+      {
+        "Bagging Models": [
+          "BaggingClassifier",
+          "RandomForestClassifier",
+          "ExtraTreesClassifier"
+        ]
+      },
+      {
+        "Boosting Models": [
+          "AdaBoostClassifier",
+          "GradientBoostingClassifier",
+          "HistGradientBoostingClassifier",
+          "GeneralGradientBoostingClassifier",
+          "GeneralAdamBoostingClassifier",
+          "NaturalGradientBoostingClassifier",
+          "NewtonBoostingClassifier",
+          "ProximalBoostingClassifier",
+          "NaturalAdamBoostingClassifier",
+          "NewtonAdamBoostingClassifier",
+          "ProximalAdamBoostingClassifier",
+          "GeneralHistGradientBoostingClassifier",
+          "HistGradientBoostingTreeClassifier",
+          "NaturalHistGradientBoostingClassifier",
+          "NewtonHistGradientBoostingClassifier",
+          "ProximalHistGradientBoostingClassifier",
+          "ExtremeHistGradientBoostingClassifier",
+          "GeneralAdamHistGradientBoostingClassifier",
+          "NaturalAdamHistGradientBoostingClassifier",
+          "NewtonAdamHistGradientBoostingClassifier",
+          "ProximalAdamHistGradientBoostingClassifier"
+        ]
+      },
+      {
+        "Stacking and Voting Models": ["StackingClassifier", "VotingClassifier"]
+      }
+    ],
+    "Multi-Class and Multi-Output": [
+      "OneVsRestClassifier",
+      "OneVsOneClassifier",
+      "OutputCodeClassifier",
+      "MultiOutputClassifier",
+      "ClassifierChain"
+    ],
+    "Neural Networks": ["MLPClassifier"],
+    "Other": [
+      "DummyClassifier",
+      "CalibratedClassifierCV",
+      "FixedThresholdClassifier",
+      "LabelPropagation",
+      "LabelSpreading",
+      "SelfTrainingClassifier",
+      "TunedThresholdClassifierCV"
+    ]
+  }
+}

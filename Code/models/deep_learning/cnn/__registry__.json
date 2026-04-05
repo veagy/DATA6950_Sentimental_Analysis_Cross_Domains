@@ -1,0 +1,34 @@
+{
+  "models": [
+    "CNNetworks",
+    "CNNetworksOp",
+    "CapsNetsModule",
+    "GroupEquivariantConvolutionalModule",
+    "ShiftNetsModule",
+    "DeformableConvModule",
+    "InvolutionModule",
+    "VolterraConvModule",
+    "DynamicSnakeConvModule",
+    "ODConvModule",
+    "ShiftwiseConvModule",
+    "SEAFECModule",
+    "IncoherentMotifModule"
+  ],
+  "layers": [
+    "CapsNetsLayer",
+    "GroupEquivariantConvolutionalLayer",
+    "ShiftNetLayer",
+    "DeformableConvLayer",
+    "InvolutionLayer",
+    "DynamicSnakeConvLayer",
+    "ODConvLayer",
+    "VolterraConvLayer",
+    "ShiftwiseConvLayer",
+    "CapsuleConvKANLayer",
+    "SEAFECLayer",
+    "IncoherentMotifLayer",
+    "QCNNLayer",
+    "EventConvLayer",
+    "TopologyNetLayer"
+  ]
+}

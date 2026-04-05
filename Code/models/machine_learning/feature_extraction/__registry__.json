@@ -1,0 +1,13 @@
+{
+  "feature_extraction": {
+    "dict": ["DictVectorizer"],
+    "text": [
+      "HashingVectorizer",
+      "CountVectorizer",
+      "TfidfTransformer",
+      "TfidfVectorizer",
+      "FeatureHasher"
+    ],
+    "image": ["PatchExtractor"]
+  }
+}

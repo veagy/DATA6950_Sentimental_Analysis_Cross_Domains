@@ -1,0 +1,33 @@
+{
+  "cross_validation": {
+    "search_cv": [
+      "GridSearchCV",
+      "RandomizedSearchCV"
+    ],
+    "splitters": [
+      "KFoldCV",
+      "GroupKFold",
+      "StratifiedKFold",
+      "TimeSeriesSplit",
+      "LeaveOneOut",
+      "LeavePOut",
+      "LeaveOneGroupOut",
+      "LeavePGroupsOut",
+      "PredefinedSplit",
+      "ShuffleSplit",
+      "GroupShuffleSplit",
+      "StratifiedShuffleSplit",
+      "RepeatedKFold",
+      "RepeatedStratifiedKFold",
+      "CVSplitManager"
+    ],
+    "functional": [
+      "cross_validate",
+      "cross_val_score",
+      "cross_val_predict",
+      "permutation_test_score",
+      "learning_curve",
+      "validation_curve"
+    ]
+  }
+}
