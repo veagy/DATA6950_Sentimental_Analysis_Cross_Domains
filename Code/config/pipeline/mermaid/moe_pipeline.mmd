@@ -1,0 +1,6 @@
+flowchart LR
+    input[IDENTITY] --> encoder
+    encoder --> lazy1[LAZY]
+    lazy1 --> decoder
+    decoder --> lazy2[LAZY]
+    lazy2 --> classifier

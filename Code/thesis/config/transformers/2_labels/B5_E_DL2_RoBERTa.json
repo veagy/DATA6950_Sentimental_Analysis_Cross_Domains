@@ -1,0 +1,12 @@
+{
+    "LLMModule": {
+        "model_name": "roberta-base",
+        "tokenizer_name": "roberta-base",
+        "n_classes": 2,
+        "single_linear_head": true,
+        "embed_dim": 768,
+        "l2_normalize_pooled": false,
+        "checkpoint_dir": "checkpoints/deep_learning/llm",
+        "device": "cpu"
+    }
+}

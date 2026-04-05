@@ -1,0 +1,14 @@
+[
+  {
+    "name": "feat_ffn",
+    "config": "Code/thesis/config/feature_encoder/3_labels/FeatEnc_FFN.json",
+    "checkpoint": "checkpoints/3-labels/all-data/FeatEnc_FFN.safetensors",
+    "modality": "dense"
+  },
+  {
+    "name": "feat_cnn",
+    "config": "Code/thesis/config/feature_encoder/3_labels/FeatEnc_CNN.json",
+    "checkpoint": "checkpoints/3-labels/all-data/FeatEnc_CNN.safetensors",
+    "modality": "dense"
+  }
+]

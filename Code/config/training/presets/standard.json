@@ -1,0 +1,32 @@
+{
+  "data": {
+    "source": "data/train.csv",
+    "label_col": "label",
+    "test_size": 0.2,
+    "preprocessing": {
+      "clean": true,
+      "engineer": true,
+      "scale": "standard",
+      "paradigm": "supervised"
+    }
+  },
+  "model": {
+    "name": "StandardDense",
+    "overrides": { "in_features": 128, "out_features": 3 }
+  },
+  "training": {
+    "epochs": 50,
+    "batch_size": 32,
+    "loss": "CrossEntropyLoss",
+    "optimizer": "adamw",
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "val_split": 0.2,
+    "save_every_n_epochs": 10,
+    "run_id": "default"
+  },
+  "checkpoint": {
+    "save_dir": "checkpoints/pretrained",
+    "save_type": "pt"
+  }
+}

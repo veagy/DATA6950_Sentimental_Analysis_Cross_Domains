@@ -1,0 +1,55 @@
+{
+  "SRUCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "bias": true,
+    "funcs": null,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "QRNNCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "kernel_size": null,
+    "dimensionality": 1,
+    "stride": 1,
+    "padding": 0,
+    "dilation": 1,
+    "funcs": null,
+    "groups": 1,
+    "bias": true,
+    "ifo_pooling": false,
+    "padding_mode": "zeros",
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "MGUCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "funcs": null,
+    "bias": true,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "GORUCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_reflections": null,
+    "funcs": null,
+    "bias": true,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "JANETCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "funcs": null,
+    "bias": true,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

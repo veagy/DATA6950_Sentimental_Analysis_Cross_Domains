@@ -1,0 +1,43 @@
+{
+  "foundation": [
+    "LayerNorm",
+    "RMSNorm",
+    "BatchNorm",
+    "GroupNorm",
+    "InstanceNorm",
+    "LayerNormSimple",
+    "ScaleNorm"
+  ],
+  "placement": [
+    "PreLNBlock",
+    "PostLNBlock",
+    "PeriLNBlock",
+    "HybridNormBlock"
+  ],
+  "component": [
+    "QKNorm",
+    "EmbeddingLayerNorm",
+    "LogitNorm",
+    "SoftmaxNorm"
+  ],
+  "adaptive": [
+    "AdaLN",
+    "DeepNorm",
+    "TaperNorm",
+    "PowerNorm",
+    "AdaNorm"
+  ],
+  "architectural": [
+    "LayerScale",
+    "ReZero",
+    "WeightNorm",
+    "SigmaReparam"
+  ],
+  "normfree": [
+    "DyT",
+    "FixNorm",
+    "UnitNorm",
+    "CRMSNorm",
+    "Derf"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "GRUModule": {
+        "input_size": 100,
+        "hidden_size": 275,
+        "num_layers": 1,
+        "bias": true,
+        "batch_first": true,
+        "dropout": 0.0,
+        "bidirectional": false,
+        "device": "cpu"
+    }
+}

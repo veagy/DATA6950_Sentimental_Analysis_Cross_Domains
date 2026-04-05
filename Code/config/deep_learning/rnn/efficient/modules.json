@@ -1,0 +1,31 @@
+{
+  "RWKVModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "func": "tanh",
+    "bias": true,
+    "batch_first": false,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "decay": 0.0,
+    "mu": null,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "MambaModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "rank": "auto",
+    "bias": true,
+    "batch_first": false,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "func": "tanh",
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

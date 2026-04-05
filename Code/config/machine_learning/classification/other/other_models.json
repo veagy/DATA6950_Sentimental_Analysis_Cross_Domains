@@ -1,0 +1,83 @@
+{
+  "DummyClassifier": {
+    "strategy": "prior",
+    "random_state": null,
+    "constant": null,
+    "warm_start": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "CalibratedClassifierCV": {
+    "estimator": null,
+    "method": "sigmoid",
+    "cv": null,
+    "cv_config": null,
+    "n_jobs": null,
+    "ensemble": "auto",
+    "warm_start": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "FixedThresholdClassifier": {
+    "estimator": null,
+    "threshold": "auto",
+    "pos_label": null,
+    "response_method": "auto",
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "LabelPropagation": {
+    "kernel": "rbf",
+    "gamma": 20.0,
+    "n_neighbors": 7,
+    "max_iter": 1000,
+    "tol": 0.001,
+    "n_jobs": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "LabelSpreading": {
+    "kernel": "rbf",
+    "gamma": 20.0,
+    "n_neighbors": 7,
+    "alpha": 0.2,
+    "max_iter": 1000,
+    "tol": 0.001,
+    "n_jobs": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "SelfTrainingClassifier": {
+    "estimator": null,
+    "threshold": 0.75,
+    "criterion": "threshold",
+    "k_best": 10,
+    "max_iter": 10,
+    "verbose": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "TunedThresholdClassifierCV": {
+    "estimator": null,
+    "scoring": "balanced_accuracy",
+    "response_method": "auto",
+    "thresholds": 100,
+    "cv": null,
+    "cv_config": null,
+    "refit": true,
+    "n_jobs": null,
+    "random_state": null,
+    "store_cv_results": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "_PlattCalibrator": {
+    "n_classes": null,
+    "device": null,
+    "dtype": null
+  },
+  "_TemperatureScaler": {
+    "device": null,
+    "dtype": null
+  }
+}

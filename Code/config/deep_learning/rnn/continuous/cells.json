@@ -1,0 +1,36 @@
+{
+  "NeuralODECell": {
+    "input_size": null,
+    "hidden_size": null,
+    "nn_module": null,
+    "funcs": null,
+    "update": "auto",
+    "solve_method": "rk_4",
+    "bias": true,
+    "proj_size": 0,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "LTCCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "seq_len": null,
+    "funcs": "sigmoid",
+    "bias": true,
+    "time_delta": 0.1,
+    "solver_type": "euler",
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "CfCCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "funcs": "sigmoid",
+    "bias": true,
+    "time_delta": 0.1,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

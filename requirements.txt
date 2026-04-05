@@ -1,0 +1,35 @@
+# Thesis training & inference (Code/thesis + models loaded from thesis configs).
+# Tests: pip install -r requirements-dev.txt
+#
+# Optional packages for the rest of Code/ (cloud loaders, streaming, API adapters,
+# quantum layers, etc.) are listed in requirements-monorepo-extras.txt.
+
+# --- Core numerics & classical ML ---
+numpy>=1.26.0
+pandas>=2.2.0
+scipy>=1.12.0
+joblib>=1.3.0
+scikit-learn>=1.4.0
+
+# --- PyTorch (CNN / RNN / ML modules in Code/models) ---
+torch>=2.6.0
+
+# --- Parquet, checkpoints, progress ---
+pyarrow>=14.0.0
+safetensors>=0.4.5
+tqdm>=4.66.0
+
+# --- MLModule / DLModule: checkpoint pickling; MoE LoRA / optional 4-bit (CUDA) ---
+dill>=0.4.1
+accelerate>=1.13.0
+bitsandbytes>=0.49.0
+peft>=0.18.0
+
+# --- Hugging Face (LLMModule, HRM, AutoTokenizer / pretrained weights) ---
+transformers>=4.48.0
+huggingface-hub>=0.20.0
+sentencepiece>=0.1.99
+
+# --- Thesis data script embed_reduce.py (SentenceTransformer + UMAP -> 100D features) ---
+sentence-transformers>=5.2.0
+umap-learn>=0.5.5

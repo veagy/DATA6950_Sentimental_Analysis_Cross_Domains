@@ -1,0 +1,15 @@
+{
+  "KernelDensity": {
+    "bandwidth": 1.0,
+    "algorithm": "auto",
+    "kernel": "gaussian",
+    "metric": "euclidean",
+    "atol": 0,
+    "rtol": 0,
+    "breadth_first": true,
+    "leaf_size": 40,
+    "metric_params": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

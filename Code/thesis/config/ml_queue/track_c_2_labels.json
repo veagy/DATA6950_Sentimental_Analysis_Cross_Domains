@@ -1,0 +1,5 @@
+{
+  "_ml_queue_track": "c",
+  "_ml_queue_n_labels": 2,
+  "_ml_queue_description": "docs/ml Track C: frozen encoder embeddings + LogisticRegression and LinearSVC only (DistilBERT subset)."
+}

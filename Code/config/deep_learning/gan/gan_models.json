@@ -1,0 +1,12 @@
+{
+  "GANGeneral": {
+    "latent_size": null,
+    "generator_type": null,
+    "discriminator_type": null,
+    "generator_configs": null,
+    "discriminator_configs": null,
+    "seed": 42,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

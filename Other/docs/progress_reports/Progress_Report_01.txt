@@ -1,0 +1,46 @@
+
+Project Name: Sentiment Analysis using Hierarchical Reasoning Models and Mixture-of-Experts Architecture: Experimental Results and Analysis
+Name: Rohan Pratap Reddy Ravula
+Date: 9 February 2026
+
+Tasks Completed:
+
+1. Analysis of Model Failures & Performance Evaluation:
+   - Verified Traditional ML superiority over basic DL/Transformers in current settings.
+   - Validated STACK1 ensemble success (+3.5 F1 target met).
+   - Identified root causes for Transformer (frozen weights) and HRM underperformance.
+
+2. Dataset Characterization Analysis:
+   - Quantified difficulty gap between IMDB (Easy) and Sentiment140 (Hard).
+   - Documented statistical significance of ML dominance.
+
+3. Domain-Specific Dataset Acquisition (4 Domains):
+   - Finance: Financial PhraseBank.
+   - Hospitality: HRAST (27k samples).
+   - Healthcare: Medical Sentiment Analysis (~400 samples) & Patient Statements (~2k).
+   - Local Business: Yelp Academic Dataset (7M+ reviews, pre-train candidate).
+
+4. Documentation:
+   - Progress report generation and findings synthesis.
+
+5. Data Pipeline Implementation (New):
+   - Successfully implemented a robust preprocessing pipeline (dummy/preprocess.py) for all 9 acquired datasets.
+   - Standardized text input: Converted diverse formats (CSV, JSON, Latin-1) to UTF-8 and performed Regex cleaning for URLs, handles, and special characters.
+   - Normalized Labels: Created both Binary (Positive/Negative) and Ternary (Positive/Neutral/Negative) versions to address class imbalances and neutral sentiment handling.
+   - Validated dataset integrity across domains (Finance, Hospitality, Healthcare, Social Media).
+
+6. Model Updation:
+   - Modified model code to handle multi-label data.
+   - Initialized training configurations for individual domains.
+
+Total Hours: 52 hours (4-weeks)
+
+Plan for Next Week:
+
+1. Machine Learning Analysis Execution:
+   - Execute ML baselines (Logistic Regression, Linear SVC, Naive Bayes, Random Forest).
+   - Evaluate performance metrics (Accuracy, F1, Precision, Recall) to establish benchmarks for domain-specific tasks.
+
+2. Deep Learning Models:
+   - Implement and fine-tune Transformers/HRM on the preprocessed data.
+   - Compare DL performance against the established ML baselines.

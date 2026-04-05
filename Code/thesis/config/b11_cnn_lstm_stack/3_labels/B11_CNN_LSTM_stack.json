@@ -1,0 +1,15 @@
+{
+  "_comment": "Frozen CNN→LSTM pretrain stack + trainable 100→400→GELU→3. Default pretrain: pretrain_cnn_3labels.safetensors + pretrain_lstm_3labels.safetensors.",
+  "B11StackedCNNLSTMGeLUHeadDDP": {
+    "n_labels": 3,
+    "dataset_stem": "all-data",
+    "pretrain_cnn_ckpt": null,
+    "pretrain_lstm_ckpt": null,
+    "hidden_dim": 400,
+    "epochs": 2,
+    "batch_size": 512,
+    "lr": 0.001,
+    "num_workers": 2,
+    "batch_read": 8192
+  }
+}

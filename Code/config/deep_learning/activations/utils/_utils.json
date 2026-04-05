@@ -1,0 +1,23 @@
+{
+  "_Linear": {
+    "ai": 1.0,
+    "bi": 0.0
+  },
+  "_LinearParametricActivation": {
+    "dims": null,
+    "dim": -1,
+    "bias": true
+  },
+  "Forward_hook": {
+    "name": "Activation"
+  },
+  "Backward_hook": {
+    "name": "Activation"
+  },
+  "ComplexDataConverter": {
+    "data": null,
+    "dim": -1,
+    "device": null,
+    "arrangement": "split"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "RWKVCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "func": null,
+    "bias": true,
+    "decay": 0.0,
+    "mu": null,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "MambaCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "rank": "auto",
+    "bias": true,
+    "func": null,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

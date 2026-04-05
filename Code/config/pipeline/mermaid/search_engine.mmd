@@ -1,0 +1,15 @@
+graph TD
+    %% Search Engine FSM
+    %% Architecture: Multi-Modal Semantic Search (Text + Image embeddings) -> FAISS KNN
+
+    A[DATA_API_INPUT: Search Query String] --> B[TEXT_CLEANUP]
+    B --> C[CLIP_TEXT_ENCODER]
+    
+    D[DATA_API_INPUT: Optional Image Query] --> E[IMAGE_RESIZER]
+    E --> F[CLIP_IMAGE_ENCODER]
+    
+    C --> G[MODALITY_FUSION]
+    F --> G
+    
+    G --> H[VECTOR_SEARCH_RETRIEVAL]
+    H --> I[JSON_OUTPUT: Search Results]

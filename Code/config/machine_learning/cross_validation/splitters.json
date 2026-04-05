@@ -1,0 +1,101 @@
+{
+  "BaseSplitterCV": {
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "KFoldCV": {
+    "n_splits": 5,
+    "shuffle": false,
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "GroupKFold": {
+    "n_splits": 5,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "StratifiedKFold": {
+    "n_splits": 5,
+    "shuffle": false,
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "TimeSeriesSplit": {
+    "n_splits": 5,
+    "max_train_size": null,
+    "test_size": null,
+    "gap": 0,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "LeaveOneOut": {
+    "gcv_mode": "auto",
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "LeavePOut": {
+    "p": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "LeaveOneGroupOut": {
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "LeavePGroupsOut": {
+    "n_groups": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "PredefinedSplit": {
+    "test_fold": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "ShuffleSplit": {
+    "n_splits": 10,
+    "test_size": null,
+    "train_size": null,
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "GroupShuffleSplit": {
+    "n_splits": 5,
+    "test_size": null,
+    "train_size": null,
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "StratifiedShuffleSplit": {
+    "n_splits": 10,
+    "test_size": null,
+    "train_size": null,
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "RepeatedKFold": {
+    "n_splits": 5,
+    "n_repeats": 10,
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "RepeatedStratifiedKFold": {
+    "n_splits": 5,
+    "n_repeats": 10,
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "CVSplitManager": {
+    "splitter": null,
+    "cv_config": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

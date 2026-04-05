@@ -1,0 +1,65 @@
+{
+  "ComplexActivation": {
+    "activation": null,
+    "mode": "sep",
+    "is_stacked_flag": false,
+    "dim": -1,
+    "dims": "()",
+    "flags": "{}"
+  },
+  "ModReLU": {
+    "bias": 0.0,
+    "learnable": false
+  },
+  "ComplexLeakyReLU": {
+    "negative_slope": 0.01
+  },
+  "ComplexELU": {
+    "alpha": 1.0
+  },
+  "ComplexSoftplus": {
+    "beta": 1.0,
+    "threshold": 20.0
+  },
+  "ComplexGELU": {
+    "approximate": "none"
+  },
+  "ComplexGLU": {
+    "dim": -1
+  },
+  "ComplexSoftmax": {
+    "dim": -1
+  },
+  "_ComplexSoftmax": {
+    "dim": -1
+  },
+  "ComplexLogSoftmax": {
+    "dim": -1
+  },
+  "ComplexHardtanh": {
+    "min_val": -1.0,
+    "max_val": 1.0
+  },
+  "ComplexSoftshrink": {
+    "lambd": 0.5
+  },
+  "ComplexHardshrink": {
+    "lambd": 0.5
+  },
+  "ComplexHeaviside": {
+    "values": null
+  },
+  "_ComplexLinear": {
+    "in_features": null,
+    "out_features": null,
+    "bias": true
+  },
+  "ComplexCustomStringActivationLayer": {
+    "in_features": null,
+    "act_operation": null,
+    "act_funcs": null,
+    "dims": null,
+    "biases": null,
+    "name": null
+  }
+}

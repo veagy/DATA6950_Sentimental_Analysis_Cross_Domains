@@ -1,0 +1,9 @@
+{
+  "PatchExtractor": {
+    "patch_size": null,
+    "max_patches": null,
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

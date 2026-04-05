@@ -1,0 +1,52 @@
+{
+  "deterministic": [
+    "GreedySelector"
+  ],
+  "stochastic": [
+    "AncestralSelector",
+    "TemperatureSelector",
+    "TopKSelector",
+    "TopPSelector",
+    "MinPSelector"
+  ],
+  "information_theoretic": [
+    "TailFreeSelector",
+    "TypicalSelector",
+    "EpsilonSelector",
+    "EtaSelector",
+    "MirostatSelector",
+    "RhoLessSelector"
+  ],
+  "contrastive": [
+    "ContrastiveSearchSelector",
+    "ContrastiveDecodingSelector",
+    "DoLaSelector",
+    "DeLTaSelector",
+    "FSDSelector",
+    "CACSSelector",
+    "ClassifierFreeGuidanceSelector"
+  ],
+  "structural": [
+    "FSMSteeredSelector",
+    "WatermarkSelector",
+    "TOSSSelector",
+    "RankRestrictedSelector"
+  ],
+  "differentiable": [
+    "GumbelSoftmaxSelector",
+    "EntmaxSelector"
+  ],
+  "beam": [
+    "BeamSearchSelector",
+    "DiverseBeamSelector"
+  ],
+  "reasoning": [
+    "AIDSelector",
+    "EntropyBandSelector",
+    "SaturationExitSelector"
+  ],
+  "speculative": [
+    "SpeculativeSelector",
+    "MirostatV2Selector"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "AgglomerativeClustering": {
+    "n_clusters": 2,
+    "metric": "euclidean",
+    "metric_params": null,
+    "memory": null,
+    "connectivity": null,
+    "compute_full_tree": "auto",
+    "linkage": "ward",
+    "distance_threshold": null,
+    "compute_distances": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "FeatureAgglomeration": {
+    "n_clusters": 2,
+    "metric": "euclidean",
+    "metric_params": null,
+    "memory": null,
+    "connectivity": null,
+    "compute_full_tree": "auto",
+    "linkage": "ward",
+    "pooling_func": "@torch.mean",
+    "distance_threshold": null,
+    "compute_distances": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "Birch": {
+    "threshold": 0.5,
+    "branching_factor": 50,
+    "n_clusters": 3,
+    "compute_labels": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "_CFSubcluster": {
+    "linear_sum": null,
+    "squared_sum": null,
+    "count": null,
+    "child": null
+  },
+  "_CFNode": {
+    "threshold": null,
+    "branching_factor": null,
+    "is_leaf": null
+  }
+}

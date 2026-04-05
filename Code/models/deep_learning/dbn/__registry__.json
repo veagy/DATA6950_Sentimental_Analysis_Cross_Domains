@@ -1,0 +1,50 @@
+{
+  "core": [
+    "RBM",
+    "GaussianRBM"
+  ],
+  "foundational": [
+    "StandardDBN",
+    "DBNDNNHybrid",
+    "GaussianDBN",
+    "ReluDBN",
+    "SparseDBN",
+    "BayesianDBN"
+  ],
+  "structural": [
+    "CDBN",
+    "MultiresolutionDBN",
+    "PyramidFDBNet",
+    "MultimodalDBN"
+  ],
+  "temporal": [
+    "RDBN",
+    "TDBN",
+    "ConditionalDBN"
+  ],
+  "specialized": [
+    "SDBN",
+    "EEGDBN",
+    "MEDBN",
+    "CVDBN",
+    "FuzzyDBN"
+  ],
+  "hardware": [
+    "QDBN",
+    "MemristiveDBN"
+  ],
+  "hybrid": [
+    "HTSTDBN",
+    "MSEDBN",
+    "ODBNFDFTS",
+    "PSODBN",
+    "OAFDBN",
+    "DiffusionDBN",
+    "IDBN",
+    "SSDBN",
+    "SpikingCDBN",
+    "GANDBN",
+    "EEGBCIDBN",
+    "EnsembleDBN"
+  ]
+}

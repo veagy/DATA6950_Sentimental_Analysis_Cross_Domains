@@ -1,0 +1,9 @@
+{
+  "kernel_approximation": [
+    "AdditiveChi2Sampler",
+    "SkewedChi2Sampler",
+    "Nystroem",
+    "RBFSampler",
+    "PolynomialCountSketch"
+  ]
+}

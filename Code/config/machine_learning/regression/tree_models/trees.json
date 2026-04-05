@@ -1,0 +1,36 @@
+{
+  "DecisionTreeRegressor": {
+    "criterion": "squared_error",
+    "splitter": "best",
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "min_weight_fraction_leaf": 0.0,
+    "max_features": null,
+    "random_state": null,
+    "max_leaf_nodes": null,
+    "min_impurity_decrease": 0.0,
+    "ccp_alpha": 0.0,
+    "monotonic_cst": null,
+    "interaction_cst": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "ExtraTreeRegressor": {
+    "criterion": "squared_error",
+    "splitter": "random",
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "min_weight_fraction_leaf": 0.0,
+    "max_features": 1.0,
+    "random_state": null,
+    "max_leaf_nodes": null,
+    "min_impurity_decrease": 0.0,
+    "ccp_alpha": 0.0,
+    "monotonic_cst": null,
+    "interaction_cst": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

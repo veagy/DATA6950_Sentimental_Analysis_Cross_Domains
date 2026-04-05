@@ -1,0 +1,40 @@
+{
+  "RNNModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "non_linearity": "tanh",
+    "funcs": null,
+    "bias": true,
+    "batch_first": false,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "LSTMModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "bias": true,
+    "batch_first": false,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "proj_size": 0,
+    "device": "cpu",
+    "dtype": "@torch.float32",
+    "funcs": null
+  },
+  "GRUModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "funcs": null,
+    "bias": true,
+    "batch_first": false,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

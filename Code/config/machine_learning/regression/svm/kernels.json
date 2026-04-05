@@ -1,0 +1,122 @@
+{
+  "BaseKernel": {
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "LinearKernel": {
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "PolyKernel": {
+    "degree": null,
+    "gamma": null,
+    "bias": null,
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "RBFKernel": {
+    "gamma": null,
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "SigmoidKernel": {
+    "gamma": null,
+    "bias": null,
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "ConstantKernel": {
+    "constant_val": null,
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "WhiteKernel": {
+    "noise_level": null,
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "SumKernel": {
+    "k1": null,
+    "k2": null,
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "ProductKernel": {
+    "k1": null,
+    "k2": null,
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "LaplacianKernel": {
+    "sigma": null,
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "HistogramIntersectionKernel": {
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "ChiSquareKernel": {
+    "gamma": null,
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "AnovaKernel": {
+    "degree": null,
+    "gamma": null,
+    "trainable": false,
+    "num_support_vectors": null,
+    "num_features": null,
+    "num_classes": 1,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

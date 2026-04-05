@@ -1,0 +1,16 @@
+graph TD
+    %% Recommendation Engine FSM
+    %% Architecture: Two-Tower (User Profile + Item Catalog) -> Cross-Attention -> Ranking
+    
+    A[DATA_API_INPUT: User Event Data] --> B[TEXT_CLEANUP]
+    B --> C[BEHAVIOR_EMBEDDING]
+    
+    D[DATA_API_INPUT: Item Catalog] --> E[IMAGE_TEXT_FUSION]
+    E --> F[ITEM_EMBEDDING]
+    
+    C --> G[CROSS_ATTENTION]
+    F --> G
+    
+    G --> H[DEEP_CROSS_NETWORK]
+    H --> I[RANKING_HEAD]
+    I --> J[JSON_OUTPUT: Top-K Recommendations]

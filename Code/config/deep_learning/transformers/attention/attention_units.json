@@ -1,0 +1,20 @@
+{
+  "GeneralAttentionBlock": {
+    "input_size": null,
+    "hidden_size": null,
+    "context_length": null,
+    "heads": null,
+    "bias": false,
+    "causal": true,
+    "cross": false,
+    "hard": false,
+    "additive": false,
+    "multiheaded": true,
+    "out_proj": false,
+    "temperature": null,
+    "func": "tanh",
+    "caching": false,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

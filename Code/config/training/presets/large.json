@@ -1,0 +1,38 @@
+{
+  "data": {
+    "source": "data/train.csv",
+    "label_col": "label",
+    "test_size": 0.2,
+    "preprocessing": {
+      "clean": true,
+      "engineer": true,
+      "scale": "standard",
+      "paradigm": "supervised"
+    }
+  },
+  "model": {
+    "name": "FeedForwardNeuralNetwork",
+    "overrides": {
+      "dims": [512, 256, 128, 64, 10],
+      "biases": [true, true, true, true, true],
+      "act_funcs": ["relu", "relu", "relu", "relu", "softmax"]
+    }
+  },
+  "training": {
+    "epochs": 100,
+    "batch_size": 64,
+    "loss": "CrossEntropyLoss",
+    "optimizer": "adamw",
+    "lr": 0.0005,
+    "weight_decay": 0.01,
+    "mixed_precision": true,
+    "grad_accum": 2,
+    "val_split": 0.2,
+    "save_every_n_epochs": 5,
+    "run_id": "large"
+  },
+  "checkpoint": {
+    "save_dir": "checkpoints/large",
+    "save_type": "pt"
+  }
+}

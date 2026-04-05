@@ -1,0 +1,15 @@
+{
+  "_comment": "Frozen pretrained CNN encoder + trainable GeLU head (2-label).",
+  "FrozenPretrainGeLUHeadDDP": {
+    "pretrain_arch": "cnn",
+    "n_labels": 2,
+    "dataset_stem": "all-data",
+    "hidden_dim": 400,
+    "epochs": 2,
+    "batch_size": 512,
+    "lr": 0.001,
+    "num_workers": 2,
+    "batch_read": 8192,
+    "pretrain_ckpt": null
+  }
+}

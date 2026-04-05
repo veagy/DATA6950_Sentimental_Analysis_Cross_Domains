@@ -1,0 +1,55 @@
+{
+  "language": [
+    "SegmentEmbedding",
+    "TokenEmbedding",
+    "PositionEmbedding",
+    "SPLADEEmbedding",
+    "AdaptiveInputEmbedding"
+  ],
+  "vision": [
+    "PatchEmbedding",
+    "NeRFPositionalEncoding",
+    "ROICropEmbedding",
+    "GeospatialEmbedding",
+    "MultispectralEmbedding"
+  ],
+  "multimodal": [
+    "DocumentVisualEmbedding",
+    "SpectrogramEmbedding",
+    "SpeakerEmbedding",
+    "InstructionEmbedding",
+    "LatentAlignmentEmbedding"
+  ],
+  "graph": [
+    "TransEEmbedding",
+    "Node2VecEmbedding",
+    "DynamicGraphEmbedding"
+  ],
+  "domain": [
+    "EntityEmbedding",
+    "TemporalEmbedding",
+    "CodeEmbedding",
+    "MolecularEmbedding",
+    "BundleEmbedding"
+  ],
+  "geometry": [
+    "PoincareEmbedding",
+    "SphericalEmbedding",
+    "ManifoldEmbedding",
+    "TakensEmbedding",
+    "VSAEmbedding"
+  ],
+  "security": [
+    "BoxEmbedding",
+    "LSHEmbedding",
+    "DifferentialPrivacyEmbedding",
+    "BayesianEmbedding",
+    "MetaEmbedding"
+  ],
+  "frontier": [
+    "HRREmbedding",
+    "SoftPromptEmbedding",
+    "ArcFaceEmbedding",
+    "OneBitEmbedding"
+  ]
+}

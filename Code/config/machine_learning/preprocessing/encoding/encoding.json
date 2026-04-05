@@ -1,0 +1,69 @@
+{
+  "ContinuousFeatureDiscretizer": {
+    "eps": 1e-05,
+    "merge_func": "mean",
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "LabelEncoder": {
+    "device": "cpu",
+    "dtype": "@torch.long",
+    "handle_unknown": "error"
+  },
+  "LabelBinarizer": {
+    "neg_label": 0,
+    "pos_label": 1,
+    "sparse_output": false,
+    "device": "cpu",
+    "dtype": "@torch.long",
+    "handle_unknown": "error"
+  },
+  "MultiLabelBinarizer": {
+    "neg_label": 0,
+    "pos_label": 1,
+    "handle_unknown": "error",
+    "device": "cpu",
+    "dtype": "@torch.long"
+  },
+  "OneHotEncoder": {
+    "categories": "auto",
+    "drop": null,
+    "sparse_output": true,
+    "handle_unknown": "error",
+    "min_frequency": null,
+    "max_categories": null,
+    "feature_name_combiner": "concat",
+    "device": "cpu",
+    "dtype": "@torch.long"
+  },
+  "OrdinalEncoder": {
+    "categories": "auto",
+    "handle_unknown": "error",
+    "unknown_value": null,
+    "encoded_missing_value": null,
+    "min_frequency": null,
+    "max_categories": null,
+    "device": "cpu",
+    "dtype": "@torch.long"
+  },
+  "TargetEncoder": {
+    "categories": "auto",
+    "target_type": "auto",
+    "smooth": "auto",
+    "cv": 5,
+    "shuffle": true,
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.long"
+  },
+  "KBinsDiscretizer": {
+    "n_bins": 5,
+    "encode": "onehot",
+    "strategy": "quantile",
+    "quantile_method": "linear",
+    "subsample": "2 * 100000.0",
+    "random_state": null,
+    "device": "cpu",
+    "dtype": "@torch.long"
+  }
+}

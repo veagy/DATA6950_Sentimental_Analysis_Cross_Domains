@@ -1,0 +1,15 @@
+{
+  "_comment": "Frozen pretrained LSTM encoder + trainable GeLU head (3-label).",
+  "FrozenPretrainGeLUHeadDDP": {
+    "pretrain_arch": "lstm",
+    "n_labels": 3,
+    "dataset_stem": "all-data",
+    "hidden_dim": 400,
+    "epochs": 2,
+    "batch_size": 512,
+    "lr": 0.001,
+    "num_workers": 2,
+    "batch_read": 8192,
+    "pretrain_ckpt": null
+  }
+}
