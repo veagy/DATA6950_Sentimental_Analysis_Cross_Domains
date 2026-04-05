@@ -19,3 +19,5 @@ Other/checkpoints/transformer/
 Dataset/processed/
 Dataset/raw/
 Dataset/transformed/
+
+.env
