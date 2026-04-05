@@ -1,0 +1,36 @@
+{
+  "BregmanKMeans": {
+    "n_clusters": 8,
+    "divergence": null,
+    "divergence_params": null,
+    "eps": 1e-09,
+    "metric": "euclidean",
+    "metric_params": null,
+    "init": "k-means++",
+    "n_init": "auto",
+    "max_iter": 300,
+    "tol": 0.0001,
+    "verbose": false,
+    "random_state": null,
+    "copy_X": true,
+    "warm_start": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "KMeansCluster": {
+    "n_clusters": 8,
+    "init": "k-means++",
+    "n_init": "auto",
+    "max_iter": 300,
+    "tol": 0.0001,
+    "verbose": false,
+    "random_state": null,
+    "copy_X": true,
+    "metric": "euclidean",
+    "metric_params": null,
+    "algorithm": "lloyd",
+    "n_yinyang_groups": 10,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

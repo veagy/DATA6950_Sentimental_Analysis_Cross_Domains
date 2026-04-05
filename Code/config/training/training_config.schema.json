@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sentinel Training Configuration",
+  "description": "Schema for training run configuration: data, model, and training hyperparameters",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "data": {
+      "type": "object",
+      "description": "Data source and preprocessing configuration",
+      "properties": {
+        "source": { "type": "string", "description": "File path or cloud URI (s3://, gs://, az://)" },
+        "label_col": { "type": "string", "default": "label" },
+        "test_size": { "type": "number", "minimum": 0, "maximum": 1, "default": 0.2 },
+        "train_path": { "type": "string" },
+        "val_path": { "type": "string" },
+        "test_path": { "type": "string" },
+        "preprocessing": {
+          "type": "object",
+          "properties": {
+            "clean": { "type": "boolean", "default": true },
+            "engineer": { "type": "boolean", "default": false },
+            "scale": { "type": "string", "enum": ["standard", "robust", "minmax", null] },
+            "paradigm": { "type": "string", "enum": ["supervised", "unsupervised", "semi_supervised", "generative"] }
+          }
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "description": "Model architecture configuration",
+      "properties": {
+        "name": { "type": "string", "description": "Model class name from registry (e.g. StandardDense)" },
+        "overrides": {
+          "type": "object",
+          "description": "Parameter overrides for model instantiation"
+        }
+      }
+    },
+    "training": {
+      "type": "object",
+      "description": "Training hyperparameters",
+      "properties": {
+        "epochs": { "type": "integer", "minimum": 1, "default": 50 },
+        "batch_size": { "type": "integer", "minimum": 1, "default": 32 },
+        "loss": { "type": "string", "default": "CrossEntropyLoss" },
+        "optimizer": { "type": "string", "default": "adamw" },
+        "lr": { "type": "number", "minimum": 0, "default": 0.001 },
+        "weight_decay": { "type": "number", "minimum": 0, "default": 0.01 },
+        "mixed_precision": { "type": "boolean", "default": false },
+        "grad_accum": { "type": "integer", "minimum": 1, "default": 1 },
+        "val_split": { "type": "number", "minimum": 0, "maximum": 1, "default": 0.2 },
+        "save_every_n_epochs": { "type": "integer", "minimum": 1 },
+        "run_id": { "type": "string", "default": "default" },
+        "device": { "type": "string", "enum": ["cpu", "cuda", "auto"] }
+      }
+    },
+    "checkpoint": {
+      "type": "object",
+      "properties": {
+        "save_dir": { "type": "string" },
+        "save_type": { "type": "string", "enum": ["pt", "pth"], "default": "pt" }
+      }
+    }
+  }
+}

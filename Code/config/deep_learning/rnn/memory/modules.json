@@ -1,0 +1,45 @@
+{
+  "ESNModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "func": "tanh",
+    "bias": true,
+    "batch_first": false,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "leaking_rate": 0.8,
+    "spectral_radius": 0.9,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "NTMModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "mem_rows": null,
+    "mem_columns": null,
+    "funcs": null,
+    "bias": true,
+    "batch_first": false,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "proj_size": 0,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "HopfieldNetworkModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "bias": true,
+    "beta": 1.0,
+    "batch_first": false,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "proj_size": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

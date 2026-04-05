@@ -1,0 +1,21 @@
+{
+  "ConvolutionActivation": {
+    "in_features": null,
+    "activations": null,
+    "dim": -1,
+    "bias": false,
+    "out_layer": false,
+    "arrange": "alternate",
+    "freeze": true
+  },
+  "CustomStringConvolutionActivation": {
+    "in_features": null,
+    "act_operation": null,
+    "act_funcs": null,
+    "dims": null,
+    "dim": -1,
+    "biases": null,
+    "name": null,
+    "bias": false
+  }
+}

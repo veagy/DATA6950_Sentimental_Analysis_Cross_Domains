@@ -1,0 +1,17 @@
+{
+  "IsotonicRegression": {
+    "y_min": null,
+    "y_max": null,
+    "increasing": true,
+    "out_of_bounds": "nan",
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "DummyRegressor": {
+    "strategy": "mean",
+    "constant": null,
+    "quantile": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

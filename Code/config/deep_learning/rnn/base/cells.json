@@ -1,0 +1,28 @@
+{
+  "RNNCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "non_linearity": "tanh",
+    "funcs": null,
+    "bias": true,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "LSTMCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "funcs": null,
+    "bias": true,
+    "proj_size": 0,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "GRUCell": {
+    "input_size": null,
+    "hidden_size": null,
+    "funcs": null,
+    "bias": true,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

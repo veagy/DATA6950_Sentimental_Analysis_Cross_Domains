@@ -1,0 +1,40 @@
+{
+  "KNeighborsClassifier": {
+    "n_neighbors": 5,
+    "weights": "uniform",
+    "algorithm": "auto",
+    "leaf_size": 30,
+    "p": 2,
+    "metric": "minkowski",
+    "metric_params": null,
+    "class_weights": null,
+    "n_jobs": null,
+    "warm_start": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "RadiusNeighborsClassifier": {
+    "radius": 1.0,
+    "weights": "uniform",
+    "algorithm": "auto",
+    "leaf_size": 30,
+    "p": 2,
+    "metric": "minkowski",
+    "metric_params": null,
+    "class_weight": null,
+    "n_jobs": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "NearestCentroid": {
+    "p": 2,
+    "metric": "minkowski",
+    "shrink_threshold": null,
+    "priors": "uniform",
+    "metric_params": null,
+    "class_weights": null,
+    "n_jobs": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

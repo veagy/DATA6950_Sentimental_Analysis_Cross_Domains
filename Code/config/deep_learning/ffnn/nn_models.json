@@ -1,0 +1,25 @@
+{
+  "FeedForwardNeuralNetwork": {
+    "dims": null,
+    "biases": null,
+    "act_funcs": null,
+    "bypass": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "FeedForwardNeuralNetworkOp": {
+    "dims": null,
+    "biases": null,
+    "act_funcs": null,
+    "bypass": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "KANNetwork": {
+    "dims": null,
+    "bypass": null,
+    "kan_kwargs": null,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

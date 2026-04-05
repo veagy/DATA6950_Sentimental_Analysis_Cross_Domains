@@ -1,0 +1,59 @@
+{
+  "Binarizer": {
+    "threshold": 0.0,
+    "copy": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "MaxAbsScaler": {
+    "copy": true,
+    "clip": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "MinMaxScaler": {
+    "feature_range": "(0, 1)",
+    "copy": true,
+    "clip": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "Normalizer": {
+    "norm": "l2",
+    "copy": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "StandardScaler": {
+    "copy": true,
+    "with_mean": true,
+    "with_std": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "RobustScaler": {
+    "with_centering": true,
+    "with_scaling": true,
+    "quantile_range": "(25.0, 75.0)",
+    "unit_variance": false,
+    "copy": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "PowerTransformer": {
+    "method": "yeo-johnson",
+    "standardize": true,
+    "copy": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "QuantileTransformer": {
+    "n_quantiles": 1000,
+    "output_distribution": "uniform",
+    "subsample": 10000,
+    "random_state": null,
+    "copy": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

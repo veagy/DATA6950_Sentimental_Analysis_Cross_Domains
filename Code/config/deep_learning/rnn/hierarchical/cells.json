@@ -1,0 +1,31 @@
+{
+  "HierarchicalRNNCell": {
+    "input_size": null,
+    "high_hidden_size": null,
+    "low_hidden_size": null,
+    "proj_size": null,
+    "funcs": null,
+    "bias": true,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "HierarchicalLSTMCell": {
+    "input_size": null,
+    "low_hidden_size": null,
+    "high_hidden_size": null,
+    "funcs": null,
+    "bias": true,
+    "proj_size": 0,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "HierarchicalGRUCell": {
+    "input_size": null,
+    "low_hidden_size": null,
+    "high_hidden_size": null,
+    "funcs": null,
+    "bias": true,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

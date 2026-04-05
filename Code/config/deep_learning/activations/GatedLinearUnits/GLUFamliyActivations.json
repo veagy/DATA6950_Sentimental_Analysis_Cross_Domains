@@ -1,0 +1,48 @@
+{
+  "_LinearTransformation": {
+    "dims": null,
+    "dim": -1,
+    "out_features": "in_features",
+    "bias": false
+  },
+  "GatedLinearUnits": {
+    "activation": null,
+    "dims": null
+  },
+  "GLUActivation": {
+    "activation1": null,
+    "activation2": null,
+    "dims": null
+  },
+  "GTUActivation": {
+    "dims": null
+  },
+  "ReGLUActivation": {
+    "dims": null
+  },
+  "GEGLUActivation": {
+    "dims": null,
+    "gelu_trainable": false
+  },
+  "SwiGLUActivation": {
+    "dims": null,
+    "gelu_trainable": false
+  },
+  "EGLUActivation": {
+    "dims": null
+  },
+  "LiGLUActivation": {
+    "dims": null
+  },
+  "SEGLUActivation": {
+    "dims": null
+  },
+  "CustomStringActivationLayer": {
+    "in_features": null,
+    "act_operation": null,
+    "act_funcs": null,
+    "dims": null,
+    "biases": null,
+    "name": null
+  }
+}

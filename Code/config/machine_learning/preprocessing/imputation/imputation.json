@@ -1,0 +1,56 @@
+{
+  "_RidgeEstimator": {
+    "alpha": 1.0,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "KNNImputer": {
+    "missing_values": "@torch.nan",
+    "n_neighbors": 5,
+    "weights": "uniform",
+    "metric": "nan_euclidean",
+    "metric_params": null,
+    "copy": true,
+    "add_indicator": false,
+    "keep_empty_features": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "MissingIndicator": {
+    "missing_values": "@torch.nan",
+    "features": "missing-only",
+    "sparse": "auto",
+    "error_on_new": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "SimpleImputer": {
+    "missing_values": "@torch.nan",
+    "fill_value": null,
+    "copy": true,
+    "add_indicator": false,
+    "keep_empty_features": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "IterativeImputer": {
+    "estimator": null,
+    "missing_values": "@torch.nan",
+    "sample_posterior": false,
+    "max_iter": 10,
+    "tol": 0.001,
+    "n_nearest_features": null,
+    "initial_strategy": "mean",
+    "fill_value": null,
+    "imputation_order": "ascending",
+    "skip_complete": false,
+    "min_value": "-torch.inf",
+    "max_value": "@torch.inf",
+    "verbose": 0,
+    "random_state": null,
+    "add_indicator": false,
+    "keep_empty_features": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

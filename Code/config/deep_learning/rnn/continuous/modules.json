@@ -1,0 +1,48 @@
+{
+  "NeuralODEModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "nn_module": "auto",
+    "funcs": null,
+    "update": "auto",
+    "solve_method": "rk_4",
+    "bias": true,
+    "batch_first": false,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "proj_size": 0,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "LTCModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "seq_len": null,
+    "funcs": "sigmoid",
+    "bias": true,
+    "time_delta": 0.1,
+    "solver_type": "euler",
+    "proj_size": null,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "batch_first": false,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  },
+  "CfCModule": {
+    "input_size": null,
+    "hidden_size": null,
+    "num_layers": null,
+    "funcs": "sigmoid",
+    "bias": true,
+    "time_delta": 0.1,
+    "proj_size": null,
+    "dropout": 0.0,
+    "bidirectional": false,
+    "batch_first": false,
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "PolynomialFeatures": {
+    "degree": 2,
+    "interaction_only": false,
+    "include_bias": true,
+    "order": "C",
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "KernelCenterer": {
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "SplineTransformers": {
+    "n_knots": 5,
+    "degree": 3,
+    "knots": "uniform",
+    "extrapolation": "constant",
+    "include_bias": true,
+    "order": "C",
+    "handle_missing": "error",
+    "sparse_output": false,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "FunctionTransformer": {
+    "func": null,
+    "inverse_func": null,
+    "validate": false,
+    "accept_sparse": false,
+    "check_inverse": false,
+    "feature_names_out": null,
+    "kw_args": null,
+    "inv_kw_args": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

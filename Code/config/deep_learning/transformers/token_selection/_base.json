@@ -1,0 +1,6 @@
+{
+  "BaseTokenSelector": {
+    "device": "cpu",
+    "dtype": "@torch.float32"
+  }
+}

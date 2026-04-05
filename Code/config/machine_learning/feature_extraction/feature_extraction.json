@@ -1,0 +1,9 @@
+{
+  "DictVectorizer": {
+    "separator": "=",
+    "sparse": true,
+    "sort": true,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "RFE": {
+    "estimator": null,
+    "n_features_to_select": null,
+    "step": 1,
+    "verbose": 0,
+    "importance_getter": "auto",
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "RFECV": {
+    "estimator": null,
+    "n_features_to_select": null,
+    "min_features_to_select": 1,
+    "cv": null,
+    "cv_config": null,
+    "scoring": null,
+    "step": 1,
+    "verbose": 0,
+    "importance_getter": "auto",
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "GenericUnivariateSelect": {
+    "score_func": null,
+    "mode": "percentile",
+    "param": 1e-05,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "SelectFdr": {
+    "score_func": null,
+    "alpha": 0.05,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "SelectFpr": {
+    "score_func": null,
+    "alpha": 0.05,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "SelectFwe": {
+    "score_func": null,
+    "alpha": 0.05,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "SelectKBest": {
+    "score_func": null,
+    "k": 10,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "SelectPercentile": {
+    "score_func": null,
+    "percentile": 10,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "SelectFromModel": {
+    "estimator": null,
+    "threshold": null,
+    "prefit": false,
+    "norm_order": 1,
+    "max_features": null,
+    "importance_getter": "auto",
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "SequentialFeatureSelector": {
+    "estimator": null,
+    "n_features_to_select": "auto",
+    "tol": null,
+    "direction": "forward",
+    "scoring": null,
+    "cv": null,
+    "cv_config": null,
+    "n_jobs": null,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  },
+  "VarianceThreshold": {
+    "threshold": 0.0,
+    "device": "cpu",
+    "dtype": "@torch.float"
+  }
+}

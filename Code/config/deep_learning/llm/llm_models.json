@@ -1,0 +1,12 @@
+{
+  "LLMModule": {
+    "model_name": null,
+    "tokenizer_name": null,
+    "n_classes": null,
+    "layers": null,
+    "act_funcs": null,
+    "device": "cpu",
+    "dtype": "@torch.float32",
+    "checkpoint_dir": "checkpoints/deep_learning/llm"
+  }
+}
