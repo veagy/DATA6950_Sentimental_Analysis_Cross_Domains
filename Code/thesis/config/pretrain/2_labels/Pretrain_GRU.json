@@ -1,0 +1,7 @@
+{
+  "FeaturePretrainAutoencoder": {
+    "architecture": "gru",
+    "input_dim": 100,
+    "latent_dim": 100
+  }
+}

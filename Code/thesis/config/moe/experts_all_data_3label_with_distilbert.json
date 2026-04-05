@@ -1,0 +1,14 @@
+[
+  {
+    "name": "distil_mlp",
+    "config": "Code/thesis/config/transformers/3_labels/B3_E_DL1_DistilBERT_mlp768_1024.json",
+    "checkpoint": "checkpoints/3-labels/all-data/B3_E_DL1_DistilBERT_mlp768_1024.safetensors",
+    "modality": "text"
+  },
+  {
+    "name": "feat_ffn",
+    "config": "Code/thesis/config/feature_encoder/3_labels/FeatEnc_FFN.json",
+    "checkpoint": "checkpoints/3-labels/all-data/FeatEnc_FFN.safetensors",
+    "modality": "dense"
+  }
+]

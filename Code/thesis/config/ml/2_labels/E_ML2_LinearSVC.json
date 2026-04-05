@@ -1,0 +1,7 @@
+{
+    "LinearSVC": {
+        "C": 1.0,
+        "max_iter": 2000,
+        "device": "cpu"
+    }
+}

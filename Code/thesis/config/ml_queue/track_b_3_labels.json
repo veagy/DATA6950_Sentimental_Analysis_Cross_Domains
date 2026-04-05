@@ -1,0 +1,5 @@
+{
+  "_ml_queue_track": "b",
+  "_ml_queue_n_labels": 3,
+  "_ml_queue_description": "docs/ml Track B: frozen encoder embeddings + trainable linear meta-head (DistilBERT subset)."
+}

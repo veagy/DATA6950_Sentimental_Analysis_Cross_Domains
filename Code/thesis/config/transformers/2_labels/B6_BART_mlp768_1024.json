@@ -1,0 +1,17 @@
+{
+    "LLMModule": {
+        "model_name": "facebook/bart-base",
+        "tokenizer_name": "facebook/bart-base",
+        "n_classes": 2,
+        "single_linear_head": false,
+        "embed_dim": 768,
+        "layers": [
+            ["linear", {"in_features": 768, "out_features": 1024, "bias": true}],
+            ["act", {"activation": "gelu"}]
+        ],
+        "act_funcs": null,
+        "l2_normalize_pooled": false,
+        "checkpoint_dir": "checkpoints/deep_learning/llm",
+        "device": "cpu"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "DecisionTreeClassifier": {
+        "max_depth": 16,
+        "min_samples_leaf": 2,
+        "random_state": 42,
+        "device": "cpu"
+    }
+}

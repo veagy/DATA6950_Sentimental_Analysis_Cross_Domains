@@ -1,0 +1,24 @@
+{
+    "HierarchicalReasoningModel": {
+        "config": {
+            "batch_size": 8,
+            "seq_len": 512,
+            "hidden_size": 800,
+            "output_embed_dim": 100,
+            "vocab_size": 30522,
+            "H_cycles": 2,
+            "L_cycles": 2,
+            "h_level_model": "EncoderLM",
+            "l_level_model": "EncoderLM",
+            "tokenizer_name": "google-bert/bert-base-uncased",
+            "model_kwargs": {
+                "num_layers": 4,
+                "num_heads": 16
+            }
+        },
+        "classification_head": {
+            "type": "mlp_sentiment_v1",
+            "num_classes": 3
+        }
+    }
+}

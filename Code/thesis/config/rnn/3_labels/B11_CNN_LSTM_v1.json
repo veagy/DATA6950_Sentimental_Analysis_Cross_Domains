@@ -1,0 +1,58 @@
+{
+    "CNNetworks": {
+        "dimensionality": 1,
+        "layer_types": [
+            "conv",
+            "pool",
+            "fc",
+            "act",
+            "fc"
+        ],
+        "channels": [
+            100,
+            400,
+            150,
+            3
+        ],
+        "kernel_size": [
+            3,
+            2
+        ],
+        "stride": [
+            1,
+            2
+        ],
+        "padding": [
+            1,
+            0
+        ],
+        "pool_type": [
+            "max"
+        ],
+        "act_funcs": [
+            "ReLU"
+        ],
+        "pad_type": [],
+        "dropout_percent": [],
+        "dilation": [
+            1,
+            1
+        ],
+        "groups": [
+            1,
+            1
+        ],
+        "bias": [
+            true,
+            true,
+            true
+        ],
+        "padding_mode": [
+            "zeros",
+            "zeros"
+        ],
+        "lazy": false,
+        "transpose": false,
+        "device": "cpu"
+    }
+}

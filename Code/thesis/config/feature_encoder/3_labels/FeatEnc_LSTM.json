@@ -1,0 +1,7 @@
+{
+  "FeatureEncoderClassifier": {
+    "architecture": "lstm",
+    "input_dim": 100,
+    "latent_dim": 100
+  }
+}

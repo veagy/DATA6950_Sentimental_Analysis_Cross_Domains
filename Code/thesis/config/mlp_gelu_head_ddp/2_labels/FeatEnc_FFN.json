@@ -1,0 +1,15 @@
+{
+  "_comment": "Frozen pretrained FFN encoder + trainable 100->400->GELU->2. Outputs under checkpoints/mlp_geLU_head_ddp/combined|heads_only.",
+  "FrozenPretrainGeLUHeadDDP": {
+    "pretrain_arch": "ffnn",
+    "n_labels": 2,
+    "dataset_stem": "all-data",
+    "hidden_dim": 400,
+    "epochs": 2,
+    "batch_size": 512,
+    "lr": 0.001,
+    "num_workers": 2,
+    "batch_read": 8192,
+    "pretrain_ckpt": null
+  }
+}
