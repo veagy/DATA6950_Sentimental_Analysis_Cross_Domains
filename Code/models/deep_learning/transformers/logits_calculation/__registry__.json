@@ -1,0 +1,48 @@
+{
+  "standard": [
+    "LinearHead",
+    "WeightTiedHead",
+    "MLPHead"
+  ],
+  "efficiency": [
+    "AdaptiveSoftmaxHead",
+    "HierarchicalSoftmaxHead",
+    "FactorizedHead",
+    "DifferentiatedSoftmaxHead",
+    "SampledSoftmaxHead"
+  ],
+  "expressivity": [
+    "MoSHead",
+    "GLUHead",
+    "PolynomialSoftmaxHead"
+  ],
+  "geometric": [
+    "CosineSimilarityHead",
+    "EuclideanDistanceHead",
+    "HyperbolicHead",
+    "OrthogonalHead",
+    "MatryoshkaHead"
+  ],
+  "retrieval": [
+    "kNNLMHead",
+    "RetroRetrievalHead",
+    "DKVBHead"
+  ],
+  "specialized": [
+    "ContrastiveHead",
+    "EarlyExitHead",
+    "MedusaHeads",
+    "EagleDraftHead"
+  ],
+  "training": [
+    "LCFTLoss",
+    "TemperatureDependentHead",
+    "SigmoidVocabularyHead",
+    "CCELoss"
+  ],
+  "interpretability": [
+    "LogitLens",
+    "TunedLens",
+    "LogitPrisms"
+  ]
+}

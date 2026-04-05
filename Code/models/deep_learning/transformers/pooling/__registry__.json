@@ -1,0 +1,75 @@
+{
+  "static": [
+    "MeanPooling",
+    "MaxPooling",
+    "CLSPooling",
+    "SumPooling",
+    "LastTokenPooling"
+  ],
+  "statistical": [
+    "WeightedMeanPooling",
+    "MeanSqrtLenPooling",
+    "PowerMeanPooling",
+    "GeMPooling",
+    "LSEPooling",
+    "SoftPoolPooling",
+    "StdVariancePooling",
+    "StatsPooling",
+    "DecayMeanPooling"
+  ],
+  "multi_layer": [
+    "WeightedLayerPooling",
+    "ConcatenatePooling",
+    "SBERTWKPooling"
+  ],
+  "attention": [
+    "AttentionPooling",
+    "LatentAttentionPooling",
+    "SparsemaxPooling",
+    "MultiHeadAttentionPooling",
+    "GatedAttentionPooling",
+    "PromptAwarePooling"
+  ],
+  "strategy": [
+    "MatryoshkaPooling",
+    "LateInteractionPooling",
+    "MultiResolutionPooling"
+  ],
+  "multimodal": [
+    "CrossModalAttentionPooling",
+    "TemporalPooling"
+  ],
+  "geometric": [
+    "HyperbolicPooling",
+    "OptimalTransportPooling",
+    "OrthogonalProjectionPooling",
+    "BinaryTernaryPooling"
+  ],
+  "spectral": [
+    "SATPoolPooling",
+    "WaveletPooling"
+  ],
+  "structural": [
+    "GlotPooling",
+    "DependencyWeightedPooling",
+    "TreeLSTMPooling",
+    "BilinearPooling",
+    "FisherVectorPooling",
+    "VLADPooling",
+    "CapsulePooling",
+    "LSTMGRUPooling",
+    "CNNPooling",
+    "TopKPooling",
+    "GumbelSoftmaxPooling",
+    "VQPooling",
+    "KMeansPooling",
+    "GatedRecurrentPooling"
+  ],
+  "compression": [
+    "ProductQuantizationPooling",
+    "HierarchicalPooling",
+    "SlidingWindowPooling",
+    "LateChunkingPooling",
+    "RelativeLastTokenPooling"
+  ]
+}

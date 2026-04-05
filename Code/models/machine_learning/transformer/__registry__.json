@@ -1,0 +1,42 @@
+{
+  "transformer": {
+    "decomposition": [
+      "FastICA",
+      "NMF",
+      "MiniBatchNMF",
+      "TruncatedSVD",
+      "FactorAnalysis",
+      "LatentDirichletAllocation",
+      "DictionaryLearning",
+      "MiniBatchDictionaryLearning",
+      "SparseCoder",
+      "NeighborhoodComponentsAnalysis"
+    ],
+    "pca": [
+      "PCA",
+      "KernelPCA",
+      "SparsePCA",
+      "MiniBatchSparsePCA",
+      "IncrementalPCA"
+    ],
+    "manifold_learning": [
+      "TSNE",
+      "Isomap",
+      "LocallyLinearEmbedding",
+      "MDS",
+      "ClassicalMDS",
+      "SpectralEmbedding"
+    ],
+    "misc": [
+      "ColumnTransformer",
+      "KNeighborsTransformer",
+      "RadiusNeighborsTransformer",
+      "RandomTreesEmbeddings",
+      "FeatureUnion"
+    ],
+    "random_projection": [
+      "GaussianRandomProjection",
+      "SparseRandomProjection"
+    ]
+  }
+}

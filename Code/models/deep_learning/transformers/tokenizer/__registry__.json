@@ -1,0 +1,76 @@
+{
+  "core": [
+    "HLFETokenizer",
+    "StandardBPETokenizer",
+    "CharacterLevelTokenizer",
+    "WordLevelTokenizer",
+    "BPETokenizer",
+    "WordPieceTokenizer",
+    "ByteLevelTokenizer",
+    "SentencePieceWrapper",
+    "UnigramTokenizer",
+    "NgramTokenizer"
+  ],
+  "probabilistic": [
+    "BPEDropout",
+    "SubwordRegularization",
+    "BPEWeighted",
+    "StochasticByteLevelBPE"
+  ],
+  "token_free": [
+    "BLTTokenizer",
+    "CharformerTokenizer",
+    "CANINETokenizer",
+    "ByT5Tokenizer",
+    "MEGABYTETokenizer"
+  ],
+  "linguistic": [
+    "MorphPieceTokenizer",
+    "MorfessorWrapper",
+    "SubCharTokenizer",
+    "RadicalTokenizer",
+    "SyllableTokenizer",
+    "CompoundSplittingTokenizer",
+    "CBPETokenizer"
+  ],
+  "visual": [
+    "PIXELTokenizer",
+    "GlyphBasedTokenizer",
+    "PixelGPTTokenizer"
+  ],
+  "language_specific": [
+    "JiebaTokenizer",
+    "MeCabTokenizer",
+    "PyThaiNLPTokenizer"
+  ],
+  "domain_specific": [
+    "GuidedTokenization",
+    "SMILESFunctional",
+    "ASTTokenization",
+    "DigitChunking",
+    "ReducedAlphabetBPE"
+  ],
+  "dynamic": [
+    "Zip2Zip",
+    "LazyLLMTokenizer",
+    "AdaptiveTokenScheduler",
+    "FinalStylePruning",
+    "TiktokenWrapper"
+  ],
+  "multimodal": [
+    "WavTokenizer",
+    "VQVAETokenizer",
+    "FocalCodecTokenizer",
+    "DSATokenizer"
+  ],
+  "efficiency": [
+    "HSATokenizer",
+    "PatchParallelTokenizer",
+    "HTPTokenizer"
+  ],
+  "frontiers": [
+    "CanonicalGeneration",
+    "QualityAwareTokenization",
+    "LCMTokenizer"
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "clustering": {
+    "Centroid-based": {
+      "Base": [
+        "BregmanKMeans",
+        "KMeansCluster"
+      ],
+      "Core & Classical Partitional": [
+        "MiniBatchKMeansCluster",
+        "BisectingKMeansCluster",
+        "KModes",
+        "KPrototypes",
+        "KCenters",
+        "SphericalKMeans"
+      ],
+      "Medoid-Based & Graph-Centroid": [
+        "KMedoids",
+        "KMedians",
+        "PAM",
+        "CLARA",
+        "CLARANS",
+        "KMediansOnGraphs",
+        "PowerIteratedClustering"
+      ],
+      "Robust, Adversarial & Fair": [
+        "TrimmedKMeans",
+        "WeightedKMeans",
+        "AdversarialKMeans",
+        "FairKMeans"
+      ],
+      "Constrained & Semi-Supervised": [
+        "COPKMeans",
+        "SizeConstrainedKMeans",
+        "Cerrado"
+      ],
+      "Kernel-Based & Manifold": [
+        "KernelKMeans",
+        "ABKMeans",
+        "KHarmonicMeans",
+        "DirectionalKMeans",
+        "KRiemannianMeans",
+        "SoftTopographicMapping"
+      ],
+      "Fuzzy, Density & Grid Hybrids": [
+        "FuzzyCMeans",
+        "PowerKMeans",
+        "MeanShift",
+        "XMeans",
+        "GMeans",
+        "PCM",
+        "RoughKMeans",
+        "DenclueCluster",
+        "DPClustering"
+      ],
+      "Sparse & Subspace": [
+        "SparseKMeans",
+        "SubspaceKMeans"
+      ],
+      "Nature-Inspired, Physics & Evolutionary": [
+        "ABCClustering",
+        "CuckooSearchClustering",
+        "FireflyClustering",
+        "GreyWolfOptimizerClustering",
+        "QuantumKMeans",
+        "MolecularDynamicsClustering",
+        "HamiltonianCentroidClustering",
+        "GeneticKMeans",
+        "PSOClustering",
+        "BigVNSClust",
+        "SACClustering"
+      ],
+      "Distributed, Parallel & Streaming": [
+        "KMeansParallel",
+        "StreamingKMeans",
+        "CoresetKMeans",
+        "OnlineKMeans"
+      ],
+      "Deep Learning & Modern AI": [
+        "DEC",
+        "KLLMMeans",
+        "CentroidBasedMemory",
+        "KNLPMeans",
+        "ConceptCentroidClustering",
+        "SummaryAsCentroid"
+      ]
+    },
+    "Density-based": {
+      "Base": [
+        "DBSCAN",
+        "HDBSCAN",
+        "OPTICS"
+      ],
+      "Classic & Foundational": [
+        "DBSCANPlusPlus",
+        "DPC",
+        "GDBSCAN",
+        "FADBC",
+        "FCDCSD",
+        "clusterdv",
+        "eQual",
+        "DBOCO",
+        "KR_DBSCAN",
+        "RNN_DBSCAN",
+        "SkinnyDip",
+        "IPM_DBSCAN"
+      ],
+      "Hierarchical & Topological": [
+        "ARDT_DBSCAN",
+        "DBMAC_II",
+        "HCLORE",
+        "PDBSCAN",
+        "TopologicalDensityClustering"
+      ],
+      "Neuromorphic": [
+        "NeuromorphicDBSCAN",
+        "FlatNeuromorphicDBSCAN",
+        "SystolicNeuromorphicDBSCAN",
+        "MemristiveDensityClustering"
+      ],
+      "Quantum & Physics-Inspired": [
+        "QC",
+        "QDPC",
+        "DQC",
+        "GroverAcceleratedQDPC",
+        "DistCalcCircuitQDPC",
+        "IsingModelClustering",
+        "QGA_DBSCAN",
+        "DBSCAN_QGA"
+      ],
+      "Scalable & Distributed": [
+        "MR_DBSCAN",
+        "P_DBSCAN",
+        "sDBSCAN",
+        "sOPTICS",
+        "SRRDBSCAN",
+        "LSH_DBSCAN",
+        "LSH_HDBSCAN"
+      ],
+      "Streaming & Online": [
+        "DBStream",
+        "DenStream",
+        "DStream"
+      ],
+      "Grid & Subspace": [
+        "STING",
+        "BANGClustering",
+        "OptiGrid",
+        "GDPAM",
+        "FourC",
+        "CASH",
+        "ENCLUS",
+        "MAFIA",
+        "PROCLUS"
+      ],
+      "Swarm & Bio-Inspired": [
+        "DatabionicSwarm",
+        "CSA_DBSCAN",
+        "SSA_DBSCAN",
+        "SMCFO",
+        "PRI_MFC",
+        "SACA",
+        "GravitationalClustering",
+        "K_DBSCAN"
+      ],
+      "Variable Density": [
+        "DVBSCAN",
+        "VDBSCAN",
+        "VDECAL",
+        "K_MDNN_DBSCAN",
+        "BRIDGEClustering"
+      ],
+      "Domain-Specific": [
+        "CADENCE",
+        "CPDD_ID",
+        "DBCLASD",
+        "DSets",
+        "GHCA",
+        "NS_DBSCAN",
+        "UDBSCAN"
+      ]
+    },
+    "Others": {
+      "Affinity & Spectral": [
+        "AffinityPropagation",
+        "SpectralClustering",
+        "SpectralBiclustering",
+        "SpectralCoclustering"
+      ],
+      "Probabilistic & Mixture": [
+        "GaussianMixture",
+        "ExpectationMaximization",
+        "LatentClassAnalysis",
+        "BayesianNetworkClustering",
+        "DirichletProcessMixture",
+        "ParsimoniousGMM",
+        "HiddenMarkovModel",
+        "TDistributionMixture",
+        "HiddenMarkovRandomField",
+        "LatentDirichletAllocation",
+        "HierarchicalDirichletProcess",
+        "BayesianGaussianMixture"
+      ],
+      "Graph & Community": [
+        "LabelPropagation",
+        "InfoMap",
+        "FluidCommunities",
+        "Walktrap",
+        "NewmanGirvan",
+        "PARC",
+        "Louvain",
+        "Leiden",
+        "InfinigraphShardedClustering",
+        "AdaptiveGraphClustering",
+        "ModularityFastModularity",
+        "AuraAgenticClustering"
+      ],
+      "Grid & Subspace": [
+        "WaveCluster",
+        "ITGC",
+        "CLIQUE",
+        "ORCLUS",
+        "STATPC",
+        "COBI"
+      ],
+      "Neural Topology": [
+        "SelfOrganizingMap",
+        "NeuralGas",
+        "ART1",
+        "ART2",
+        "FuzzyART"
+      ],
+      "Constraint & Foundation": [
+        "KPop",
+        "MPCKMeans",
+        "SemanticRecursiveClustering",
+        "ContrastiveClustering"
+      ],
+      "Deep & Representational": [
+        "ClusterGAN",
+        "VaDE",
+        "DCN",
+        "DeepGraphInfomax",
+        "sgSDC",
+        "scGCluster",
+        "JointRepresentationClustering",
+        "SequenceAutoencoder",
+        "HybridShapeSimilarityClustering",
+        "SubKMeans",
+        "CutESC",
+        "BPEnhancedHeterogeneousClustering"
+      ],
+      "Explainable": [
+        "NeuroSymbolicClustering",
+        "IDClust",
+        "CausalClustering",
+        "DCSSDECClustering"
+      ],
+      "Federated & Privacy": [
+        "FedCM",
+        "FedChae",
+        "IFCA",
+        "DFCA",
+        "RSSKMeans",
+        "UPAClustering",
+        "DifferentiallyPrivateClustering"
+      ],
+      "Quantum, Physics & Autonomous": [
+        "GroverQDPC",
+        "HQCClustering",
+        "QuantumEnhancedPatternRecognition",
+        "QuantumCybersecurityClustering",
+        "TorqueClustering",
+        "CGNET",
+        "RecursiveTopologicalHomogeneousEnergyClustering",
+        "CFDMappedClustering",
+        "BSFDA",
+        "DPPA",
+        "AutoLeiden",
+        "BOCEDSTSHC",
+        "CODAS",
+        "PCU",
+        "CSMOTE"
+      ]
+    },
+    "Hierarchical": {
+      "Base": [
+        "AgglomerativeClustering",
+        "FeatureAgglomeration",
+        "Birch"
+      ],
+      "Classic & Divisive": [
+        "DIANA",
+        "MONA",
+        "BisectingHC"
+      ],
+      "Robust & Representative-Based": [
+        "CURE",
+        "ROCK"
+      ],
+      "Graph & Community-Based": [
+        "Chameleon",
+        "SUBDUE",
+        "GirvanNewman",
+        "HSBM",
+        "LouvainHC",
+        "LeidenHC",
+        "Paris"
+      ],
+      "Large-Scale & Efficient Variants": [
+        "SLINK",
+        "CLINK",
+        "MC_UPGMA",
+        "LanceWilliams"
+      ],
+      "Online, Streaming & Distributed": [
+        "PERCH",
+        "GRINCH",
+        "DHC"
+      ],
+      "Conceptual & Incremental": [
+        "Cobweb",
+        "Labyrinth",
+        "UNIMEM"
+      ],
+      "Density-Based Hierarchical Hybrids": [
+        "tNEB",
+        "GaugingDelta",
+        "GaugingBeta"
+      ],
+      "Deep Learning & Modern AI": [
+        "DeepECT",
+        "DipDECK",
+        "LearningAugmentedHC",
+        "HierarchicalVAE",
+        "PAH",
+        "CellScope"
+      ],
+      "Constrained & Specialized": [
+        "ConstrainedHClust",
+        "COPKMeansHierarchical",
+        "SCHC",
+        "ClustGeo"
+      ]
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "base": [
+    "GeneralAttentionBlock",
+    "SentenceAttention",
+    "WordAttention",
+    "ContextAttention",
+    "GlobalAttention"
+  ],
+  "query": [
+    "MultiHeadedLatentAttention",
+    "MultiQueryAttention",
+    "GroupedQueryAttention",
+    "XAttention",
+    "LazyAttention"
+  ],
+  "sparse": [
+    "StrideSparseAttention",
+    "FixedSparseAttention",
+    "LocalAttention",
+    "CompressedOnlyAttention",
+    "WindowOnlyAttention",
+    "SparseOnlyAttention",
+    "NativeSparseAttention",
+    "PositionPersistantSparseAttention",
+    "PositionPersistantSparseAttentionTopK",
+    "PositionPersistantSparseAttentionRatio"
+  ],
+  "efficient": [
+    "QuantizableAttention",
+    "RetNetAttention",
+    "GatedDeltaNetAttention",
+    "S6Attention",
+    "PADReAttention",
+    "FlashAttention",
+    "FlashAttentionTurbo",
+    "FlashAttentionTurboSDPA",
+    "FlashAttentionTurboBackend",
+    "RingAttention",
+    "RingAttentionDistributed",
+    "StarAttention",
+    "StarAttentionMean",
+    "StarAttentionMax",
+    "StarAttentionAttn",
+    "LinearAttention",
+    "FAVOURPlusAttention",
+    "SlimAttention",
+    "LogLinearAttention",
+    "LogLinearAttentionParallel",
+    "LogLinearAttentionELU",
+    "LogLinearAttentionSoftplus",
+    "KVShiftingAttention"
+  ],
+  "heads": [
+    "LightningAttention",
+    "LightningAttentionFixedGate",
+    "LoGeRAttention",
+    "LoGeRAttentionTTT",
+    "LoGeRAttentionSWAOnly",
+    "LoGeRAttentionTTTOnly",
+    "KnockingHeadsAttention"
+  ],
+  "operators": [
+    "DropAttention",
+    "MirrorAttention",
+    "ReverseAttention",
+    "DifferentialAttention",
+    "DifferentialElementwiseAttention",
+    "ClusteringAttention",
+    "FuzzyClusteringAttention",
+    "HardClusteringAttention",
+    "CategorizationAttention",
+    "GaussianAttention",
+    "VariationalAttention"
+  ],
+  "structured": [
+    "StructuredAttention",
+    "TreeAttention",
+    "GraphAttention",
+    "HierarchicalAttention",
+    "TriangularAttention",
+    "LocationAttention"
+  ],
+  "adaptive": [
+    "AdaptiveAttention",
+    "AdaptiveBreadthAttention",
+    "SelectiveAttention",
+    "ForgettingAttention"
+  ],
+  "logical": [
+    "SequentialAttention",
+    "PermutationInvariantAttention",
+    "MultiModalAttention",
+    "CoAttention",
+    "BiLinearAttention"
+  ],
+  "vision": [
+    "PTCAAttention",
+    "ContextAnchorAttention",
+    "PKIAttention",
+    "ChannelAttention",
+    "SpatialAttention",
+    "ConvolutionalBlockAttention",
+    "AxialAttention",
+    "CrissCrossAttention",
+    "KAxAtAttention",
+    "TemporalAttention",
+    "S3DWindowAttention",
+    "S3DWindowAttentionRegular",
+    "S3DWindowAttentionShifted",
+    "EntropyGuidedAttention"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "classic": [
+    "SinusoidalPositionalEncoding",
+    "LearnedAbsolutePositionalEncoding",
+    "RoPEPositionalEncoding",
+    "ALiBIPositionalEncoding"
+  ],
+  "long_context": [
+    "YaRNPositionalEncoding",
+    "LongRoPEPositionalEncoding",
+    "NTKAwareRoPEPositionalEncoding",
+    "ReROPEPositionalEncoding",
+    "RoPEPlusPositionalEncoding"
+  ],
+  "multimodal": [
+    "PEGPositionalEncoding",
+    "Sinusoidal2DPositionalEncoding",
+    "PEFieldPositionalEncoding",
+    "SpiralROPEPositionalEncoding",
+    "CircleRoPEPositionalEncoding"
+  ],
+  "relative": [
+    "KERPLEPositionalEncoding",
+    "T5RelativePositionBias",
+    "URPEPositionalEncoding",
+    "ERPEPositionalEncoding"
+  ],
+  "structural": [
+    "SpectralPositionalEncoding",
+    "RWSEPositionalEncoding",
+    "HPEPositionalEncoding",
+    "TreeStructuredPositionalEncoding",
+    "MoireGTPositionalEncoding"
+  ],
+  "dynamic": [
+    "PaTHPositionalEncoding",
+    "SelectiveRoPEPositionalEncoding",
+    "CoPEPositionalEncoding",
+    "FusionGatedPositionalEncoding",
+    "NoPEPositionalEncoding"
+  ],
+  "functional": [
+    "PoPEPositionalEncoding",
+    "LFFPositionalEncoding",
+    "DFTPositionalEncoding",
+    "BSplinePositionalEncoding",
+    "WaveletStackPositionalEncoding"
+  ],
+  "timeseries": [
+    "DyWPEPositionalEncoding",
+    "WinStatPositionalEncoding",
+    "tAPEPositionalEncoding",
+    "StochasticPositionalEncoding",
+    "ConvSPEPositionalEncoding"
+  ],
+  "hybrid": [
+    "TUPEPositionalEncoding",
+    "RNoPEPositionalEncoding",
+    "QKNormRoPEPositionalEncoding",
+    "BPEPositionalEncoding",
+    "AbacusPositionalEncoding"
+  ],
+  "experimental": [
+    "GRAPEPositionalEncoding",
+    "SetEncodingPositionalEncoding",
+    "PPEPositionalEncoding",
+    "AlternativeWaveformsPositionalEncoding",
+    "DroPEPositionalEncoding"
+  ]
+}

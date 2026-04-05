@@ -1,0 +1,39 @@
+{
+  "feature_selection": {
+    "classes": [
+      "RFE",
+      "RFECV",
+      "SequentialFeatureSelector",
+      "VarianceThreshold",
+      "GenericUnivariateSelect",
+      "SelectFdr",
+      "SelectFpr",
+      "SelectFwe",
+      "SelectKBest",
+      "SelectPercentile",
+      "SelectFromModel"
+    ],
+    "functions": [
+      "f_classif",
+      "chi2",
+      "f_regression",
+      "r_regression",
+      "mutual_info_classif",
+      "mutual_info_regression"
+    ],
+    "covariance": [
+      "EmpiricalCovariance",
+      "EllipticEnvelope",
+      "LedoitWolf",
+      "MinCovDet",
+      "OAS",
+      "ShrunkCovariance",
+      "GraphicalLasso",
+      "GraphicalLassoCV",
+      "GraphicalRidge",
+      "GraphicalRidgeCV",
+      "GraphicalElasticNet",
+      "GraphicalElasticNetCV"
+    ]
+  }
+}
