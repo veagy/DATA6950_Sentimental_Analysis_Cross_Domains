@@ -14,3 +14,8 @@ Other/checkpoints/mlp_geLU_head_ddp/
 Other/checkpoints/moe/
 Other/checkpoints/pretrain/
 Other/checkpoints/transformer/
+
+# Dataset artifacts (generated or downloaded; keep out of version control)
+Dataset/processed/
+Dataset/raw/
+Dataset/transformed/
