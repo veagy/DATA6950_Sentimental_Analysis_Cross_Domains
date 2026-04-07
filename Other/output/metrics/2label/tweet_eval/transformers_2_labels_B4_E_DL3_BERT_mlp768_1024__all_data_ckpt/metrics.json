@@ -1,0 +1,47 @@
+{
+  "model_id": "transformers_2_labels_B4_E_DL3_BERT_mlp768_1024__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\transformers\\2_labels\\B4_E_DL3_BERT_mlp768_1024.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\2-labels\\all-data\\B4_E_DL3_BERT_mlp768_1024.safetensors",
+  "n_classes": 2,
+  "text_mode": true,
+  "safe_stem": "tweet_eval",
+  "class_name": "LLMModule",
+  "metrics": {
+    "n_samples": 730,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.5657534246575342,
+    "balanced_accuracy": 0.5370659775948505,
+    "hamming_loss": 0.43424657534246575,
+    "matthews_corrcoef": 0.07780206319773861,
+    "cohen_kappa": 0.07648040099930564,
+    "precision_macro": 0.5408269350399236,
+    "recall_macro": 0.5370659775948505,
+    "f1_macro": 0.5345539534051116,
+    "jaccard_macro": 0.3740636386267454,
+    "precision_micro": 0.5657534246575342,
+    "recall_micro": 0.5657534246575342,
+    "f1_micro": 0.5657534246575342,
+    "jaccard_micro": 0.3944603629417383,
+    "precision_weighted": 0.5532901798487289,
+    "recall_weighted": 0.5657534246575342,
+    "f1_weighted": 0.5553536009067267,
+    "jaccard_weighted": 0.3935662599580674,
+    "confusion_matrix": [
+      [
+        301,
+        127
+      ],
+      [
+        190,
+        112
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "y should be a 1d array, got an array of shape (730, 2) instead."
+  },
+  "original_stem": "tweet_eval"
+}

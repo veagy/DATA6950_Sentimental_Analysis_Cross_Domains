@@ -1,0 +1,47 @@
+{
+  "model_id": "feature_encoder_2_labels_FeatEnc_RNN__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\feature_encoder\\2_labels\\FeatEnc_RNN.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\2-labels\\all-data\\FeatEnc_RNN.safetensors",
+  "n_classes": 2,
+  "text_mode": false,
+  "safe_stem": "HRAST",
+  "class_name": "FeatureEncoderClassifier",
+  "metrics": {
+    "n_samples": 22322,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.4917570110205179,
+    "balanced_accuracy": 0.4846173950823538,
+    "hamming_loss": 0.5082429889794822,
+    "matthews_corrcoef": -0.03163948670332346,
+    "cohen_kappa": -0.031099023084276256,
+    "precision_macro": 0.48373069574026734,
+    "recall_macro": 0.4846173950823538,
+    "f1_macro": 0.4801104465643009,
+    "jaccard_macro": 0.31934322949870664,
+    "precision_micro": 0.4917570110205179,
+    "recall_micro": 0.4917570110205179,
+    "f1_micro": 0.4917570110205179,
+    "jaccard_micro": 0.32604627676953696,
+    "precision_weighted": 0.4856991323613649,
+    "recall_weighted": 0.4917570110205179,
+    "f1_weighted": 0.48469795893316703,
+    "jaccard_weighted": 0.3233254289752564,
+    "confusion_matrix": [
+      [
+        3818,
+        6685
+      ],
+      [
+        4660,
+        7159
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "y should be a 1d array, got an array of shape (22322, 2) instead."
+  },
+  "original_stem": "HRAST"
+}

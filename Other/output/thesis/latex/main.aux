@@ -1,0 +1,219 @@
+\relax 
+\citation{ref01,ref02,ref03,ref04}
+\citation{ref08}
+\citation{ref03,ref04}
+\citation{ref05,ref06}
+\citation{ref16,ref17,ref26,ref27}
+\citation{ref04,ref08}
+\citation{ref12}
+\citation{ref14}
+\citation{ref15}
+\citation{ref13}
+\citation{ref16,ref17}
+\citation{ref09,ref18,ref19,ref20,ref21}
+\citation{ref08}
+\citation{ref22,ref23,ref24,ref25,ref26,ref27,ref28,ref29}
+\citation{ref05,ref06,ref30}
+\citation{ref33}
+\citation{ref35}
+\citation{ref34}
+\citation{ref31}
+\citation{ref32}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
+\newlabel{sec:intro}{{I}{1}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {I-A}}Motivation}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {I-B}}Problem and Goal}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {I-C}}Research objectives }{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {I-D}}Contributions}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{}\protected@file@percent }
+\newlabel{sec:related}{{II}{2}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Methodology and System Design}{2}{}\protected@file@percent }
+\newlabel{sec:method}{{III}{2}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}High-Level Architecture}{2}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Mixture-of-experts schematic : input text, hierarchical reasoning block, parallel ML (TF--IDF + linear), DL (transformer encoders), and HRM experts, fused by a learned gating network.}}{2}{}\protected@file@percent }
+\newlabel{fig:capstone_moe}{{1}{2}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Preprocessing}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Expert Families}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-D}}HRM Formulation}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-E}}Ensemble Combination}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-F}}Validation protocol}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-G}}Software Stack}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-H}}Reporting scope}{2}{}\protected@file@percent }
+\citation{ref16,ref17,ref22}
+\citation{ref14,ref15}
+\citation{ref16,ref17}
+\citation{ref26,ref27,ref28,ref29}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Expert Families and Roles}}{3}{}\protected@file@percent }
+\newlabel{tab:experts}{{I}{3}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Datasets}{3}{}\protected@file@percent }
+\newlabel{sec:datasets}{{IV}{3}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Dataset inventory . Corpus sizes and label splits are \emph  {illustrative}; Table~\ref {tab:datasets} and \texttt  {output/dataset analysis/} rollups are canonical for this paper.}}{3}{}\protected@file@percent }
+\newlabel{fig:capstone_dataset_inv}{{5}{3}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces BERT-style baseline pipeline : text $\rightarrow $ contextual embeddings $\rightarrow $ downstream layer (illustrative; the implementation uses multiple encoder families).}}{3}{}\protected@file@percent }
+\newlabel{fig:capstone_bert}{{6}{3}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Experimental Setup and Evaluation Protocol}{3}{}\protected@file@percent }
+\newlabel{sec:exp_setup}{{V}{3}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Metrics and primary objective}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Data splits and stacking}{3}{}\protected@file@percent }
+\citation{ref05,ref06,ref30}
+\citation{ref16,ref17,ref22}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Public datasets (thesis scale and task).}}{4}{}\protected@file@percent }
+\newlabel{tab:datasets}{{II}{4}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Data Stems Inventory for Evaluation Pipelines.}}{4}{}\protected@file@percent }
+\newlabel{tab:processed_stems}{{III}{4}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Label distribution: processed IMDB slice (EDA chart).}}{4}{}\protected@file@percent }
+\newlabel{fig:labels_imdb}{{2}{4}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Label distribution: processed merged \texttt  {all-data} parquet (EDA).}}{4}{}\protected@file@percent }
+\newlabel{fig:labels_all}{{3}{4}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Label distribution: processed HRAST stem slice.}}{4}{}\protected@file@percent }
+\newlabel{fig:labels_hrast}{{4}{4}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}Optimization and early stopping}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-D}}Seeds and significance}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-E}}Cross-domain protocol}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-F}}Reproducibility (thesis)}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-G}}Repository HRAST slice (smoke-scale)}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-H}}Pipeline Milestones}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-I}}Framework architecture visuals }{4}{}\protected@file@percent }
+\newlabel{sec:capstone_visuals}{{\mbox  {V-I}}{4}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Ensemble training and evaluation workflow : per-expert training, MoE/baseline validation, fine-tuning, final ensembles, ablations, and cross-domain checks.}}{5}{}\protected@file@percent }
+\newlabel{fig:capstone_ensemble_pipe}{{7}{5}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Macro-F1 comparison, binary vs.\ ternary . Repository-wide ensemble and per-family metrics appear in Section~\ref {sec:thesis_results} and Appendix~\ref {app:hrast}.}}{5}{}\protected@file@percent }
+\newlabel{fig:capstone_ml_b3}{{8}{5}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Thesis-Scale Experimental Results}{5}{}\protected@file@percent }
+\newlabel{sec:thesis_results}{{VI}{5}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Global statistics}{5}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Cross-model performance comparison on 2-label classification tasks.}}{5}{}\protected@file@percent }
+\newlabel{fig:perf_2label}{{9}{5}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Performance by model type}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Performance by dataset}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-D}}Top ensembles and best singles}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-E}}Ensemble comparison}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-F}}Binary versus multi-class}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-G}}Visualized Performance Charts}{5}{}\protected@file@percent }
+\citation{ref33,ref35}
+\citation{ref03,ref34}
+\citation{ref36}
+\citation{ref04,ref08}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Global statistics (thesis-scale aggregate).}}{6}{}\protected@file@percent }
+\newlabel{tab:global_stats}{{IV}{6}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Mean macro-F1 by model type (thesis).}}{6}{}\protected@file@percent }
+\newlabel{tab:by_type}{{V}{6}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Mean macro-F1 by dataset (thesis).}}{6}{}\protected@file@percent }
+\newlabel{tab:by_dataset}{{VI}{6}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Selected thesis macro-F1 highlights (STACK1 vs.\ strong singles).}}{6}{}\protected@file@percent }
+\newlabel{tab:top_ensemble}{{VII}{6}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces Ensemble-level average macro-F1 (thesis summary).}}{6}{}\protected@file@percent }
+\newlabel{tab:ensemble_cmp}{{VIII}{6}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IX}{\ignorespaces Binary vs.\ multi-class mean macro-F1 (thesis).}}{6}{}\protected@file@percent }
+\newlabel{tab:bin_mc}{{IX}{6}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Experimental Results}{6}{}\protected@file@percent }
+\newlabel{sec:results}{{VII}{6}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-A}}Thesis-scale aggregates (all headline corpora)}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-B}}Repository HRAST slice (config-scan figures and appendix)}{6}{}\protected@file@percent }
+\newlabel{sec:hrast}{{\mbox  {VII-B}}{6}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Discussion}{6}{}\protected@file@percent }
+\newlabel{sec:discuss}{{VIII}{6}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Cross-model performance comparison on 3-label classification tasks.}}{7}{}\protected@file@percent }
+\newlabel{fig:perf_3label}{{10}{7}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces HRAST 3-label macro-F1 ranking (generated chart).}}{7}{}\protected@file@percent }
+\newlabel{fig:rank3}{{11}{7}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces HRAST 2-label macro-F1 ranking (generated chart).}}{7}{}\protected@file@percent }
+\newlabel{fig:rank2}{{12}{7}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Paired 2- vs.\ 3-label macro-F1 on HRAST.}}{7}{}\protected@file@percent }
+\newlabel{fig:paired}{{13}{7}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces HRAST metric heatmaps: 2-label (left) and 3-label (right).}}{7}{}\protected@file@percent }
+\newlabel{fig:heat_pair}{{14}{7}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-A}}Limitations and threats to validity}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Conclusion}{7}{}\protected@file@percent }
+\newlabel{sec:conclusion}{{IX}{7}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Eval status summaries: 2-label (left) and 3-label (right).}}{8}{}\protected@file@percent }
+\newlabel{fig:eval_pair}{{15}{8}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {X}{\ignorespaces Top HRAST 2-label experts by macro-F1 (config-scan; $n{=}20$ test slice).}}{8}{}\protected@file@percent }
+\newlabel{tab:hrast_top2}{{X}{8}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {XI}{\ignorespaces Top HRAST 3-label experts by macro-F1 (config-scan; $n{=}24$ test slice).}}{8}{}\protected@file@percent }
+\newlabel{tab:hrast_top3}{{XI}{8}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {X}System and Artifact Footprint}{8}{}\protected@file@percent }
+\newlabel{sec:artifacts}{{X}{8}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {XI}Repository Snapshot}{8}{}\protected@file@percent }
+\newlabel{sec:repository}{{XI}{8}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {XI-A}}Dataset alignment}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {XI-B}}Metrics rollups and failed loads}{8}{}\protected@file@percent }
+\bibstyle{IEEEtran}
+\citation{*}
+\bibdata{references}
+\bibcite{ref01}{1}
+\bibcite{ref02}{2}
+\bibcite{ref03}{3}
+\bibcite{ref04}{4}
+\bibcite{ref08}{5}
+\bibcite{ref05}{6}
+\bibcite{ref06}{7}
+\bibcite{ref16}{8}
+\bibcite{ref17}{9}
+\bibcite{ref26}{10}
+\bibcite{ref27}{11}
+\bibcite{ref12}{12}
+\bibcite{ref14}{13}
+\bibcite{ref15}{14}
+\bibcite{ref13}{15}
+\bibcite{ref09}{16}
+\bibcite{ref18}{17}
+\bibcite{ref19}{18}
+\bibcite{ref20}{19}
+\bibcite{ref21}{20}
+\bibcite{ref22}{21}
+\bibcite{ref23}{22}
+\bibcite{ref24}{23}
+\bibcite{ref25}{24}
+\bibcite{ref28}{25}
+\bibcite{ref29}{26}
+\bibcite{ref30}{27}
+\bibcite{ref33}{28}
+\bibcite{ref35}{29}
+\bibcite{ref34}{30}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Confusion matrix: 2-label RoBERTa expert on HRAST slice.}}{9}{}\protected@file@percent }
+\newlabel{fig:conf}{{16}{9}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {XI-C}}Reproducibility}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{9}{}\protected@file@percent }
+\bibcite{ref31}{31}
+\bibcite{ref32}{32}
+\bibcite{ref36}{33}
+\bibcite{ref07}{34}
+\bibcite{ref10}{35}
+\bibcite{ref11}{36}
+\bibcite{ref37}{37}
+\bibcite{ref38}{38}
+\bibcite{ref39}{39}
+\bibcite{ref40}{40}
+\bibcite{ref41}{41}
+\bibcite{ref42}{42}
+\bibcite{ref43}{43}
+\bibcite{ref44}{44}
+\bibcite{ref45}{45}
+\bibcite{ref46}{46}
+\bibcite{ref47}{47}
+\bibcite{ref48}{48}
+\bibcite{ref49}{49}
+\bibcite{ref50}{50}
+\bibcite{ref51}{51}
+\bibcite{ref52}{52}
+\bibcite{ref53}{53}
+\bibcite{ref54}{54}
+\bibcite{ref55}{55}
+\bibcite{ref56}{56}
+\bibcite{ref57}{57}
+\bibcite{ref58}{58}
+\bibcite{ref59}{59}
+\bibcite{ref60}{60}
+\bibcite{ref61}{61}
+\bibcite{ref62}{62}
+\bibcite{ref63}{63}
+\bibcite{ref64}{64}
+\bibcite{ref65}{65}
+\bibcite{ref66}{66}
+\bibcite{ref67}{67}
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  A: Full HRAST Metric Rollup}{11}{}\protected@file@percent }
+\newlabel{app:hrast}{{A}{11}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {XII}{\ignorespaces HRAST stem: models with successfully computed accuracy and macro-F1 (from \texttt  {output/metrics/summary.csv}). Rows with load or state errors are omitted here but retained in the CSV for debugging.}}{11}{}\protected@file@percent }
+\newlabel{tab:hrast_summary}{{XII}{11}{}{}{}}
+\gdef \@abspage@last{11}

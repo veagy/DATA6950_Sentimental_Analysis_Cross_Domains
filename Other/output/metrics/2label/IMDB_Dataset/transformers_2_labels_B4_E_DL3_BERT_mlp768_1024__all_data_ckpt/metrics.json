@@ -1,0 +1,47 @@
+{
+  "model_id": "transformers_2_labels_B4_E_DL3_BERT_mlp768_1024__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\transformers\\2_labels\\B4_E_DL3_BERT_mlp768_1024.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\2-labels\\all-data\\B4_E_DL3_BERT_mlp768_1024.safetensors",
+  "n_classes": 2,
+  "text_mode": true,
+  "safe_stem": "IMDB_Dataset",
+  "class_name": "LLMModule",
+  "metrics": {
+    "n_samples": 1000,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.896,
+    "balanced_accuracy": 0.8960235840943365,
+    "hamming_loss": 0.104,
+    "matthews_corrcoef": 0.7922373287302141,
+    "cohen_kappa": 0.7920091515973298,
+    "precision_macro": 0.8962137674634523,
+    "recall_macro": 0.8960235840943365,
+    "f1_macro": 0.895989598959896,
+    "jaccard_macro": 0.8115787435300759,
+    "precision_micro": 0.896,
+    "recall_micro": 0.896,
+    "f1_micro": 0.896,
+    "jaccard_micro": 0.8115942028985508,
+    "precision_weighted": 0.8962332008692208,
+    "recall_weighted": 0.896,
+    "f1_weighted": 0.8959875187518752,
+    "jaccard_weighted": 0.8115753301015168,
+    "confusion_matrix": [
+      [
+        453,
+        46
+      ],
+      [
+        58,
+        443
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "y should be a 1d array, got an array of shape (1000, 2) instead."
+  },
+  "original_stem": "IMDB_Dataset"
+}

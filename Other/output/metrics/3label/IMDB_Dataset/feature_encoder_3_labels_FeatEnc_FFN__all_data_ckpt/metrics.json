@@ -1,0 +1,54 @@
+{
+  "model_id": "feature_encoder_3_labels_FeatEnc_FFN__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\feature_encoder\\3_labels\\FeatEnc_FFN.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\3-labels\\all-data\\FeatEnc_FFN.safetensors",
+  "n_classes": 3,
+  "text_mode": false,
+  "safe_stem": "IMDB_Dataset",
+  "class_name": "FeatureEncoderClassifier",
+  "metrics": {
+    "n_samples": 1000,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.501,
+    "balanced_accuracy": 0.5019640078560315,
+    "hamming_loss": 0.499,
+    "matthews_corrcoef": 0.014772376082221933,
+    "cohen_kappa": 0.0039204413890021605,
+    "precision_macro": 0.5277777777777778,
+    "recall_macro": 0.5019640078560315,
+    "f1_macro": 0.3508005708791774,
+    "jaccard_macro": 0.2578029806909964,
+    "precision_micro": 0.501,
+    "recall_micro": 0.501,
+    "f1_micro": 0.501,
+    "jaccard_micro": 0.3342228152101401,
+    "precision_weighted": 0.5278333333333334,
+    "recall_weighted": 0.501,
+    "f1_weighted": 0.35017604102836314,
+    "jaccard_weighted": 0.2573266674604592,
+    "confusion_matrix": [
+      [
+        491,
+        8,
+        0
+      ],
+      [
+        491,
+        10,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "missing_class_in_y_true"
+  },
+  "original_stem": "IMDB_Dataset"
+}

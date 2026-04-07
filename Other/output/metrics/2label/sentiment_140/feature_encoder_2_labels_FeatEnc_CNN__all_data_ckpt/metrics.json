@@ -1,0 +1,47 @@
+{
+  "model_id": "feature_encoder_2_labels_FeatEnc_CNN__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\feature_encoder\\2_labels\\FeatEnc_CNN.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\2-labels\\all-data\\FeatEnc_CNN.safetensors",
+  "n_classes": 2,
+  "text_mode": false,
+  "safe_stem": "sentiment_140",
+  "class_name": "FeatureEncoderClassifier",
+  "metrics": {
+    "n_samples": 1000,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.917,
+    "balanced_accuracy": 0.917,
+    "hamming_loss": 0.083,
+    "matthews_corrcoef": 0.0,
+    "cohen_kappa": 0.0,
+    "precision_macro": 0.5,
+    "recall_macro": 0.4585,
+    "f1_macro": 0.47835159102764735,
+    "jaccard_macro": 0.4585,
+    "precision_micro": 0.917,
+    "recall_micro": 0.917,
+    "f1_micro": 0.917,
+    "jaccard_micro": 0.8467220683287165,
+    "precision_weighted": 1.0,
+    "recall_weighted": 0.917,
+    "f1_weighted": 0.9567031820552947,
+    "jaccard_weighted": 0.917,
+    "confusion_matrix": [
+      [
+        917,
+        83
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "missing_class_in_y_true"
+  },
+  "original_stem": "sentiment_140"
+}

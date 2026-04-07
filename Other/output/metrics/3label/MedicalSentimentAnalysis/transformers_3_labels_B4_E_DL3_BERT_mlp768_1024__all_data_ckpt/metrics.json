@@ -1,0 +1,54 @@
+{
+  "model_id": "transformers_3_labels_B4_E_DL3_BERT_mlp768_1024__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\transformers\\3_labels\\B4_E_DL3_BERT_mlp768_1024.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\3-labels\\all-data\\B4_E_DL3_BERT_mlp768_1024.safetensors",
+  "n_classes": 3,
+  "text_mode": true,
+  "safe_stem": "MedicalSentimentAnalysis",
+  "class_name": "LLMModule",
+  "metrics": {
+    "n_samples": 1000,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.963,
+    "balanced_accuracy": 0.9630000000000001,
+    "hamming_loss": 0.037,
+    "matthews_corrcoef": 0.9282770716637926,
+    "cohen_kappa": 0.926,
+    "precision_macro": 0.9652798713697115,
+    "recall_macro": 0.9630000000000001,
+    "f1_macro": 0.9629546194087757,
+    "jaccard_macro": 0.9285589269222749,
+    "precision_micro": 0.963,
+    "recall_micro": 0.963,
+    "f1_micro": 0.963,
+    "jaccard_micro": 0.9286403085824494,
+    "precision_weighted": 0.9652798713697116,
+    "recall_weighted": 0.963,
+    "f1_weighted": 0.9629546194087757,
+    "jaccard_weighted": 0.9285589269222748,
+    "confusion_matrix": [
+      [
+        499,
+        1,
+        0
+      ],
+      [
+        36,
+        464,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "missing_class_in_y_true"
+  },
+  "original_stem": "MedicalSentimentAnalysis"
+}

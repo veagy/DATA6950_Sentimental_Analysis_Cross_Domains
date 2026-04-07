@@ -1,0 +1,55 @@
+{
+  "model_id": "ml_3_labels_E_ML2_LinearSVC__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\ml\\3_labels\\E_ML2_LinearSVC.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\3-labels\\all-data\\E_ML2_LinearSVC.safetensors",
+  "n_classes": 3,
+  "text_mode": false,
+  "safe_stem": "tweet_eval",
+  "class_name": "LinearSVC",
+  "metrics": {
+    "n_samples": 1000,
+    "labels_present": [
+      0,
+      1,
+      2
+    ],
+    "accuracy": 0.303,
+    "balanced_accuracy": 0.3315126570526707,
+    "hamming_loss": 0.697,
+    "matthews_corrcoef": -0.01251786630599622,
+    "cohen_kappa": -0.0032761211646641364,
+    "precision_macro": 0.2160006318117201,
+    "recall_macro": 0.3315126570526707,
+    "f1_macro": 0.1668208747048182,
+    "jaccard_macro": 0.10653790704592782,
+    "precision_micro": 0.303,
+    "recall_micro": 0.303,
+    "f1_micro": 0.303,
+    "jaccard_micro": 0.1785503830288745,
+    "precision_weighted": 0.23931195703680305,
+    "recall_weighted": 0.303,
+    "f1_weighted": 0.15613530719622168,
+    "jaccard_weighted": 0.09907165839035219,
+    "confusion_matrix": [
+      [
+        9,
+        419,
+        0
+      ],
+      [
+        8,
+        294,
+        0
+      ],
+      [
+        9,
+        261,
+        0
+      ]
+    ],
+    "roc_auc_ovr_macro": 0.4984342761756297,
+    "roc_auc_skip_reason": null
+  },
+  "original_stem": "tweet_eval"
+}

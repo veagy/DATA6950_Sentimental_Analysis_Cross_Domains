@@ -1,0 +1,6 @@
+\section{System and Artifact Footprint}
+\label{sec:artifacts}
+
+The project tree exports a machine-readable catalog under \path{output/models/} (generated from \path{Code/thesis/} and checkpoints). The latest export lists: \textbf{75} configuration JSON files, \textbf{87} checkpoint weight files (\texttt{.safetensors} / \texttt{.joblib}), \textbf{6} MoE manifest summaries, \textbf{25} \path{run_meta.txt} traces, \textbf{52} Python modules under \path{Code/thesis/}, and \textbf{3} validation entrypoint scripts. Repository layout rollups appear in \path{output/path/summary_by_topdir.md} with a full file inventory in \path{output/path/inventory_all.csv}.
+
+This footprint supports swapping experts, ablations, and extended gating without rewriting the full pipeline; Section~\ref{sec:repository} documents dataset alignment and HRAST-specific evaluation outputs that consume the same configs.

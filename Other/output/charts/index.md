@@ -1,0 +1,91 @@
+# Generated charts
+
+- **Generated:** 2026-04-06T00:26:52.431779+00:00
+- **Repo root:** `.`
+- **DPI:** 180
+- **Format:** png
+- **Only:** all
+
+## Figures
+
+- `dataset_analysis\labels_processed__HRAST.parquet.png`
+- `dataset_analysis\labels_processed__IMDB_Dataset.parquet.png`
+- `dataset_analysis\labels_processed__MedicalSentimentAnalysis.parquet.png`
+- `dataset_analysis\labels_processed__PatientStatements.parquet.png`
+- `dataset_analysis\labels_processed__all-data.parquet.png`
+- `dataset_analysis\labels_processed__amazon_reviews.parquet.png`
+- `dataset_analysis\labels_processed__by_source_stem__HRAST.parquet.png`
+- `dataset_analysis\labels_processed__sentiment_140.parquet.png`
+- `dataset_analysis\labels_processed__tweet_eval.parquet.png`
+- `dataset_analysis\labels_processed__yelp_business.parquet.png`
+- `dataset_analysis\labels_processed__yelp_review.parquet.png`
+- `dataset_analysis\labels_raw__tweet_eval.parquet.png`
+- `dataset_analysis\labels_raw__yelp_business.parquet.png`
+- `dataset_analysis\labels_raw__yelp_review.parquet.png`
+- `dataset_analysis\labels_transformed__HRAST.parquet.png`
+- `dataset_analysis\labels_transformed__IMDB_Dataset.parquet.png`
+- `dataset_analysis\labels_transformed__MedicalSentimentAnalysis.parquet.png`
+- `dataset_analysis\labels_transformed__PatientStatements.parquet.png`
+- `dataset_analysis\labels_transformed__all-data.parquet.png`
+- `dataset_analysis\labels_transformed__amazon_reviews.parquet.png`
+- `dataset_analysis\labels_transformed__by_source_stem__HRAST.parquet.png`
+- `dataset_analysis\labels_transformed__sentiment_140.parquet.png`
+- `dataset_analysis\labels_transformed__tweet_eval.parquet.png`
+- `dataset_analysis\labels_transformed__yelp_business.parquet.png`
+- `dataset_analysis\labels_transformed__yelp_review.parquet.png`
+- `dataset_analysis\stem_labels_processed__all-data.parquet.png`
+- `dataset_analysis\stem_labels_processed__by_source_stem__HRAST.parquet.png`
+- `dataset_analysis\stem_labels_transformed__all-data.parquet.png`
+- `dataset_analysis\stem_labels_transformed__by_source_stem__HRAST.parquet.png`
+- `dataset_analysis\text_length_processed__HRAST.parquet.png`
+- `dataset_analysis\text_length_processed__IMDB_Dataset.parquet.png`
+- `dataset_analysis\text_length_processed__MedicalSentimentAnalysis.parquet.png`
+- `dataset_analysis\text_length_processed__PatientStatements.parquet.png`
+- `dataset_analysis\text_length_processed__all-data.parquet.png`
+- `dataset_analysis\text_length_processed__amazon_reviews.parquet.png`
+- `dataset_analysis\text_length_processed__by_source_stem__HRAST.parquet.png`
+- `dataset_analysis\text_length_processed__sentiment_140.parquet.png`
+- `dataset_analysis\text_length_processed__tweet_eval.parquet.png`
+- `dataset_analysis\text_length_processed__yelp_business.parquet.png`
+- `dataset_analysis\text_length_processed__yelp_review.parquet.png`
+- `dataset_analysis\text_length_raw__tweet_eval.parquet.png`
+- `dataset_analysis\text_length_raw__yelp_business.parquet.png`
+- `dataset_analysis\text_length_raw__yelp_review.parquet.png`
+- `metrics\2label\eval_status.png`
+- `metrics\2label\grouped_f1_macro_weighted_HRAST.png`
+- `metrics\2label\heatmap_metrics_HRAST.png`
+- `metrics\2label\ranking_f1_HRAST.png`
+- `metrics\3label\eval_status.png`
+- `metrics\3label\grouped_f1_macro_weighted_HRAST.png`
+- `metrics\3label\heatmap_metrics_HRAST.png`
+- `metrics\3label\ranking_f1_HRAST.png`
+- `metrics\3label\roc_auc_HRAST.png`
+- `metrics\combined\paired_f1_HRAST.png`
+- `metrics\confusion\2label_HRAST_feature_encoder_2_labels_FeatEnc_CNN__all_data_ckpt.png`
+- `metrics\confusion\2label_HRAST_feature_encoder_2_labels_FeatEnc_FFN__all_data_ckpt.png`
+- `metrics\confusion\2label_HRAST_feature_encoder_2_labels_FeatEnc_GRU__all_data_ckpt.png`
+- `metrics\confusion\2label_HRAST_feature_encoder_2_labels_FeatEnc_LSTM__all_data_ckpt.png`
+- `metrics\confusion\2label_HRAST_feature_encoder_2_labels_FeatEnc_RNN__all_data_ckpt.png`
+- `metrics\confusion\2label_HRAST_ml_2_labels_E_ML1_LogisticRegression__all_data_ckpt.png`
+- `metrics\confusion\2label_HRAST_ml_2_labels_E_ML2_LinearSVC__all_data_ckpt.png`
+- `metrics\confusion\2label_HRAST_ml_2_labels_E_ML3_DecisionTreeClassifier__all_data_ckpt.png`
+- `metrics\confusion\2label_HRAST_transformers_2_labels_B3_E_DL1_DistilBERT_mlp768_1024__all_data_ckpt.png`
+- `metrics\confusion\2label_HRAST_transformers_2_labels_B4_E_DL3_BERT_mlp768_1024__all_data_ckpt.png`
+- `metrics\confusion\2label_HRAST_transformers_2_labels_B5_E_DL2_RoBERTa_mlp768_1024__all_data_ckpt.png`
+- `metrics\confusion\3label_HRAST_feature_encoder_3_labels_FeatEnc_CNN__all_data_ckpt.png`
+- `metrics\confusion\3label_HRAST_feature_encoder_3_labels_FeatEnc_FFN__all_data_ckpt.png`
+- `metrics\confusion\3label_HRAST_feature_encoder_3_labels_FeatEnc_GRU__all_data_ckpt.png`
+- `metrics\confusion\3label_HRAST_feature_encoder_3_labels_FeatEnc_LSTM__all_data_ckpt.png`
+- `metrics\confusion\3label_HRAST_feature_encoder_3_labels_FeatEnc_RNN__all_data_ckpt.png`
+- `metrics\confusion\3label_HRAST_ml_3_labels_E_ML2_LinearSVC__all_data_ckpt.png`
+- `metrics\confusion\3label_HRAST_moe_uniform__experts_all_data_3label.png`
+- `metrics\confusion\3label_HRAST_transformers_3_labels_B3_E_DL1_DistilBERT_mlp768_1024__all_data_ckpt.png`
+- `metrics\confusion\3label_HRAST_transformers_3_labels_B4_E_DL3_BERT_mlp768_1024__all_data_ckpt.png`
+- `metrics\confusion\3label_HRAST_transformers_3_labels_B5_E_DL2_RoBERTa_mlp768_1024__all_data_ckpt.png`
+- `metrics\scatter_accuracy_f1_summary.png`
+- `models\checkpoints_top25.png`
+- `models\configs_by_model_class.png`
+- `models\logs_size_hist.png`
+- `models\moe_manifest_experts.png`
+- `path\topdir_bytes.png`
+- `path\topdir_file_count.png`

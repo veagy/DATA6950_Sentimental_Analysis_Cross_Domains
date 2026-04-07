@@ -1,0 +1,61 @@
+{
+  "path": "D:\\CAPSTONE\\new\\TEMP\\data\\processed\\amazon_reviews.parquet",
+  "relative_to_data_root": "processed/amazon_reviews.parquet",
+  "file_size_bytes": 265267022,
+  "num_rows_metadata": 1048575,
+  "num_row_groups": 5,
+  "compression": "SNAPPY",
+  "column_names": [
+    "text",
+    "sentiment_value"
+  ],
+  "sampled_for_deep_stats": true,
+  "sample_max_rows_cap": 10000,
+  "dedupe_key_columns": null,
+  "deep_stats_row_count": 10000,
+  "deep_stats_mode": "sampled",
+  "columns_profile": {
+    "text": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 9998
+    },
+    "sentiment_value": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 2
+    }
+  },
+  "inferred_text_column": "text",
+  "inferred_label_column": "sentiment_value",
+  "inferred_features_column": null,
+  "source_stem_column": null,
+  "label_raw_value_counts_top20": {
+    "0": 5098,
+    "1": 4902
+  },
+  "label_distribution_normalized_3": {
+    "0": 5098,
+    "1": 4902,
+    "_skipped_normalization": 0
+  },
+  "label_distribution_normalized_2": {
+    "0": 5098,
+    "1": 4902,
+    "_skipped_normalization": 0
+  },
+  "text_length_stats_sample": {
+    "n_empty_text": 0,
+    "char_len_min": 1,
+    "char_len_max": 1002,
+    "char_len_mean": 411.3028,
+    "char_len_std": 236.0315737407609,
+    "char_len_p50": 361.0,
+    "char_len_p90": 776.0,
+    "char_len_p95": 871.0499999999993,
+    "char_len_p99": 965.0,
+    "word_count_mean": 75.2388
+  },
+  "dedupe_rate_key_sample": 0.00019999999999997797,
+  "analysis_error": null
+}

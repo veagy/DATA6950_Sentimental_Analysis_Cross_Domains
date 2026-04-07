@@ -1,0 +1,30 @@
+\section{Experimental Setup and Evaluation Protocol}
+\label{sec:exp_setup}
+
+This section condenses the thesis validation plan~\cite{ref16,ref17,ref22}: how metrics, splits, and seeds are chosen so that Section~\ref{sec:thesis_results} and the HRAST slice in Section~\ref{sec:hrast} remain comparable.
+
+\subsection{Metrics and primary objective}
+\textbf{Macro-F1} is the primary score: it treats classes equally and is appropriate under imbalance (e.g., Sentiment140 and TweetEval Feminism). We also report accuracy, precision, recall, and AUROC where available, plus engineering measures (latency, memory, parameter count) in the full thesis. Macro-F1 aligns with common practice in social and review sentiment benchmarks~\cite{ref14,ref15}.
+
+\subsection{Data splits and stacking}
+Experts are trained on stratified \textbf{train / validation / test} partitions. Stacking (STACK1 and variants) uses \textbf{$k$-fold cross-validation} with $k=5$ to build \textbf{out-of-fold} meta-features for the meta-learner, avoiding leakage onto the held-out test set~\cite{ref16,ref17}. MoE gating uses dense softmax or sparse top-$K$ routing as in Section~\ref{sec:method}~\cite{ref26,ref27,ref28,ref29}.
+
+\subsection{Optimization and early stopping}
+Training follows weighted cross-entropy under class imbalance, AdamW optimization, learning-rate warmup and decay, gradient clipping, and \textbf{early stopping on validation macro-F1}. Transformer families use learning rates on the order of $2\times10^{-5}$; linear baselines use stronger rates (e.g., $\sim\!10^{-3}$), consistent with the implementation report.
+
+\subsection{Seeds and significance}
+Multiple random seeds (e.g., 42, 123, 456 / 2024 in the thesis) support stability checks. Where the thesis reports them, paired tests, 95\% confidence intervals, and Cohen's $d$ quantify differences between systems; we do not duplicate those tables here.
+
+\subsection{Cross-domain protocol}
+The thesis includes \textbf{cross-domain} settings (e.g., train on Sentiment140, evaluate on Amazon) to stress domain shift~\cite{ref05,ref06,ref30}. Aggregates in Section~\ref{sec:thesis_results} pool all in-domain experiment rows unless noted.
+
+\subsection{Reproducibility (thesis)}
+The thesis emphasizes \textbf{fixed seeds}, logged hyperparameters, retained checkpoints (best, last, and periodic), and optional containerized environments. Experiment tracking (Weights \& Biases or MLflow in the original setup) records learning curves and metric traces so that ensemble and MoE comparisons can be audited later. We do not restate runbooks here; Section~\ref{sec:artifacts} points to exported indexes under \path{output/models/}.
+
+Representative shell entry points from the thesis appendix include installing dependencies and invoking training or ensemble evaluation with dataset and model identifiers. In this repository checkout, analogous automation appears under \path{Code/thesis/} with configs driving which experts are materialized and which checkpoints are loaded for HRAST smoke tests.
+
+\subsection{Repository HRAST slice (smoke-scale)}
+Per-stem HRAST evaluation (Section~\ref{sec:hrast}) uses checkpoints discovered from \path{Code/thesis/config/} and writes one row per model$\times$label mode in \path{output/metrics/summary.csv}. Sample sizes are \textbf{small} (order of tens of labeled points per model in the latest profile); they are appropriate for regression and config scans, not for claims comparable to full-corpus Section~\ref{sec:thesis_results}.
+
+\subsection{Pipeline Milestones}
+The validation framework is organized into four pipeline phases: \textbf{preprocessing} (deduplication, URL/emoji handling, tokenization, stratified splits); \textbf{expert training} for ML, DL, and HRM families on binary and three-class heads where applicable; \textbf{combination} via stacking meta-learners and gating networks with held-out testing; and \textbf{downstream analysis} including ablations, robustness checks, and cross-domain sampling. Those milestones informed the thesis validation plan~\cite{ref16,ref17,ref22} and are visualized in Section~\ref{sec:capstone_visuals}; they do not replace the numerical tables in Section~\ref{sec:thesis_results}.

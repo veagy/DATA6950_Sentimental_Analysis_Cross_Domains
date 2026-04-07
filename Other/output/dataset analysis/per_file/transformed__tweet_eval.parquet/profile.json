@@ -1,0 +1,70 @@
+{
+  "path": "D:\\CAPSTONE\\new\\TEMP\\data\\transformed\\tweet_eval.parquet",
+  "relative_to_data_root": "transformed/tweet_eval.parquet",
+  "file_size_bytes": 83058865,
+  "num_rows_metadata": 200721,
+  "num_row_groups": 3,
+  "compression": "SNAPPY",
+  "column_names": [
+    "features_100d",
+    "sentiment_value",
+    "__index_level_0__"
+  ],
+  "sampled_for_deep_stats": true,
+  "sample_max_rows_cap": 10000,
+  "dedupe_key_columns": null,
+  "deep_stats_row_count": 10000,
+  "deep_stats_mode": "sampled",
+  "columns_profile": {
+    "features_100d": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": null,
+      "n_distinct_note": "skipped (unhashable / nested values)"
+    },
+    "sentiment_value": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 20
+    }
+  },
+  "inferred_text_column": null,
+  "inferred_label_column": "sentiment_value",
+  "inferred_features_column": "features_100d",
+  "source_stem_column": null,
+  "label_raw_value_counts_top20": {
+    "0": 2192,
+    "1": 969,
+    "2": 934,
+    "4": 782,
+    "7": 529,
+    "3": 521,
+    "18": 490,
+    "6": 426,
+    "11": 338,
+    "17": 338,
+    "8": 328,
+    "5": 312,
+    "10": 266,
+    "12": 240,
+    "15": 238,
+    "14": 236,
+    "13": 228,
+    "9": 227,
+    "16": 226,
+    "19": 180
+  },
+  "label_distribution_normalized_3": {
+    "0": 4233,
+    "1": 3125,
+    "2": 2642,
+    "_skipped_normalization": 0
+  },
+  "label_distribution_normalized_2": {
+    "0": 4233,
+    "1": 3125,
+    "_skipped_normalization": 2642
+  },
+  "dedupe_rate_key_sample": null,
+  "analysis_error": null
+}

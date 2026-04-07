@@ -1,0 +1,10 @@
+{
+  "dataset_stem": "amazon_reviews",
+  "label_mode": 3,
+  "model_id": "hrm_finetune__amazon_reviews__3label",
+  "error": "missing_checkpoint:D:\\CAPSTONE\\new\\TEMP\\checkpoints\\hrm\\fine-tune\\amazon_reviews\\3-labels\\E_HRM1_4Level_ft_mlp_3label.safetensors",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\hrm\\E_HRM1_4Level_ft_mlp_3label.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\hrm\\fine-tune\\amazon_reviews\\3-labels\\E_HRM1_4Level_ft_mlp_3label.safetensors",
+  "class_name": "",
+  "metrics": null
+}

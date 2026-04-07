@@ -1,0 +1,90 @@
+\section{Datasets}
+\label{sec:datasets}
+
+Table~\ref{tab:datasets} summarizes the four public corpora used in the thesis narrative. The repository additionally profiles processed and transformed Parquet under \path{data/} with rollups in \path{output/dataset analysis/}.
+
+Across these sources, missingness is generally low and duplicate rates are small in the processed slices; what drives modeling choices is the spread of document length (truncation limits for transformers), class priors (Sentiment140 is strongly skewed, on the order of one-quarter vs.\ three-quarters in the thesis profile), and stance ambiguity in multi-class Twitter tasks. Those factors motivate class weighting, balanced sampling or focal-style objectives where used, and careful calibration of maximum sequence length per expert family.
+
+\begin{table*}[t]
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \caption{Public datasets (thesis scale and task).}
+    \label{tab:datasets}
+    \resizebox{\linewidth}{!}{
+    \begin{tabular}{@{}lccp{0.36\linewidth}@{}}
+      \toprule
+      \textbf{Dataset} & \textbf{Scale} & \textbf{Task} & \textbf{Notes} \\
+      \midrule
+      Sentiment140 & $\sim$1.05M tweets & Binary & Imbalanced, noisy \\
+      IMDB & 50K reviews & Binary & Balanced, long text \\
+      Amazon & $\sim$4M reviews & Binary & Product lexicon \\
+      TweetEval Feminism & $\sim$60K tweets & 3-class & Stance \\
+      \bottomrule
+    \end{tabular}
+    }
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \caption{Data Stems Inventory for Evaluation Pipelines.}
+    \label{tab:processed_stems}
+    \resizebox{\linewidth}{!}{
+    \begin{tabular}{@{}ll@{}}
+      \toprule
+      \textbf{Stem (filename)} & \textbf{Role in this repository} \\
+      \midrule
+      \texttt{amazon\_reviews} & Reviews / e-commerce slice \\
+      \texttt{HRAST} & Multi-domain HRAST corpus (eval stem for config-scan) \\
+      \texttt{IMDB\_Dataset} & Long-form movie reviews \\
+      \texttt{MedicalSentimentAnalysis} & Clinical text sentiment \\
+      \texttt{PatientStatements} & Patient-statement sentiment \\
+      \texttt{sentiment\_140} & Twitter-scale social binary \\
+      \texttt{tweet\_eval} & TweetEval tasks (e.g., stance / multi-class) \\
+      \texttt{yelp\_business} & Yelp business / review text \\
+      \bottomrule
+    \end{tabular}
+    }
+  \end{minipage}
+\end{table*}
+
+Merged corpus statistics and per-file profiles appear in \path{output/dataset analysis/alignment_report.md} and per-file \path{report.md} files (IMDB, Amazon sample, Sentiment140, Yelp, HRAST stem slice, etc.). The combined processed/transformed Parquet merge in the repository profile reaches on the order of \textbf{9.5M} rows with matching \path{source_stem} distributions between processed and transformed exports (see the implementation report). The HRAST stem slice used for lightweight per-config evaluation is much smaller (order $10^3$--$10^4$ rows depending on export) and is documented under \path{data/processed/by_source_stem/} and \path{output/dataset analysis/}.
+
+Figure~\ref{fig:capstone_dataset_inv} shows a multi-domain inventory from initial framework planning; \textbf{canonical scales} for the four headline corpora remain Table~\ref{tab:datasets}.
+
+\begin{figure*}[t]
+  \begin{minipage}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{fig_labels_imdb.png}
+    \caption{Label distribution: processed IMDB slice (EDA chart).}
+    \label{fig:labels_imdb}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{fig_labels_alldata.png}
+    \caption{Label distribution: processed merged \texttt{all-data} parquet (EDA).}
+    \label{fig:labels_all}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{fig_labels_hrast.png}
+    \caption{Label distribution: processed HRAST stem slice.}
+    \label{fig:labels_hrast}
+  \end{minipage}
+\end{figure*}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{fig_capstone_dataset_inventory.png}
+  \caption{Dataset inventory . Corpus sizes and label splits are \emph{illustrative}; Table~\ref{tab:datasets} and \texttt{output/dataset analysis/} rollups are canonical for this paper.}
+  \label{fig:capstone_dataset_inv}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{fig_capstone_bert_pipeline.png}
+  \caption{BERT-style baseline pipeline : text $\rightarrow$ contextual embeddings $\rightarrow$ downstream layer (illustrative; the implementation uses multiple encoder families).}
+  \label{fig:capstone_bert}
+\end{figure}
+
+
+Note: Parquet stems here are used for per-stem pipelines (excluding merged \texttt{all-data.parquet}). Training uses \texttt{all-data} checkpoints where configured. Thesis-scale headline metrics for Sentiment140, IMDB, Amazon, and TweetEval appear in Section~\ref{sec:thesis_results}. Appendix~\ref{app:hrast} gives a repository \emph{config-scan} rollup on the HRAST slice only (smoke-scale $n$).
+

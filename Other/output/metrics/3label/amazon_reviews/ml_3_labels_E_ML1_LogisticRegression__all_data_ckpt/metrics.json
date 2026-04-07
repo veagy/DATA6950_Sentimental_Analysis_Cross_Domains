@@ -1,0 +1,11 @@
+{
+  "model_id": "ml_3_labels_E_ML1_LogisticRegression__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\ml\\3_labels\\E_ML1_LogisticRegression.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\3-labels\\all-data\\E_ML1_LogisticRegression.safetensors",
+  "n_classes": 3,
+  "text_mode": false,
+  "safe_stem": "amazon_reviews",
+  "error": "load_model: Error(s) in loading state_dict for LogisticRegression:\n\tsize mismatch for _weights: copying a param with shape torch.Size([3, 100]) from checkpoint, the shape in current model is torch.Size([2, 100]).\n\tsize mismatch for _bias: copying a param with shape torch.Size([3]) from checkpoint, the shape in current model is torch.Size([2]).",
+  "original_stem": "amazon_reviews"
+}

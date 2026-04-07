@@ -1,0 +1,47 @@
+{
+  "model_id": "feature_encoder_2_labels_FeatEnc_LSTM__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\feature_encoder\\2_labels\\FeatEnc_LSTM.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\2-labels\\all-data\\FeatEnc_LSTM.safetensors",
+  "n_classes": 2,
+  "text_mode": false,
+  "safe_stem": "IMDB_Dataset",
+  "class_name": "FeatureEncoderClassifier",
+  "metrics": {
+    "n_samples": 1000,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.501,
+    "balanced_accuracy": 0.5,
+    "hamming_loss": 0.499,
+    "matthews_corrcoef": 0.0,
+    "cohen_kappa": 0.0,
+    "precision_macro": 0.2505,
+    "recall_macro": 0.5,
+    "f1_macro": 0.33377748167888077,
+    "jaccard_macro": 0.2505,
+    "precision_micro": 0.501,
+    "recall_micro": 0.501,
+    "f1_micro": 0.501,
+    "jaccard_micro": 0.3342228152101401,
+    "precision_weighted": 0.25100100000000003,
+    "recall_weighted": 0.501,
+    "f1_weighted": 0.3344450366422385,
+    "jaccard_weighted": 0.25100100000000003,
+    "confusion_matrix": [
+      [
+        0,
+        499
+      ],
+      [
+        0,
+        501
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "y should be a 1d array, got an array of shape (1000, 2) instead."
+  },
+  "original_stem": "IMDB_Dataset"
+}

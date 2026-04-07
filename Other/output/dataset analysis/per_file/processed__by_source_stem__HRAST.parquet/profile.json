@@ -1,0 +1,74 @@
+{
+  "path": "/home/ubuntu/CAPSTONE/TEMP/data/processed/by_source_stem/HRAST.parquet",
+  "relative_to_data_root": "processed/by_source_stem/HRAST.parquet",
+  "file_size_bytes": 129588,
+  "num_rows_metadata": 4000,
+  "num_row_groups": 1,
+  "compression": "SNAPPY",
+  "column_names": [
+    "text",
+    "sentiment_value",
+    "source_stem"
+  ],
+  "sampled_for_deep_stats": false,
+  "sample_max_rows_cap": 10000,
+  "dedupe_key_columns": null,
+  "deep_stats_row_count": 4000,
+  "deep_stats_mode": "exact_window",
+  "columns_profile": {
+    "text": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 3999
+    },
+    "sentiment_value": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "min": 0.0,
+      "max": 2.0,
+      "mean": 0.629
+    },
+    "source_stem": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 1
+    }
+  },
+  "inferred_text_column": "text",
+  "inferred_label_column": "sentiment_value",
+  "inferred_features_column": null,
+  "source_stem_column": "source_stem",
+  "label_raw_value_counts_top20": {
+    "1": 2042,
+    "0": 1721,
+    "2": 237
+  },
+  "label_distribution_normalized_3": {
+    "0": 1721,
+    "1": 2042,
+    "2": 237,
+    "_skipped_normalization": 0
+  },
+  "label_distribution_normalized_2": {
+    "0": 1721,
+    "1": 2042,
+    "_skipped_normalization": 237
+  },
+  "source_stem_value_counts_sample": {
+    "HRAST": 4000
+  },
+  "text_length_stats_sample": {
+    "n_empty_text": 0,
+    "char_len_min": 7,
+    "char_len_max": 439,
+    "char_len_mean": 54.6745,
+    "char_len_std": 36.301707993575356,
+    "char_len_p50": 44.0,
+    "char_len_p90": 100.0,
+    "char_len_p95": 124.0,
+    "char_len_p99": 179.01999999999953,
+    "word_count_mean": 9.467
+  },
+  "dedupe_rate_key_sample": 0.00024999999999997247,
+  "analysis_error": null
+}

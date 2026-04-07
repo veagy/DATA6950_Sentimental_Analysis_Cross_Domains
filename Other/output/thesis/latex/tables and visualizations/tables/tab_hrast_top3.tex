@@ -1,0 +1,15 @@
+\begin{table*}[t]
+  \centering
+  \caption{Top HRAST 3-label experts by macro-F1 (config-scan; $n{=}24$ test slice).}
+  \label{tab:hrast_top3}
+  \begin{tabular}{@{}lccc@{}}
+    \toprule
+    \textbf{Model} & \textbf{Accuracy} & \textbf{F1\textsubscript{macro}} & \textbf{ROC-AUC OVR} \\
+    \midrule
+    RoBERTa (B5 E-DL2) & 0.667 & 0.485 & 0.795 \\
+    BERT (B4 E-DL3) & 0.625 & 0.458 & 0.758 \\
+    DistilBERT (B3 E-DL1) & 0.583 & 0.424 & 0.745 \\
+    Linear SVM (E-ML2) & 0.500 & 0.282 & 0.510 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}

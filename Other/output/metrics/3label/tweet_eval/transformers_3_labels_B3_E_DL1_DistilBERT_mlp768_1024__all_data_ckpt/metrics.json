@@ -1,0 +1,55 @@
+{
+  "model_id": "transformers_3_labels_B3_E_DL1_DistilBERT_mlp768_1024__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\transformers\\3_labels\\B3_E_DL1_DistilBERT_mlp768_1024.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\3-labels\\all-data\\B3_E_DL1_DistilBERT_mlp768_1024.safetensors",
+  "n_classes": 3,
+  "text_mode": true,
+  "safe_stem": "tweet_eval",
+  "class_name": "LLMModule",
+  "metrics": {
+    "n_samples": 1000,
+    "labels_present": [
+      0,
+      1,
+      2
+    ],
+    "accuracy": 0.369,
+    "balanced_accuracy": 0.3329586151933535,
+    "hamming_loss": 0.631,
+    "matthews_corrcoef": -0.0039070363347191465,
+    "cohen_kappa": -0.0037317825067524346,
+    "precision_macro": 0.32676491274101443,
+    "recall_macro": 0.3329586151933535,
+    "f1_macro": 0.31425800449954144,
+    "jaccard_macro": 0.19495604265050936,
+    "precision_micro": 0.369,
+    "recall_micro": 0.369,
+    "f1_micro": 0.369,
+    "jaccard_micro": 0.22624156958920907,
+    "precision_weighted": 0.3406144255556406,
+    "recall_weighted": 0.369,
+    "f1_weighted": 0.3405034630635148,
+    "jaccard_weighted": 0.21369063975764055,
+    "confusion_matrix": [
+      [
+        238,
+        143,
+        47
+      ],
+      [
+        167,
+        108,
+        27
+      ],
+      [
+        170,
+        77,
+        23
+      ]
+    ],
+    "roc_auc_ovr_macro": 0.524316211856696,
+    "roc_auc_skip_reason": null
+  },
+  "original_stem": "tweet_eval"
+}
