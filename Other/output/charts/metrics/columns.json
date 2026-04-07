@@ -1,0 +1,10 @@
+{
+  "columns": [
+    "n_samples",
+    "accuracy",
+    "balanced_accuracy",
+    "f1_macro",
+    "roc_auc_ovr_macro"
+  ],
+  "comment": "Subset for HRM fine-tune paper tables; omit file to use full eval scalar set."
+}

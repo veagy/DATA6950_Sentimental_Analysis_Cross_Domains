@@ -1,0 +1,50 @@
+{
+  "path": "D:\\CAPSTONE\\new\\TEMP\\data\\transformed\\PatientStatements.parquet",
+  "relative_to_data_root": "transformed/PatientStatements.parquet",
+  "file_size_bytes": 1218558,
+  "num_rows_metadata": 2000,
+  "num_row_groups": 1,
+  "compression": "SNAPPY",
+  "column_names": [
+    "features_100d",
+    "sentiment_value"
+  ],
+  "sampled_for_deep_stats": false,
+  "sample_max_rows_cap": 10000,
+  "dedupe_key_columns": null,
+  "deep_stats_row_count": 2000,
+  "deep_stats_mode": "exact_window",
+  "columns_profile": {
+    "features_100d": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": null,
+      "n_distinct_note": "skipped (unhashable / nested values)"
+    },
+    "sentiment_value": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 2
+    }
+  },
+  "inferred_text_column": null,
+  "inferred_label_column": "sentiment_value",
+  "inferred_features_column": "features_100d",
+  "source_stem_column": null,
+  "label_raw_value_counts_top20": {
+    "0": 1000,
+    "1": 1000
+  },
+  "label_distribution_normalized_3": {
+    "0": 1000,
+    "1": 1000,
+    "_skipped_normalization": 0
+  },
+  "label_distribution_normalized_2": {
+    "0": 1000,
+    "1": 1000,
+    "_skipped_normalization": 0
+  },
+  "dedupe_rate_key_sample": null,
+  "analysis_error": null
+}

@@ -1,0 +1,841 @@
+[
+  {
+    "relative_path": "Code\\thesis\\config\\b11_cnn_lstm_stack\\2_labels\\B11_CNN_LSTM_stack.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T02:06:50+00:00",
+    "top_keys": [
+      "_comment",
+      "B11StackedCNNLSTMGeLUHeadDDP"
+    ],
+    "json_top_keys": [
+      "_comment",
+      "B11StackedCNNLSTMGeLUHeadDDP"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\b11_cnn_lstm_stack\\3_labels\\B11_CNN_LSTM_stack.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T02:06:52+00:00",
+    "top_keys": [
+      "_comment",
+      "B11StackedCNNLSTMGeLUHeadDDP"
+    ],
+    "json_top_keys": [
+      "_comment",
+      "B11StackedCNNLSTMGeLUHeadDDP"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\cnn\\2_labels\\B9_CNN_Text.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "CNNetworks",
+    "json_top_keys": [
+      "CNNetworks"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\cnn\\3_labels\\B9_CNN_Text.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "CNNetworks",
+    "json_top_keys": [
+      "CNNetworks"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\feature_encoder\\2_labels\\FeatEnc_CNN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeatureEncoderClassifier",
+    "json_top_keys": [
+      "FeatureEncoderClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\feature_encoder\\2_labels\\FeatEnc_FFN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeatureEncoderClassifier",
+    "json_top_keys": [
+      "FeatureEncoderClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\feature_encoder\\2_labels\\FeatEnc_GRU.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeatureEncoderClassifier",
+    "json_top_keys": [
+      "FeatureEncoderClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\feature_encoder\\2_labels\\FeatEnc_LSTM.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeatureEncoderClassifier",
+    "json_top_keys": [
+      "FeatureEncoderClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\feature_encoder\\2_labels\\FeatEnc_RNN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeatureEncoderClassifier",
+    "json_top_keys": [
+      "FeatureEncoderClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\feature_encoder\\3_labels\\FeatEnc_CNN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeatureEncoderClassifier",
+    "json_top_keys": [
+      "FeatureEncoderClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\feature_encoder\\3_labels\\FeatEnc_FFN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeatureEncoderClassifier",
+    "json_top_keys": [
+      "FeatureEncoderClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\feature_encoder\\3_labels\\FeatEnc_GRU.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeatureEncoderClassifier",
+    "json_top_keys": [
+      "FeatureEncoderClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\feature_encoder\\3_labels\\FeatEnc_LSTM.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeatureEncoderClassifier",
+    "json_top_keys": [
+      "FeatureEncoderClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\feature_encoder\\3_labels\\FeatEnc_RNN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeatureEncoderClassifier",
+    "json_top_keys": [
+      "FeatureEncoderClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\hrm\\E_HRM1_4Level.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:38+00:00",
+    "model_class": "HierarchicalReasoningModel",
+    "json_top_keys": [
+      "HierarchicalReasoningModel"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\hrm\\E_HRM1_4Level_ft_mlp_2label.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-01T01:53:38+00:00",
+    "model_class": "HierarchicalReasoningModel",
+    "json_top_keys": [
+      "HierarchicalReasoningModel"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\hrm\\E_HRM1_4Level_ft_mlp_3label.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-01T01:53:38+00:00",
+    "model_class": "HierarchicalReasoningModel",
+    "json_top_keys": [
+      "HierarchicalReasoningModel"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\ml\\2_labels\\E_ML1_LogisticRegression.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "LogisticRegression",
+    "json_top_keys": [
+      "LogisticRegression"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\ml\\2_labels\\E_ML2_LinearSVC.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "LinearSVC",
+    "json_top_keys": [
+      "LinearSVC"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\ml\\2_labels\\E_ML3_DecisionTreeClassifier.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T11:49:40+00:00",
+    "model_class": "DecisionTreeClassifier",
+    "json_top_keys": [
+      "DecisionTreeClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\ml\\2_labels\\E_ML4_RandomForestClassifier.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T11:49:40+00:00",
+    "model_class": "RandomForestClassifier",
+    "json_top_keys": [
+      "RandomForestClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\ml\\3_labels\\E_ML1_LogisticRegression.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "LogisticRegression",
+    "json_top_keys": [
+      "LogisticRegression"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\ml\\3_labels\\E_ML2_LinearSVC.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "LinearSVC",
+    "json_top_keys": [
+      "LinearSVC"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\ml\\3_labels\\E_ML3_DecisionTreeClassifier.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T11:49:40+00:00",
+    "model_class": "DecisionTreeClassifier",
+    "json_top_keys": [
+      "DecisionTreeClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\ml\\3_labels\\E_ML4_RandomForestClassifier.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T11:49:54+00:00",
+    "model_class": "RandomForestClassifier",
+    "json_top_keys": [
+      "RandomForestClassifier"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\ml_queue\\track_b_2_labels.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-03T19:08:18+00:00",
+    "top_keys": [
+      "_ml_queue_track",
+      "_ml_queue_n_labels",
+      "_ml_queue_description"
+    ],
+    "json_top_keys": [
+      "_ml_queue_track",
+      "_ml_queue_n_labels",
+      "_ml_queue_description"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\ml_queue\\track_b_3_labels.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-03T19:08:18+00:00",
+    "top_keys": [
+      "_ml_queue_track",
+      "_ml_queue_n_labels",
+      "_ml_queue_description"
+    ],
+    "json_top_keys": [
+      "_ml_queue_track",
+      "_ml_queue_n_labels",
+      "_ml_queue_description"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\ml_queue\\track_c_2_labels.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-03T19:08:18+00:00",
+    "top_keys": [
+      "_ml_queue_track",
+      "_ml_queue_n_labels",
+      "_ml_queue_description"
+    ],
+    "json_top_keys": [
+      "_ml_queue_track",
+      "_ml_queue_n_labels",
+      "_ml_queue_description"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\ml_queue\\track_c_3_labels.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-03T19:08:22+00:00",
+    "top_keys": [
+      "_ml_queue_track",
+      "_ml_queue_n_labels",
+      "_ml_queue_description"
+    ],
+    "json_top_keys": [
+      "_ml_queue_track",
+      "_ml_queue_n_labels",
+      "_ml_queue_description"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\mlp_gelu_head_ddp\\2_labels\\FeatEnc_CNN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T02:03:24+00:00",
+    "top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ],
+    "json_top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\mlp_gelu_head_ddp\\2_labels\\FeatEnc_FFN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T02:03:24+00:00",
+    "top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ],
+    "json_top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\mlp_gelu_head_ddp\\2_labels\\FeatEnc_GRU.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T02:03:24+00:00",
+    "top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ],
+    "json_top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\mlp_gelu_head_ddp\\2_labels\\FeatEnc_LSTM.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T02:03:24+00:00",
+    "top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ],
+    "json_top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\mlp_gelu_head_ddp\\2_labels\\FeatEnc_RNN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T02:03:24+00:00",
+    "top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ],
+    "json_top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\mlp_gelu_head_ddp\\3_labels\\FeatEnc_CNN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T02:03:24+00:00",
+    "top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ],
+    "json_top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\mlp_gelu_head_ddp\\3_labels\\FeatEnc_FFN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T02:03:24+00:00",
+    "top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ],
+    "json_top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\mlp_gelu_head_ddp\\3_labels\\FeatEnc_GRU.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T02:03:24+00:00",
+    "top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ],
+    "json_top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\mlp_gelu_head_ddp\\3_labels\\FeatEnc_LSTM.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T02:03:24+00:00",
+    "top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ],
+    "json_top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\mlp_gelu_head_ddp\\3_labels\\FeatEnc_RNN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T02:03:24+00:00",
+    "top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ],
+    "json_top_keys": [
+      "_comment",
+      "FrozenPretrainGeLUHeadDDP"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\moe\\example_experts.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:38+00:00",
+    "list_length": 2,
+    "list_item_keys": [
+      "name",
+      "config",
+      "checkpoint",
+      "modality"
+    ],
+    "json_top_keys": "list[2]"
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\moe\\experts_all_data_2label.json",
+    "kind": "moe_manifest",
+    "mtime_iso": "2026-04-04T16:05:46+00:00",
+    "list_length": 5,
+    "list_item_keys": [
+      "name",
+      "config",
+      "checkpoint",
+      "modality"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\moe\\experts_all_data_2label_with_distilbert.json",
+    "kind": "moe_manifest",
+    "mtime_iso": "2026-04-04T16:05:44+00:00",
+    "list_length": 2,
+    "list_item_keys": [
+      "name",
+      "config",
+      "checkpoint",
+      "modality"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\moe\\experts_all_data_3label.json",
+    "kind": "moe_manifest",
+    "mtime_iso": "2026-04-04T16:05:48+00:00",
+    "list_length": 5,
+    "list_item_keys": [
+      "name",
+      "config",
+      "checkpoint",
+      "modality"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\moe\\experts_all_data_3label_with_distilbert.json",
+    "kind": "moe_manifest",
+    "mtime_iso": "2026-04-04T16:05:44+00:00",
+    "list_length": 2,
+    "list_item_keys": [
+      "name",
+      "config",
+      "checkpoint",
+      "modality"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\moe\\experts_smoke_2label.json",
+    "kind": "moe_manifest",
+    "mtime_iso": "2026-04-04T16:12:44+00:00",
+    "list_length": 2,
+    "list_item_keys": [
+      "name",
+      "config",
+      "checkpoint",
+      "modality"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\moe\\experts_smoke_3label.json",
+    "kind": "moe_manifest",
+    "mtime_iso": "2026-04-04T16:12:44+00:00",
+    "list_length": 2,
+    "list_item_keys": [
+      "name",
+      "config",
+      "checkpoint",
+      "modality"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\pretrain\\2_labels\\Pretrain_CNN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeaturePretrainAutoencoder",
+    "json_top_keys": [
+      "FeaturePretrainAutoencoder"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\pretrain\\2_labels\\Pretrain_FFN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeaturePretrainAutoencoder",
+    "json_top_keys": [
+      "FeaturePretrainAutoencoder"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\pretrain\\2_labels\\Pretrain_GRU.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeaturePretrainAutoencoder",
+    "json_top_keys": [
+      "FeaturePretrainAutoencoder"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\pretrain\\2_labels\\Pretrain_LSTM.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeaturePretrainAutoencoder",
+    "json_top_keys": [
+      "FeaturePretrainAutoencoder"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\pretrain\\2_labels\\Pretrain_RNN.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "FeaturePretrainAutoencoder",
+    "json_top_keys": [
+      "FeaturePretrainAutoencoder"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\rnn\\2_labels\\B10_LSTM.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "LSTMModule",
+    "hidden_size": 420,
+    "json_top_keys": [
+      "LSTMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\rnn\\2_labels\\B11_CNN_LSTM_v1.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "CNNetworks",
+    "json_top_keys": [
+      "CNNetworks"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\rnn\\2_labels\\B7_BiLSTM.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "LSTMModule",
+    "hidden_size": 375,
+    "json_top_keys": [
+      "LSTMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\rnn\\2_labels\\B8_GRU.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "GRUModule",
+    "hidden_size": 275,
+    "json_top_keys": [
+      "GRUModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\rnn\\3_labels\\B10_LSTM.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "LSTMModule",
+    "hidden_size": 420,
+    "json_top_keys": [
+      "LSTMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\rnn\\3_labels\\B11_CNN_LSTM_v1.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "CNNetworks",
+    "json_top_keys": [
+      "CNNetworks"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\rnn\\3_labels\\B7_BiLSTM.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "LSTMModule",
+    "hidden_size": 375,
+    "json_top_keys": [
+      "LSTMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\rnn\\3_labels\\B8_GRU.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-03-30T05:59:40+00:00",
+    "model_class": "GRUModule",
+    "hidden_size": 275,
+    "json_top_keys": [
+      "GRUModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\2_labels\\B3_E_DL1_DistilBERT.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T01:03:32+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 2,
+    "model_name": "distilbert-base-uncased",
+    "tokenizer_name": "distilbert-base-uncased",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\2_labels\\B3_E_DL1_DistilBERT_mlp768_1024.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-02T12:11:32+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 2,
+    "model_name": "distilbert-base-uncased",
+    "tokenizer_name": "distilbert-base-uncased",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\2_labels\\B4_E_DL3_BERT.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T01:03:34+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 2,
+    "model_name": "google-bert/bert-base-uncased",
+    "tokenizer_name": "google-bert/bert-base-uncased",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\2_labels\\B4_E_DL3_BERT_mlp768_1024.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-02T12:11:34+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 2,
+    "model_name": "google-bert/bert-base-uncased",
+    "tokenizer_name": "google-bert/bert-base-uncased",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\2_labels\\B5_E_DL2_RoBERTa.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T01:03:34+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 2,
+    "model_name": "roberta-base",
+    "tokenizer_name": "roberta-base",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\2_labels\\B5_E_DL2_RoBERTa_mlp768_1024.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-02T12:11:38+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 2,
+    "model_name": "roberta-base",
+    "tokenizer_name": "roberta-base",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\2_labels\\B6_BART.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T01:03:36+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 2,
+    "model_name": "facebook/bart-base",
+    "tokenizer_name": "facebook/bart-base",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\2_labels\\B6_BART_mlp768_1024.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-02T12:11:42+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 2,
+    "model_name": "facebook/bart-base",
+    "tokenizer_name": "facebook/bart-base",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\3_labels\\B3_E_DL1_DistilBERT.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T01:03:32+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 3,
+    "model_name": "distilbert-base-uncased",
+    "tokenizer_name": "distilbert-base-uncased",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\3_labels\\B3_E_DL1_DistilBERT_mlp768_1024.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-02T12:11:32+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 3,
+    "model_name": "distilbert-base-uncased",
+    "tokenizer_name": "distilbert-base-uncased",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\3_labels\\B4_E_DL3_BERT.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T01:03:36+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 3,
+    "model_name": "google-bert/bert-base-uncased",
+    "tokenizer_name": "google-bert/bert-base-uncased",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\3_labels\\B4_E_DL3_BERT_mlp768_1024.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-02T12:11:36+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 3,
+    "model_name": "google-bert/bert-base-uncased",
+    "tokenizer_name": "google-bert/bert-base-uncased",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\3_labels\\B5_E_DL2_RoBERTa.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T01:03:36+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 3,
+    "model_name": "roberta-base",
+    "tokenizer_name": "roberta-base",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\3_labels\\B5_E_DL2_RoBERTa_mlp768_1024.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-02T12:11:40+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 3,
+    "model_name": "roberta-base",
+    "tokenizer_name": "roberta-base",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\3_labels\\B6_BART.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-04T01:03:38+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 3,
+    "model_name": "facebook/bart-base",
+    "tokenizer_name": "facebook/bart-base",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  },
+  {
+    "relative_path": "Code\\thesis\\config\\transformers\\3_labels\\B6_BART_mlp768_1024.json",
+    "kind": "model_config",
+    "mtime_iso": "2026-04-02T12:11:42+00:00",
+    "model_class": "LLMModule",
+    "n_classes": 3,
+    "model_name": "facebook/bart-base",
+    "tokenizer_name": "facebook/bart-base",
+    "embed_dim": 768,
+    "json_top_keys": [
+      "LLMModule"
+    ]
+  }
+]

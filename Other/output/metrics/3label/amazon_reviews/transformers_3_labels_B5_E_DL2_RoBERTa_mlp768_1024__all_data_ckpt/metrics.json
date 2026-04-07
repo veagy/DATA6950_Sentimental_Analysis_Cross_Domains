@@ -1,0 +1,54 @@
+{
+  "model_id": "transformers_3_labels_B5_E_DL2_RoBERTa_mlp768_1024__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\transformers\\3_labels\\B5_E_DL2_RoBERTa_mlp768_1024.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\3-labels\\all-data\\B5_E_DL2_RoBERTa_mlp768_1024.safetensors",
+  "n_classes": 3,
+  "text_mode": true,
+  "safe_stem": "amazon_reviews",
+  "class_name": "LLMModule",
+  "metrics": {
+    "n_samples": 1000,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.929,
+    "balanced_accuracy": 0.9298870274706705,
+    "hamming_loss": 0.071,
+    "matthews_corrcoef": 0.858044560930729,
+    "cohen_kappa": 0.857545284548278,
+    "precision_macro": 0.928159272957497,
+    "recall_macro": 0.9298870274706705,
+    "f1_macro": 0.9287519856620897,
+    "jaccard_macro": 0.8670100388261219,
+    "precision_micro": 0.929,
+    "recall_micro": 0.929,
+    "f1_micro": 0.929,
+    "jaccard_micro": 0.8674136321195145,
+    "precision_weighted": 0.9296805885582167,
+    "recall_weighted": 0.929,
+    "f1_weighted": 0.929071461758381,
+    "jaccard_weighted": 0.8675668333974605,
+    "confusion_matrix": [
+      [
+        494,
+        44,
+        0
+      ],
+      [
+        27,
+        435,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "missing_class_in_y_true"
+  },
+  "original_stem": "amazon_reviews"
+}

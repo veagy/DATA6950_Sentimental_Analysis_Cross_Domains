@@ -1,0 +1,47 @@
+{
+  "model_id": "transformers_2_labels_B3_E_DL1_DistilBERT_mlp768_1024__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\transformers\\2_labels\\B3_E_DL1_DistilBERT_mlp768_1024.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\2-labels\\all-data\\B3_E_DL1_DistilBERT_mlp768_1024.safetensors",
+  "n_classes": 2,
+  "text_mode": true,
+  "safe_stem": "HRAST",
+  "class_name": "LLMModule",
+  "metrics": {
+    "n_samples": 22322,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.9277842487232327,
+    "balanced_accuracy": 0.9280995441114948,
+    "hamming_loss": 0.07221575127676731,
+    "matthews_corrcoef": 0.8553869540630133,
+    "cohen_kappa": 0.8552289626145866,
+    "precision_macro": 0.9272877951200518,
+    "recall_macro": 0.9280995441114948,
+    "f1_macro": 0.9276078121217739,
+    "jaccard_macro": 0.8650100547573092,
+    "precision_micro": 0.9277842487232327,
+    "recall_micro": 0.9277842487232327,
+    "f1_micro": 0.9277842487232327,
+    "jaccard_micro": 0.8652962313027492,
+    "precision_weighted": 0.9280235304148559,
+    "recall_weighted": 0.9277842487232327,
+    "f1_weighted": 0.9278185113663471,
+    "jaccard_weighted": 0.865376484328599,
+    "confusion_matrix": [
+      [
+        9804,
+        699
+      ],
+      [
+        913,
+        10906
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "y should be a 1d array, got an array of shape (22322, 2) instead."
+  },
+  "original_stem": "HRAST"
+}

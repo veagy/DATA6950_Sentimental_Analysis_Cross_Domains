@@ -1,0 +1,122 @@
+[
+  {
+    "path": "Code\\thesis\\config\\moe\\experts_all_data_2label.json",
+    "kind": "moe_manifest",
+    "n_experts": 5,
+    "expert_names": [
+      "feat_ffn",
+      "feat_cnn",
+      "feat_gru",
+      "feat_lstm",
+      "feat_rnn"
+    ],
+    "expert_configs": [
+      "Code/thesis/config/feature_encoder/2_labels/FeatEnc_FFN.json",
+      "Code/thesis/config/feature_encoder/2_labels/FeatEnc_CNN.json",
+      "Code/thesis/config/feature_encoder/2_labels/FeatEnc_GRU.json",
+      "Code/thesis/config/feature_encoder/2_labels/FeatEnc_LSTM.json",
+      "Code/thesis/config/feature_encoder/2_labels/FeatEnc_RNN.json"
+    ],
+    "expert_checkpoints": [
+      "checkpoints/2-labels/all-data/FeatEnc_FFN.safetensors",
+      "checkpoints/2-labels/all-data/FeatEnc_CNN.safetensors",
+      "checkpoints/2-labels/all-data/FeatEnc_GRU.safetensors",
+      "checkpoints/2-labels/all-data/FeatEnc_LSTM.safetensors",
+      "checkpoints/2-labels/all-data/FeatEnc_RNN.safetensors"
+    ]
+  },
+  {
+    "path": "Code\\thesis\\config\\moe\\experts_all_data_2label_with_distilbert.json",
+    "kind": "moe_manifest",
+    "n_experts": 2,
+    "expert_names": [
+      "distil_mlp",
+      "feat_ffn"
+    ],
+    "expert_configs": [
+      "Code/thesis/config/transformers/2_labels/B3_E_DL1_DistilBERT_mlp768_1024.json",
+      "Code/thesis/config/feature_encoder/2_labels/FeatEnc_FFN.json"
+    ],
+    "expert_checkpoints": [
+      "checkpoints/2-labels/all-data/B3_E_DL1_DistilBERT_mlp768_1024.safetensors",
+      "checkpoints/2-labels/all-data/FeatEnc_FFN.safetensors"
+    ]
+  },
+  {
+    "path": "Code\\thesis\\config\\moe\\experts_all_data_3label.json",
+    "kind": "moe_manifest",
+    "n_experts": 5,
+    "expert_names": [
+      "feat_ffn",
+      "feat_cnn",
+      "feat_gru",
+      "feat_lstm",
+      "feat_rnn"
+    ],
+    "expert_configs": [
+      "Code/thesis/config/feature_encoder/3_labels/FeatEnc_FFN.json",
+      "Code/thesis/config/feature_encoder/3_labels/FeatEnc_CNN.json",
+      "Code/thesis/config/feature_encoder/3_labels/FeatEnc_GRU.json",
+      "Code/thesis/config/feature_encoder/3_labels/FeatEnc_LSTM.json",
+      "Code/thesis/config/feature_encoder/3_labels/FeatEnc_RNN.json"
+    ],
+    "expert_checkpoints": [
+      "checkpoints/3-labels/all-data/FeatEnc_FFN.safetensors",
+      "checkpoints/3-labels/all-data/FeatEnc_CNN.safetensors",
+      "checkpoints/3-labels/all-data/FeatEnc_GRU.safetensors",
+      "checkpoints/3-labels/all-data/FeatEnc_LSTM.safetensors",
+      "checkpoints/3-labels/all-data/FeatEnc_RNN.safetensors"
+    ]
+  },
+  {
+    "path": "Code\\thesis\\config\\moe\\experts_all_data_3label_with_distilbert.json",
+    "kind": "moe_manifest",
+    "n_experts": 2,
+    "expert_names": [
+      "distil_mlp",
+      "feat_ffn"
+    ],
+    "expert_configs": [
+      "Code/thesis/config/transformers/3_labels/B3_E_DL1_DistilBERT_mlp768_1024.json",
+      "Code/thesis/config/feature_encoder/3_labels/FeatEnc_FFN.json"
+    ],
+    "expert_checkpoints": [
+      "checkpoints/3-labels/all-data/B3_E_DL1_DistilBERT_mlp768_1024.safetensors",
+      "checkpoints/3-labels/all-data/FeatEnc_FFN.safetensors"
+    ]
+  },
+  {
+    "path": "Code\\thesis\\config\\moe\\experts_smoke_2label.json",
+    "kind": "moe_manifest",
+    "n_experts": 2,
+    "expert_names": [
+      "feat_ffn",
+      "feat_cnn"
+    ],
+    "expert_configs": [
+      "Code/thesis/config/feature_encoder/2_labels/FeatEnc_FFN.json",
+      "Code/thesis/config/feature_encoder/2_labels/FeatEnc_CNN.json"
+    ],
+    "expert_checkpoints": [
+      "checkpoints/2-labels/all-data/FeatEnc_FFN.safetensors",
+      "checkpoints/2-labels/all-data/FeatEnc_CNN.safetensors"
+    ]
+  },
+  {
+    "path": "Code\\thesis\\config\\moe\\experts_smoke_3label.json",
+    "kind": "moe_manifest",
+    "n_experts": 2,
+    "expert_names": [
+      "feat_ffn",
+      "feat_cnn"
+    ],
+    "expert_configs": [
+      "Code/thesis/config/feature_encoder/3_labels/FeatEnc_FFN.json",
+      "Code/thesis/config/feature_encoder/3_labels/FeatEnc_CNN.json"
+    ],
+    "expert_checkpoints": [
+      "checkpoints/3-labels/all-data/FeatEnc_FFN.safetensors",
+      "checkpoints/3-labels/all-data/FeatEnc_CNN.safetensors"
+    ]
+  }
+]

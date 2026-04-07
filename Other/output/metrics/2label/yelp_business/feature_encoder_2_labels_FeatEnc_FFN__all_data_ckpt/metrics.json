@@ -1,0 +1,47 @@
+{
+  "model_id": "feature_encoder_2_labels_FeatEnc_FFN__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\feature_encoder\\2_labels\\FeatEnc_FFN.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\2-labels\\all-data\\FeatEnc_FFN.safetensors",
+  "n_classes": 2,
+  "text_mode": false,
+  "safe_stem": "yelp_business",
+  "class_name": "FeatureEncoderClassifier",
+  "metrics": {
+    "n_samples": 667,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.5322338830584707,
+    "balanced_accuracy": 0.5170278637770898,
+    "hamming_loss": 0.46776611694152925,
+    "matthews_corrcoef": 0.13363566619136988,
+    "cohen_kappa": 0.03509032234133325,
+    "precision_macro": 0.7621951219512195,
+    "recall_macro": 0.5170278637770898,
+    "f1_macro": 0.3769341317365269,
+    "jaccard_macro": 0.2792229857283093,
+    "precision_micro": 0.5322338830584707,
+    "recall_micro": 0.5322338830584707,
+    "f1_micro": 0.5322338830584707,
+    "jaccard_micro": 0.3626149131767109,
+    "precision_weighted": 0.7547080118477346,
+    "recall_weighted": 0.5322338830584707,
+    "f1_weighted": 0.38672780974782067,
+    "jaccard_weighted": 0.2869418949062055,
+    "confusion_matrix": [
+      [
+        11,
+        312
+      ],
+      [
+        0,
+        344
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "y should be a 1d array, got an array of shape (667, 2) instead."
+  },
+  "original_stem": "yelp_business"
+}

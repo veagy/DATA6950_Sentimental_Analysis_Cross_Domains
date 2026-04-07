@@ -1,0 +1,63 @@
+{
+  "path": "D:\\CAPSTONE\\new\\TEMP\\data\\processed\\yelp_business.parquet",
+  "relative_to_data_root": "processed/yelp_business.parquet",
+  "file_size_bytes": 32677973,
+  "num_rows_metadata": 150346,
+  "num_row_groups": 1,
+  "compression": "SNAPPY",
+  "column_names": [
+    "text",
+    "sentiment_value"
+  ],
+  "sampled_for_deep_stats": true,
+  "sample_max_rows_cap": 10000,
+  "dedupe_key_columns": null,
+  "deep_stats_row_count": 10000,
+  "deep_stats_mode": "sampled",
+  "columns_profile": {
+    "text": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 10000
+    },
+    "sentiment_value": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 3
+    }
+  },
+  "inferred_text_column": "text",
+  "inferred_label_column": "sentiment_value",
+  "inferred_features_column": null,
+  "source_stem_column": null,
+  "label_raw_value_counts_top20": {
+    "1": 3406,
+    "0": 3323,
+    "2": 3271
+  },
+  "label_distribution_normalized_3": {
+    "0": 3323,
+    "1": 3406,
+    "2": 3271,
+    "_skipped_normalization": 0
+  },
+  "label_distribution_normalized_2": {
+    "0": 3323,
+    "1": 3406,
+    "_skipped_normalization": 3271
+  },
+  "text_length_stats_sample": {
+    "n_empty_text": 0,
+    "char_len_min": 194,
+    "char_len_max": 1960,
+    "char_len_mean": 734.4846,
+    "char_len_std": 354.5725160383317,
+    "char_len_p50": 628.0,
+    "char_len_p90": 1277.0,
+    "char_len_p95": 1381.0499999999993,
+    "char_len_p99": 1706.0200000000004,
+    "word_count_mean": 72.9494
+  },
+  "dedupe_rate_key_sample": 0.0,
+  "analysis_error": null
+}

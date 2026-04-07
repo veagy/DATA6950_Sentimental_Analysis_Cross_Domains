@@ -1,0 +1,47 @@
+{
+  "model_id": "ml_2_labels_E_ML1_LogisticRegression__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\ml\\2_labels\\E_ML1_LogisticRegression.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\2-labels\\all-data\\E_ML1_LogisticRegression.safetensors",
+  "n_classes": 2,
+  "text_mode": false,
+  "safe_stem": "HRAST",
+  "class_name": "LogisticRegression",
+  "metrics": {
+    "n_samples": 22322,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.5294776453722785,
+    "balanced_accuracy": 0.5,
+    "hamming_loss": 0.4705223546277215,
+    "matthews_corrcoef": 0.0,
+    "cohen_kappa": 0.0,
+    "precision_macro": 0.26473882268613924,
+    "recall_macro": 0.5,
+    "f1_macro": 0.3461820099001201,
+    "jaccard_macro": 0.26473882268613924,
+    "precision_micro": 0.5294776453722785,
+    "recall_micro": 0.5294776453722785,
+    "f1_micro": 0.5294776453722785,
+    "jaccard_micro": 0.36006092916984006,
+    "precision_weighted": 0.2803465769489723,
+    "recall_weighted": 0.5294776453722785,
+    "f1_weighted": 0.36659127094431676,
+    "jaccard_weighted": 0.2803465769489723,
+    "confusion_matrix": [
+      [
+        0,
+        10503
+      ],
+      [
+        0,
+        11819
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "y should be a 1d array, got an array of shape (22322, 2) instead."
+  },
+  "original_stem": "HRAST"
+}

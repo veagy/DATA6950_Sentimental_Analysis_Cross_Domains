@@ -1,0 +1,55 @@
+{
+  "model_id": "feature_encoder_3_labels_FeatEnc_LSTM__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\feature_encoder\\3_labels\\FeatEnc_LSTM.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\3-labels\\all-data\\FeatEnc_LSTM.safetensors",
+  "n_classes": 3,
+  "text_mode": false,
+  "safe_stem": "yelp_review",
+  "class_name": "FeatureEncoderClassifier",
+  "metrics": {
+    "n_samples": 1000,
+    "labels_present": [
+      0,
+      1,
+      2
+    ],
+    "accuracy": 0.688,
+    "balanced_accuracy": 0.3333333333333333,
+    "hamming_loss": 0.312,
+    "matthews_corrcoef": 0.0,
+    "cohen_kappa": 0.0,
+    "precision_macro": 0.2293333333333333,
+    "recall_macro": 0.3333333333333333,
+    "f1_macro": 0.2717219589257504,
+    "jaccard_macro": 0.2293333333333333,
+    "precision_micro": 0.688,
+    "recall_micro": 0.688,
+    "f1_micro": 0.688,
+    "jaccard_micro": 0.524390243902439,
+    "precision_weighted": 0.47334399999999993,
+    "recall_weighted": 0.688,
+    "f1_weighted": 0.5608341232227487,
+    "jaccard_weighted": 0.47334399999999993,
+    "confusion_matrix": [
+      [
+        0,
+        186,
+        0
+      ],
+      [
+        0,
+        688,
+        0
+      ],
+      [
+        0,
+        126,
+        0
+      ]
+    ],
+    "roc_auc_ovr_macro": 0.4888387433674495,
+    "roc_auc_skip_reason": null
+  },
+  "original_stem": "yelp_review"
+}

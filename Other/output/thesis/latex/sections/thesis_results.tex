@@ -1,0 +1,172 @@
+\section{Thesis-Scale Experimental Results}
+\label{sec:thesis_results}
+
+This section reproduces the thesis summary tables (Sections V-A--V-F of the implementation report) without restating methodology. Numeric values match that document. Together with Section~\ref{sec:exp_setup}, these tables answer \emph{how well} the MoE and stacking design performs on the \textbf{full} Sentiment140, IMDB, Amazon, and TweetEval Feminism corpora under the original protocol---i.e., all headline datasets, not the HRAST stem slice alone (see Table~\ref{tab:processed_stems} for the wider Parquet inventory).
+
+\subsection{Global statistics}
+Table~\ref{tab:global_stats} reports mean and standard deviation of macro-F1, accuracy, precision, and recall aggregated across all model--dataset experiment rows in the thesis. The large standard deviations reflect heterogeneous architectures, datasets, and label granularities pooled in one aggregate.
+
+\begin{table*}[t]
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \caption{Global statistics (thesis-scale aggregate).}
+    \label{tab:global_stats}
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcc@{}}
+      \toprule
+      Metric & Mean & Std \\
+      \midrule
+      Macro-F1 & \textbf{0.4557} & 0.2187 \\
+      Accuracy & 0.5402 & 0.1899 \\
+      Precision & 0.5051 & 0.2103 \\
+      Recall & 0.5591 & 0.2012 \\
+      \bottomrule
+    \end{tabular*}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \caption{Mean macro-F1 by model type (thesis).}
+    \label{tab:by_type}
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcc@{}}
+      \toprule
+      Model type & Mean macro-F1 & Std \\
+      \midrule
+      \textbf{Traditional ML} & \textbf{0.6389} & 0.2775 \\
+      RNN & 0.5241 & 0.2686 \\
+      CNN & 0.4719 & 0.2514 \\
+      Ensemble & 0.4660 & 0.1714 \\
+      Transformer & 0.3099 & 0.1125 \\
+      HRM & 0.2502 & 0.0301 \\
+      \bottomrule
+    \end{tabular*}
+  \end{minipage}
+  
+  \vspace{1.5em}
+  
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \caption{Mean macro-F1 by dataset (thesis).}
+    \label{tab:by_dataset}
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcc@{}}
+      \toprule
+      Dataset & Mean macro-F1 & Difficulty \\
+      \midrule
+      IMDB & 0.6068 & Medium \\
+      Amazon & 0.5839 & Medium \\
+      Feminism TweetEval & 0.3531 & Hard \\
+      Sentiment140 & 0.2791 & Very hard \\
+      \bottomrule
+    \end{tabular*}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \caption{Selected thesis macro-F1 highlights (STACK1 vs.\ strong singles).}
+    \label{tab:top_ensemble}
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llc@{}}
+      \toprule
+      System & Dataset / setting & Macro-F1 \\
+      \midrule
+      STACK1 & IMDB & \textbf{0.8911} \\
+      STACK1 & Amazon & \textbf{0.8746} \\
+      STACK1 & Feminism TweetEval & 0.6283 \\
+      E-ML2 / B2 (ref.) & IMDB / Amazon & $\sim$0.8887 / 0.8665 \\
+      E-DL3 (BERT, best single) & Sentiment140 & 0.5004 \\
+      \bottomrule
+    \end{tabular*}
+  \end{minipage}
+  
+  \vspace{1.5em}
+  
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \caption{Ensemble-level average macro-F1 (thesis summary).}
+    \label{tab:ensemble_cmp}
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lc@{}}
+      \toprule
+      Family / variant & Avg.\ macro-F1 \\
+      \midrule
+      STACK1 & $\sim$0.6517 \\
+      Simpler ensembles & $\sim$0.4820 \\
+      STACK4 (HRM-heavy) & $\sim$0.2552 \\
+      \bottomrule
+    \end{tabular*}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \caption{Binary vs.\ multi-class mean macro-F1 (thesis).}
+    \label{tab:bin_mc}
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lc@{}}
+      \toprule
+      Setting & Mean macro-F1 \\
+      \midrule
+      Binary (pooled) & \textbf{0.4899} \\
+      Multi-class (TweetEval Feminism) & 0.3531 \\
+      \bottomrule
+    \end{tabular*}
+  \end{minipage}
+\end{table*}
+
+\subsection{Performance by model type}
+Table~\ref{tab:by_type} breaks macro-F1 down by architectural family. Traditional ML (TF-IDF + linear models) achieves the highest mean macro-F1; transformers and HRMs underperform on average in the reported setup, motivating ensemble design and future architecture or training refinements.
+
+
+
+\subsection{Performance by dataset}
+Table~\ref{tab:by_dataset} orders corpora by mean macro-F1. IMDB and Amazon are comparatively moderate; TweetEval Feminism and especially Sentiment140 are harder under the thesis protocol, consistent with stance ambiguity and Twitter noise.
+
+
+
+\subsection{Top ensembles and best singles}
+Table~\ref{tab:top_ensemble} highlights STACK1 and reference singles. STACK1 reaches strong macro-F1 on balanced, longer reviews; Sentiment140 remains difficult even for the best single BERT-family expert.
+
+
+
+\subsection{Ensemble comparison}
+Table~\ref{tab:ensemble_cmp} contrasts average macro-F1 across ensemble families. STACK1 leads the reported averages, while STACK4 (HRM-heavy) is far weaker, underscoring that simply adding HRM experts without adequate training signal does not yield gains.
+
+
+
+\subsection{Binary versus multi-class}
+Table~\ref{tab:bin_mc} states the mean macro-F1 gap between binary and multi-class tasks in the thesis experiments.
+
+
+
+
+\subsection{Visualized Performance Charts}
+Fig.~\ref{fig:perf_2label} and Fig.~\ref{fig:perf_3label} visualize the F1-Macro and Accuracy distributions across 2-label and 3-label predictive models, representing checkpoints evaluated across all parsed datasets. 
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{2label_performance_chart.pdf}
+  \caption{Cross-model performance comparison on 2-label classification tasks.}
+  \label{fig:perf_2label}
+\end{figure}
+
+\begin{figure*}[t]
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{3label_performance_chart.pdf}
+    \caption{Cross-model performance comparison on 3-label classification tasks.}
+    \label{fig:perf_3label}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{fig_ranking_3label.png}
+    \caption{HRAST 3-label macro-F1 ranking (generated chart).}
+    \label{fig:rank3}
+  \end{minipage}
+  
+  \vspace{1.5em}
+  
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{fig_ranking_2label.png}
+    \caption{HRAST 2-label macro-F1 ranking (generated chart).}
+    \label{fig:rank2}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{fig_paired_f1.png}
+    \caption{Paired 2- vs.\ 3-label macro-F1 on HRAST.}
+    \label{fig:paired}
+  \end{minipage}
+\end{figure*}

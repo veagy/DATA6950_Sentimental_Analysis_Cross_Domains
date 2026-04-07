@@ -1,0 +1,18 @@
+\subsection{Framework architecture visuals }
+\label{sec:capstone_visuals}
+
+ \textbf{Authoritative scales and metrics} for this write-up are Table~\ref{tab:datasets}, Section~\ref{sec:thesis_results}, and \path{output/thesis/markdown/THESIS_IMPLEMENTATION.md}; labels inside the images correspond to the evaluated systems. Numeric claims in the paper must not be inferred from these illustrations alone.
+
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=\linewidth]{fig_capstone_ensemble_eval_pipeline.png}
+  \caption{Ensemble training and evaluation workflow : per-expert training, MoE/baseline validation, fine-tuning, final ensembles, ablations, and cross-domain checks.}
+  \label{fig:capstone_ensemble_pipe}
+\end{figure}
+
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=\linewidth]{fig_capstone_ml_binary_ternary_f1.png}
+  \caption{Macro-F1 comparison, binary vs.\ ternary . Repository-wide ensemble and per-family metrics appear in Section~\ref{sec:thesis_results} and Appendix~\ref{app:hrast}.}
+  \label{fig:capstone_ml_b3}
+\end{figure}

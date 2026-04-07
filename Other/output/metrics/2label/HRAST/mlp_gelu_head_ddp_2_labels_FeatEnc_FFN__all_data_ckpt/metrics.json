@@ -1,0 +1,11 @@
+{
+  "model_id": "mlp_gelu_head_ddp_2_labels_FeatEnc_FFN__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "/home/ubuntu/CAPSTONE/TEMP/Code/thesis/config/mlp_gelu_head_ddp/2_labels/FeatEnc_FFN.json",
+  "weight_path": "/home/ubuntu/CAPSTONE/TEMP/checkpoints/2-labels/all-data/FeatEnc_FFN.safetensors",
+  "n_classes": 2,
+  "text_mode": false,
+  "safe_stem": "HRAST",
+  "error": "load_model: dictionary update sequence element #0 has length 1; 2 is required",
+  "original_stem": "HRAST"
+}

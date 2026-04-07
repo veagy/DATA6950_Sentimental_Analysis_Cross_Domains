@@ -1,0 +1,16 @@
+\begin{table*}[t]
+  \centering
+  \caption{Top HRAST 2-label experts by macro-F1 (config-scan; $n{=}20$ test slice).}
+  \label{tab:hrast_top2}
+  \begin{tabular}{@{}lcc@{}}
+    \toprule
+    \textbf{Model} & \textbf{Accuracy} & \textbf{F1\textsubscript{macro}} \\
+    \midrule
+    RoBERTa (B5 E-DL2) & 0.800 & 0.800 \\
+    BERT (B4 E-DL3) & 0.750 & 0.744 \\
+    DistilBERT (B3 E-DL1) & 0.700 & 0.697 \\
+    Feature encoder CNN & 0.650 & 0.649 \\
+    Feature encoder FFN & 0.650 & 0.649 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}

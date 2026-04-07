@@ -1,0 +1,12 @@
+# Training entrypoints
+
+| Script | Summary |
+| --- | --- |
+| `train_all.py` | Thesis training orchestrator. - **Default (no args):** Prints usage. Train **one model at a time** with `Code/thesis/train/train_single.py` (see `scripts/README.md` → Core training). - **Single run:** Pass `--config` and `--dataset_stem` to spawn one `train_single` process. - **Full sweep:** Pass `- |
+| `train_b11_cnn_lstm_stack_gelu_ddp.py` | DDP fine-tune **B11 stacked pipeline**: frozen pretrained **CNN** then **LSTM** (each 100→100 from ``checkpoints/pretrain``), plus trainable ``100 -> 400 -> GELU -> K`` on transformed parquet. Configs: ``Code/thesis/config/b11_cnn_lstm_stack/{2_labels,3_labels}/B11_CNN_LSTM_stack.json`` (key ``B11St |
+| `train_frozen_pretrain_mlp_head_ddp.py` | DDP fine-tune: frozen pretrained feature encoder (``checkpoints/pretrain/*.safetensors``) + trainable MLP ``100 -> 400 -> GELU -> n_classes`` on transformed parquet (100-D features). Configs: ``Code/thesis/config/mlp_gelu_head_ddp/{2_labels,3_labels}/FeatEnc_*.json`` (body key ``FrozenPretrainGeLUHe |
+| `train_ml_processed_embed_meta.py` | docs/ml Tracks B and C (practical subset): frozen DistilBERT mean-pooled embeddings from ``data/processed/{stem}.parquet``, then either a trainable linear head (B) or sklearn LogisticRegression + LinearSVC (C). Aligns with TRAINING_PIPELINES.md §4–5; full multi-encoder MoE stacks remain future work. |
+| `train_moe.py` | Fine-tune the MoE gate (and optional tiny PEFT LoRA on one LLM expert) while experts stay frozen. Experts JSON: list of {config, checkpoint, modality}; see Code/thesis/config/moe/README.md. Distributed: launch with ``torchrun --nproc_per_node=2 Code/thesis/train/train_moe.py ...`` (NCCL, CUDA). Peri |
+| `train_queue.py` | Sequential feature-model training queue: CNN/RNN via ``torchrun`` (multi-GPU); optional classical ML via single-process train_single.py (use --include-ml). Transformers/HRM are not queued here. Optionally runs **five** ``FeaturePretrainAutoencoder`` jobs on ``transformed/all-data.parquet`` first (`` |
+| `train_single.py` | Train **one** model from a single thesis JSON config (one `--config` per invocation). Data: - Transformers / HRM: processed text under ``data/processed/`` (one stem or merged; see ``--pretrain_text_source``). - Merged pretrain (``all_processed``): lazy per-rank shards + ``shuffle=False``; HRM uses 2 |
+| `train_stack.py` | Meta-stacking: concatenate frozen expert logits and train a linear head. Experts JSON format matches ``train_moe.py`` (list of config + checkpoint + modality). |

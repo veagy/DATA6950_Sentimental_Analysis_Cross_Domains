@@ -1,0 +1,52 @@
+{
+  "path": "D:\\CAPSTONE\\new\\TEMP\\data\\transformed\\yelp_business.parquet",
+  "relative_to_data_root": "transformed/yelp_business.parquet",
+  "file_size_bytes": 61465574,
+  "num_rows_metadata": 150346,
+  "num_row_groups": 2,
+  "compression": "SNAPPY",
+  "column_names": [
+    "features_100d",
+    "sentiment_value"
+  ],
+  "sampled_for_deep_stats": true,
+  "sample_max_rows_cap": 10000,
+  "dedupe_key_columns": null,
+  "deep_stats_row_count": 10000,
+  "deep_stats_mode": "sampled",
+  "columns_profile": {
+    "features_100d": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": null,
+      "n_distinct_note": "skipped (unhashable / nested values)"
+    },
+    "sentiment_value": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 3
+    }
+  },
+  "inferred_text_column": null,
+  "inferred_label_column": "sentiment_value",
+  "inferred_features_column": "features_100d",
+  "source_stem_column": null,
+  "label_raw_value_counts_top20": {
+    "1": 3406,
+    "0": 3323,
+    "2": 3271
+  },
+  "label_distribution_normalized_3": {
+    "0": 3323,
+    "1": 3406,
+    "2": 3271,
+    "_skipped_normalization": 0
+  },
+  "label_distribution_normalized_2": {
+    "0": 3323,
+    "1": 3406,
+    "_skipped_normalization": 3271
+  },
+  "dedupe_rate_key_sample": null,
+  "analysis_error": null
+}
