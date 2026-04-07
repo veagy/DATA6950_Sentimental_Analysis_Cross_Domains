@@ -1,0 +1,22 @@
+\section{Introduction}
+\label{sec:intro}
+
+\subsection{Motivation}
+Sentiment analysis is central to feedback mining, social monitoring, and reputation systems. Progress from lexicons to transformers has not removed \emph{domain shift}, noisy user-generated text, and opacity of deep models~\cite{ref01,ref02,ref03,ref04}. Single architectures capture complementary signals: linear models emphasize sparse lexical features; sequence and transformer models encode context; HRM-style designs aim for layered lexical$\rightarrow$syntactic$\rightarrow$semantic$\rightarrow$pragmatic structure~\cite{ref08}.
+
+Single-model pipelines remain brittle in practice: sparse linear models can miss contextual cues, while strong neural encoders often offer limited transparency for debugging and governance~\cite{ref03,ref04}. Domain shift is especially salient when models trained on one genre (e.g., long-form reviews) are applied to another (e.g., informal social posts)~\cite{ref05,ref06}. These gaps motivate ensembles that preserve complementary inductive biases rather than stacking redundant copies of one architecture.
+
+\subsection{Problem and Goal}
+The objective is a heterogeneous MoE that (1)~improves macro-F1 and robustness versus strong single models, (2)~supports interpretable expert contributions and HRM reasoning traces where available, and (3)~remains configurable and testable for replication. Concretely, this research targets interpretable routing (dense softmax or sparse top-$K$ gating), stacking with out-of-fold probabilities to avoid test leakage, and systematic comparison across binary and multi-class label spaces~\cite{ref16,ref17,ref26,ref27}.
+
+\subsection{Research objectives }
+The research track articulates four pillars that align with the implementation: \textbf{(i)}~build a modular pipeline with swappable ML, DL, and HRM experts; \textbf{(ii)}~benchmark against strong singles with multi-seed reporting and macro-F1 as the headline metric; \textbf{(iii)}~stress robustness under noise, informal text, and cross-domain shifts (e.g., social vs.\ product language); and \textbf{(iv)}~surface reasoning-oriented artifacts from HRM levels and gating weights for auditability~\cite{ref04,ref08}. Figures~\ref{fig:capstone_moe}--\ref{fig:capstone_ensemble_pipe} illustrate this architecture; quantitative claims follow Section~\ref{sec:thesis_results}.
+
+\subsection{Contributions}
+\begin{itemize}
+  \item Modular preprocessing $\rightarrow$ experts $\rightarrow$ ensemble $\rightarrow$ evaluation pipeline with configs under \path{Code/thesis/config/}.
+  \item Stacking with out-of-fold meta-features and MoE with dense / sparse gating (STACK1--7, MOE1--5 families in the thesis catalog).
+  \item Broad model and dataset coverage (\textbf{35} experts, \textbf{four} public datasets, \textbf{140} model--dataset pairs) with multi-seed and statistical reporting where the thesis specifies paired tests and effect sizes.
+  \item Empirical guidance on when TF--IDF linear baselines, sequence models, transformers, or stacks dominate under observed data, imbalance, and compute constraints (Section~\ref{sec:discuss}).
+  \item Regenerated \path{output/} artifacts (dataset alignment, HRAST metrics, charts) documented in Section~\ref{sec:repository} and Appendix~\ref{app:hrast}.
+\end{itemize}

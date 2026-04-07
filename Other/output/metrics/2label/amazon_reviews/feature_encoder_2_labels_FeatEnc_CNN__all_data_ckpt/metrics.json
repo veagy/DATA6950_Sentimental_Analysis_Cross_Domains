@@ -1,0 +1,47 @@
+{
+  "model_id": "feature_encoder_2_labels_FeatEnc_CNN__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\feature_encoder\\2_labels\\FeatEnc_CNN.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\2-labels\\all-data\\FeatEnc_CNN.safetensors",
+  "n_classes": 2,
+  "text_mode": false,
+  "safe_stem": "amazon_reviews",
+  "class_name": "FeatureEncoderClassifier",
+  "metrics": {
+    "n_samples": 1000,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.545,
+    "balanced_accuracy": 0.510327652520961,
+    "hamming_loss": 0.455,
+    "matthews_corrcoef": 0.050763731929744545,
+    "cohen_kappa": 0.022069001091843954,
+    "precision_macro": 0.5623800150664626,
+    "recall_macro": 0.510327652520961,
+    "f1_macro": 0.3973310374515712,
+    "jaccard_macro": 0.29270833333333335,
+    "precision_micro": 0.545,
+    "recall_micro": 0.545,
+    "f1_micro": 0.545,
+    "jaccard_micro": 0.3745704467353952,
+    "precision_weighted": 0.5609348496998858,
+    "recall_weighted": 0.545,
+    "f1_weighted": 0.42000344382264315,
+    "jaccard_weighted": 0.31099583333333336,
+    "confusion_matrix": [
+      [
+        520,
+        18
+      ],
+      [
+        437,
+        25
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "y should be a 1d array, got an array of shape (1000, 2) instead."
+  },
+  "original_stem": "amazon_reviews"
+}

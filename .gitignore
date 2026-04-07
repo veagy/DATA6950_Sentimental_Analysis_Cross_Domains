@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .hypothesis/
+issues_markdown/
 
 # Model weights and configs under checkpoints (use Google Drive; see Other/checkpoints/README.md)
 Other/checkpoints/2-labels/all-data/
@@ -19,5 +20,8 @@ Other/checkpoints/transformer/
 Dataset/processed/
 Dataset/raw/
 Dataset/transformed/
+
+# Thesis build outputs and exported figures
+Other/output/thesis/imgs/
 
 .env

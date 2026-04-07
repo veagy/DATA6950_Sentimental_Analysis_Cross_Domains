@@ -1,0 +1,54 @@
+{
+  "model_id": "feature_encoder_3_labels_FeatEnc_FFN__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\feature_encoder\\3_labels\\FeatEnc_FFN.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\3-labels\\all-data\\FeatEnc_FFN.safetensors",
+  "n_classes": 3,
+  "text_mode": false,
+  "safe_stem": "MedicalSentimentAnalysis",
+  "class_name": "FeatureEncoderClassifier",
+  "metrics": {
+    "n_samples": 1000,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.487,
+    "balanced_accuracy": 0.487,
+    "hamming_loss": 0.513,
+    "matthews_corrcoef": -0.09522084872929393,
+    "cohen_kappa": -0.026000000000000023,
+    "precision_macro": 0.3256344224475562,
+    "recall_macro": 0.487,
+    "f1_macro": 0.3325865588397154,
+    "jaccard_macro": 0.24563516129784704,
+    "precision_micro": 0.487,
+    "recall_micro": 0.487,
+    "f1_micro": 0.487,
+    "jaccard_micro": 0.3218770654329147,
+    "precision_weighted": 0.3256344224475562,
+    "recall_weighted": 0.487,
+    "f1_weighted": 0.3325865588397154,
+    "jaccard_weighted": 0.24563516129784702,
+    "confusion_matrix": [
+      [
+        484,
+        16,
+        0
+      ],
+      [
+        497,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "missing_class_in_y_true"
+  },
+  "original_stem": "MedicalSentimentAnalysis"
+}

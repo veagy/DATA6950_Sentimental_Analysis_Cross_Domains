@@ -1,0 +1,24 @@
+relative_path,num_rows_metadata,file_size_bytes,n_columns,inferred_text,inferred_label,sampled,deep_stats_rows,error,profile_json
+processed/all-data.parquet,9514666,3021655663,3,text,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\processed__all-data.parquet\profile.json
+processed/amazon_reviews.parquet,1048575,265267022,2,text,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\processed__amazon_reviews.parquet\profile.json
+processed/HRAST.parquet,23113,740167,2,text,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\processed__HRAST.parquet\profile.json
+processed/IMDB_Dataset.parquet,50000,41134363,2,text,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\processed__IMDB_Dataset.parquet\profile.json
+processed/MedicalSentimentAnalysis.parquet,1000,15798,2,text,sentiment_value,False,1000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\processed__MedicalSentimentAnalysis.parquet\profile.json
+processed/PatientStatements.parquet,2000,65612,2,text,sentiment_value,False,2000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\processed__PatientStatements.parquet\profile.json
+processed/sentiment_140.parquet,1046518,55189230,3,text,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\processed__sentiment_140.parquet\profile.json
+processed/tweet_eval.parquet,200721,12123346,3,text,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\processed__tweet_eval.parquet\profile.json
+processed/yelp_business.parquet,150346,32677973,2,text,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\processed__yelp_business.parquet\profile.json
+processed/yelp_review.parquet,6990280,2621322956,2,text,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\processed__yelp_review.parquet\profile.json
+raw/tweet_eval.parquet,200777,13405697,3,text,label,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\raw__tweet_eval.parquet\profile.json
+raw/yelp_business.parquet,150346,32544603,2,text,sentiment_values,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\raw__yelp_business.parquet\profile.json
+raw/yelp_review.parquet,6990280,2693319000,2,text,sentiment_values,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\raw__yelp_review.parquet\profile.json
+transformed/all-data.parquet,9514666,3834137523,3,,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\transformed__all-data.parquet\profile.json
+transformed/amazon_reviews.parquet,1048575,426654300,2,,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\transformed__amazon_reviews.parquet\profile.json
+transformed/HRAST.parquet,23113,9878609,2,,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\transformed__HRAST.parquet\profile.json
+transformed/IMDB_Dataset.parquet,50000,20643429,2,,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\transformed__IMDB_Dataset.parquet\profile.json
+transformed/MedicalSentimentAnalysis.parquet,1000,603500,2,,sentiment_value,False,1000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\transformed__MedicalSentimentAnalysis.parquet\profile.json
+transformed/PatientStatements.parquet,2000,1218558,2,,sentiment_value,False,2000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\transformed__PatientStatements.parquet\profile.json
+transformed/sentiment_140.parquet,1046518,432055299,3,,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\transformed__sentiment_140.parquet\profile.json
+transformed/tweet_eval.parquet,200721,83058865,3,,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\transformed__tweet_eval.parquet\profile.json
+transformed/yelp_business.parquet,150346,61465574,2,,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\transformed__yelp_business.parquet\profile.json
+transformed/yelp_review.parquet,6990280,2843269516,2,,sentiment_value,True,10000,,D:\CAPSTONE\new\TEMP\output\dataset analysis\per_file\transformed__yelp_review.parquet\profile.json

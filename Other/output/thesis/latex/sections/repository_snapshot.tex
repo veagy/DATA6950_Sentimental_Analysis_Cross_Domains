@@ -1,0 +1,13 @@
+\section{Repository Snapshot}
+\label{sec:repository}
+
+Regenerated outputs under \path{output/} from the current \path{data/} tree. Counts for configs, checkpoints, and Python modules appear in Section~\ref{sec:artifacts}.
+
+\subsection{Dataset alignment}
+Merged corpus Parquet (processed vs.\ transformed \path{all-data.parquet}) contains $9{,}514{,}666$ rows; \path{source_stem} distributions match (see \path{output/dataset analysis/alignment_report.md}). The HRAST stem slice used for per-stem evaluation lives at \path{data/processed/by_source_stem/HRAST.parquet} ($4000$ rows in the latest profile; per-file reports under \path{output/dataset analysis/per_file/}).
+
+\subsection{Metrics rollups and failed loads}
+Rollups live under \path{output/metrics/}. Appendix~\ref{app:hrast} prints only HRAST rows where accuracy and macro-F1 were computed; \path{mlp_gelu_head_ddp_*} and \path{ml_3_labels_E_ML1_LogisticRegression} failures remain in \path{summary.csv} for debugging. Per-dataset stems in \path{data/processed/} are catalogued in Table~\ref{tab:processed_stems}; extending the config-scan beyond HRAST requires re-running the eval driver with each \path{source_stem}.
+
+\subsection{Reproducibility}
+Regenerate charts with \path{python output/scripts/generate_all_charts.py --repo-root .} (see \path{output/thesis/docs/LATEX_IEEE_BUILD_GUIDE.md}). In-text citations use keys \texttt{ref01}--\texttt{ref67} in \path{references.bib}.

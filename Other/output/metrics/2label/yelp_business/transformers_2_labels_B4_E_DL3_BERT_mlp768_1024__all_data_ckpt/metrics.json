@@ -1,0 +1,47 @@
+{
+  "model_id": "transformers_2_labels_B4_E_DL3_BERT_mlp768_1024__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\transformers\\2_labels\\B4_E_DL3_BERT_mlp768_1024.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\2-labels\\all-data\\B4_E_DL3_BERT_mlp768_1024.safetensors",
+  "n_classes": 2,
+  "text_mode": true,
+  "safe_stem": "yelp_business",
+  "class_name": "LLMModule",
+  "metrics": {
+    "n_samples": 667,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.782608695652174,
+    "balanced_accuracy": 0.7884881920944633,
+    "hamming_loss": 0.21739130434782608,
+    "matthews_corrcoef": 0.6169501480856995,
+    "cohen_kappa": 0.5700275193057488,
+    "precision_macro": 0.8298466762708376,
+    "recall_macro": 0.7884881920944633,
+    "f1_macro": 0.7767557273933867,
+    "jaccard_macro": 0.636425395256917,
+    "precision_micro": 0.782608695652174,
+    "recall_micro": 0.782608695652174,
+    "f1_micro": 0.782608695652174,
+    "jaccard_micro": 0.6428571428571429,
+    "precision_weighted": 0.8340323201231243,
+    "recall_weighted": 0.782608695652174,
+    "f1_weighted": 0.775617650231956,
+    "jaccard_weighted": 0.6349029042790857,
+    "confusion_matrix": [
+      [
+        315,
+        8
+      ],
+      [
+        137,
+        207
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "y should be a 1d array, got an array of shape (667, 2) instead."
+  },
+  "original_stem": "yelp_business"
+}

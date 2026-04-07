@@ -1,0 +1,86 @@
+{
+  "path": "D:\\CAPSTONE\\new\\TEMP\\data\\raw\\tweet_eval.parquet",
+  "relative_to_data_root": "raw/tweet_eval.parquet",
+  "file_size_bytes": 13405697,
+  "num_rows_metadata": 200777,
+  "num_row_groups": 1,
+  "compression": "SNAPPY",
+  "column_names": [
+    "text",
+    "label",
+    "source"
+  ],
+  "sampled_for_deep_stats": true,
+  "sample_max_rows_cap": 10000,
+  "dedupe_key_columns": null,
+  "deep_stats_row_count": 10000,
+  "deep_stats_mode": "sampled",
+  "columns_profile": {
+    "text": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 10000
+    },
+    "label": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 20
+    },
+    "source": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 1
+    }
+  },
+  "inferred_text_column": "text",
+  "inferred_label_column": "label",
+  "inferred_features_column": null,
+  "source_stem_column": null,
+  "label_raw_value_counts_top20": {
+    "0": 2192,
+    "1": 969,
+    "2": 934,
+    "4": 782,
+    "7": 530,
+    "3": 520,
+    "18": 490,
+    "6": 426,
+    "11": 338,
+    "17": 338,
+    "8": 328,
+    "5": 312,
+    "10": 266,
+    "12": 240,
+    "15": 238,
+    "14": 236,
+    "13": 228,
+    "9": 227,
+    "16": 226,
+    "19": 180
+  },
+  "label_distribution_normalized_3": {
+    "0": 4232,
+    "1": 3126,
+    "2": 2642,
+    "_skipped_normalization": 0
+  },
+  "label_distribution_normalized_2": {
+    "0": 4232,
+    "1": 3126,
+    "_skipped_normalization": 2642
+  },
+  "text_length_stats_sample": {
+    "n_empty_text": 0,
+    "char_len_min": 7,
+    "char_len_max": 167,
+    "char_len_mean": 71.5028,
+    "char_len_std": 20.929409838302128,
+    "char_len_p50": 77.0,
+    "char_len_p90": 94.0,
+    "char_len_p95": 95.0,
+    "char_len_p99": 99.0,
+    "word_count_mean": 11.9753
+  },
+  "dedupe_rate_key_sample": 0.0,
+  "analysis_error": null
+}

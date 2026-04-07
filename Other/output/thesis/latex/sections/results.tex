@@ -1,0 +1,71 @@
+\section{Experimental Results}
+\label{sec:results}
+
+\subsection{Thesis-scale aggregates (all headline corpora)}
+Section~\ref{sec:thesis_results} reports \textbf{full-corpus} aggregates for the four public datasets in the  protocol (Sentiment140, IMDB, Amazon, TweetEval Feminism): global means, per model-type means, per-dataset means, ensemble comparisons, and binary vs.\ multi-class gaps. Those numbers reflect training and evaluation on the \textbf{complete} thesis splits, not a single stem slice.
+
+\subsection{Repository HRAST slice (config-scan figures and appendix)}
+\label{sec:hrast}
+The charts and appendix table in this subsection use the \textbf{HRAST} row of \path{output/metrics/summary.csv} and \path{output/charts/metrics/...} because the automated config-scan was executed on that stem in this checkout (small $n$, smoke / regression purpose). This does \textbf{not} limit the scope of datasets you trained on: Table~\ref{tab:processed_stems} lists every processed Parquet stem (Amazon, IMDB, medical, patient, Sentiment140, TweetEval, Yelp, HRAST). Appendix~\ref{app:hrast} now lists only models with \emph{computable} metrics on HRAST (failed loads omitted from the table, still in the CSV).
+
+Fig.~\ref{fig:rank2}--\ref{fig:paired} show macro-F1 rankings for two- and three-class modes and a paired comparison. Fig.~\ref{fig:heat_pair} contrasts metric heatmaps; Fig.~\ref{fig:eval_pair} shows evaluation status panels. Fig.~\ref{fig:labels_hrast}--\ref{fig:conf} give the HRAST label distribution and a 2-label RoBERTa confusion matrix.
+
+
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.49\linewidth]{fig_heatmap_2label.png}\hfill
+  \includegraphics[width=0.49\linewidth]{fig_heatmap_3label.png}
+  \caption{HRAST metric heatmaps: 2-label (left) and 3-label (right).}
+  \label{fig:heat_pair}
+\end{figure*}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.49\linewidth]{fig_eval_status_2label.png}\hfill
+  \includegraphics[width=0.49\linewidth]{fig_eval_status_3label.png}
+  \caption{Eval status summaries: 2-label (left) and 3-label (right).}
+  \label{fig:eval_pair}
+\end{figure*}
+
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{fig_confusion_roberta_2label.png}
+  \caption{Confusion matrix: 2-label RoBERTa expert on HRAST slice.}
+  \label{fig:conf}
+\end{figure}
+
+\begin{table*}[t]
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \caption{Top HRAST 2-label experts by macro-F1 (config-scan; $n{=}20$ test slice).}
+    \label{tab:hrast_top2}
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcc@{}}
+      \toprule
+      \textbf{Model} & \textbf{Accuracy} & \textbf{F1\textsubscript{macro}} \\
+      \midrule
+      RoBERTa (B5 E-DL2) & 0.800 & 0.800 \\
+      BERT (B4 E-DL3) & 0.750 & 0.744 \\
+      DistilBERT (B3 E-DL1) & 0.700 & 0.697 \\
+      Feature encoder CNN & 0.650 & 0.649 \\
+      Feature encoder FFN & 0.650 & 0.649 \\
+      \bottomrule
+    \end{tabular*}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \caption{Top HRAST 3-label experts by macro-F1 (config-scan; $n{=}24$ test slice).}
+    \label{tab:hrast_top3}
+    \begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lccc@{}}
+      \toprule
+      \textbf{Model} & \textbf{Accuracy} & \textbf{F1\textsubscript{macro}} & \textbf{ROC-AUC OVR} \\
+      \midrule
+      RoBERTa (B5 E-DL2) & 0.667 & 0.485 & 0.795 \\
+      BERT (B4 E-DL3) & 0.625 & 0.458 & 0.758 \\
+      DistilBERT (B3 E-DL1) & 0.583 & 0.424 & 0.745 \\
+      Linear SVM (E-ML2) & 0.500 & 0.282 & 0.510 \\
+      \bottomrule
+    \end{tabular*}
+  \end{minipage}
+\end{table*}

@@ -1,0 +1,9 @@
+\section{HRM fine-tune validation (per-dataset)}
+\label{sec:hrm_finetune_validation}
+
+This section reports held-out-style metrics for the Hierarchical Reasoning Model (HRM) with the supervised MLP head only, evaluated separately for \textbf{two-class} and \textbf{three-class} heads. Each row uses the corresponding parquet under \path{data/processed/} (the merged \path{all-data.parquet} is excluded). Checkpoints are read from \path{checkpoints/hrm/fine-tune/\{dataset\}/\{2|3\}-labels/}. Scalar columns follow \path{output/charts/metrics/columns.json} when present; full metric definitions align with \path{Code/thesis/tools/eval_per_source_stem_metrics.py}. Rows with empty scores indicate a missing checkpoint or load error until weights are restored.
+
+Tables~\ref{tab:hrm_finetune_2label}--\ref{tab:hrm_finetune_3label} are generated from \path{output/metrics/hrm_finetune_2label.csv} and \path{output/metrics/hrm_finetune_3label.csv} using \path{output/thesis/scripts/csv_to_hrm_finetune_tex.py}.
+
+\subimport{tables and visualizations/tables/}{tab_hrm_finetune_2label}
+\subimport{tables and visualizations/tables/}{tab_hrm_finetune_3label}

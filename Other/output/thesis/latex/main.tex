@@ -1,0 +1,75 @@
+% IEEE two-column format (conference style: double-column body; abstract/title span appropriately).
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{booktabs}
+\usepackage{import}
+\usepackage{microtype}
+\usepackage{balance}
+\usepackage{float}
+\usepackage{etoolbox}
+
+% IEEEtran.bst inserts \, as a thousands separator in long page numbers (e.g. 21\,897),
+% which reads as awkward spacing in PDF; disable thin space only inside the bibliography.
+\AtBeginEnvironment{thebibliography}{\def\,{}}
+
+\makeatletter
+\g@addto@macro\UrlBreaks{\do\/\do\-}
+\makeatother
+
+\graphicspath{{"tables and visualizations/figures/"}}
+\raggedbottom
+
+\title{Sentiment Analysis with Hierarchical Reasoning Models and Mixture-of-Experts:\\Implementation and Repository Evaluation}
+
+\author{\IEEEauthorblockN{Rohan Pratap Reddy Ravula}
+\IEEEauthorblockA{\textit{School of Computing and Data Science}\\
+\textit{Wentworth Institute of Technology}\\
+Boston, MA, USA\\
+\url{ravular@wit.edu}}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\begin{IEEEkeywords}
+Sentiment analysis, mixture-of-experts, ensemble learning, hierarchical reasoning models, stacking, gating networks, natural language processing, macro-F1.
+\end{IEEEkeywords}
+
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/methodology}
+\input{sections/datasets}
+\input{sections/experimental_setup}
+\input{sections/capstone_visuals}
+\input{sections/thesis_results}
+
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+\input{sections/system_artifacts}
+\input{sections/repository_snapshot}
+
+\section*{Data and Code Availability}
+For more information, the full source code and evaluation frameworks are publicly maintained in the project repository at \url{https://github.com/veagy/DATA6950_Sentimental_Analysis_Cross_Domains}. The underlying datasets, merged multi-domain corpora, and serialized trained model checkpoints utilized throughout this thesis can be fully accessed at \url{https://drive.google.com/drive/folders/1oxr8hbXngefPVzvdoZPrY6_4idwKdl0q?usp=sharing}.
+
+\section*{Acknowledgment}
+The author thanks Wentworth Institute of Technology and the thesis committee for support.
+
+\balance
+\bibliographystyle{IEEEtran}
+\nocite{*}
+\bibliography{references}
+
+\clearpage
+\input{sections/appendix}
+
+\end{document}

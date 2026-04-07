@@ -1,0 +1,166 @@
+
+--- SLIDE 1 ---
+Sentiment Analysis using Hierarchical Reasoning Models
+and Mixture-of-Experts Architecture: 
+Experimental Results and Analysis
+Rohan Pratap Reddy Ravula
+Master of Science in Data Science
+School of Computing and Data Science
+Wentworth Institute of Technology
+Boston, MA
+ravular@wit.edu
+25 February 2026
+
+--- SLIDE 2 ---
+The Multi-Domain Challenge:
+Nuance Deficiency: Standard Transformers often fail at pragmatic reasoning (sarcasm, irony).
+Domain Fragility: Models trained on broad data (IMDB) degrade in specialized fields (Healthcare, Finance).
+The Hybrid Hypothesis: Combining Classical ML Rigor, Deep Learning Context, and Hierarchical Reasoning creates a robust "Team
+of Experts".
+Strategic Objectives:
+Architecture: A modular MoE system with dynamic gating and HRM reasoning.
+Performance: Target and achieve ≥3.5 F1 improvement via Stacking/MoE.
+Rigorous Implementation: Building from-scratch, optimized libraries for reproducibility.
+Thesis & Research Motivation
+
+--- SLIDE 3 ---
+Key Features:
+🔀 Dynamic Expert Selection: Gating network learns which expert to trust
+⚡ Sparse Activation: Not all experts for all inputs (computational efficiency)
+🔍 Interpretable Path: HRM provides explicit reasoning chains
+🎯 Specialized Expertise: Each model type captures different patterns
+ Model Categories (35 Total Models)
+Traditional ML (4): B1, B2, E-ML1, E-ML2
+CNN Models (4): B3-CNN variants
+RNN Models (4): B7-BiLSTM, B8-GRU variants
+Transformers (7): DistilBERT, BERT, RoBERTa variants
+HRM Models (1): E-HRM1 (4-level hierarchy)
+Ensemble Models (15): Stacking, Voting, MoE variants
+Proposed Architecture:
+
+--- SLIDE 4 ---
+Preprocessing Pipeline (...src/data/preprocess.py)
+Robustness: Successfully implemented pipeline for all 9 acquired
+datasets.
+Cross-Domain Normalization: Created uniform Binary and
+Ternary mappings for diverse sources.
+Validation: Characterized "Easy" vs. "Hard" domains via
+statistical text profiling.
+Work Completed: Data Engineering
+
+--- SLIDE 5 ---
+Optimized Neural Layers (...src/models.py):
+Normalizations: Batch, Layer, Group, Instance, RMS, Weight, LocalResponse.
+Dynamic Pooling: Fractional, LP, Adaptive, and Unpooling.
+Convolutional Core: Standard 1D/2D/3D, Transposed, and Lazy convolutions.
+Sequential Alignment:
+SoftDTW Implementation: A differentiable Soft Dynamic Time Warping module for sequence membership and alignment
+analysis—critical for time-series-like text patterns.
+18+ Attention Variants for Reasoning Implementation:
+Efficiency: FlashAttention, LinearAttention, MultiQuery, GroupedQuery, SlimAttention.
+Structural: GraphAttention, CrissCross, Triangular, StrideSparse.
+Experimental Reasoning:
+KAxAt: Kolmogorov-Arnold inspired Attention networks.
+StructuredAttention: Evaluated via SSIM, Renyi, HSIC, and CCA scoring.
+FAVOURPlus: Random feature-based linear attention for long-context scalability.
+Architectural Deep-Dive: DL Foundation
+
+--- SLIDE 6 ---
+Sophisticated Solver Implementations:
+Linear Models: Logistic Regression, Ridge, Lasso, ElasticNet (including Lars
+variants).
+Advanced Solvers: Custom Saga, Newton-CG, and Newton-Cholesky
+Hessian solvers for high-precision optimization.
+Discriminant Analysis: Linear (LDA) and Quadratic (QDA) implementations.
+SVM Excellence: SVC, LinearSVC, and NuSVC with probability calibration.
+Impact:
+Clustering Suite: K-Means, K-Medoids, K-Modes, CLARANS, Agglomerative,
+BIRCH.
+Dimensionality Reduction: Built-in PCA and t-SNE for visualizing model
+reasoning and domain clusters.
+All these model implementations are done using pytorch so that they can
+be saved as safetensors which is generally used for large language models
+which is safe and secure and less prone to corruptions.
+Classical ML Rigor: The Backbone
+
+--- SLIDE 7 ---
+Core Research Findings:
+Top Performer: The STACK1 Ensemble is the "Champion" model,
+achieving a peak accuracy of 0.892 on IMDB, representing a 3.5%
+improvement over the baseline.
+Architectural Efficiency: While Transformers and RNNs were
+tested, Optimized SVMs and Ensemble Stacking consistently
+yielded the highest scores across IMDB and Amazon datasets.
+The Complexity Gap: There is a visible performance "tax" when
+moving from Binary to Ternary classification; Macro-F1 scores
+typically drop as class complexity increases, with the notable
+exception of the Yelp dataset.
+Reliability Analysis: The correlation between Accuracy and
+Macro-F1 remains tight for most models, though the Yelp Binary
+model shows a significant "Robustness Gap," indicating potential
+sensitivity to class imbalance.
+ Performance Benchmarking & Model Robustness
+
+--- SLIDE 8 ---
+LLMModule & Analysis:
+1.HRM Integration: Constructing the final Hierarchical
+Reasoning Model by integrating the new Attention Units.
+2.MoE Routing: Implementing soft-attention based routing
+logic to dynamically select "expert" sub-networks based
+on input text complexity.
+3.Medical Domain Focus: Conducting ablation studies on
+the Medical Dataset to address previous performance
+bottlenecks.
+HF Bridge: Seamless integration with HuggingFace
+transformers and sentence_transformers.
+Retrieval: CLS, Mean, Max, and Concatenation pooling
+for rich embedding generation.
+Latent Domain Analysis:
+8+ Clustering Algorithms: K-Means, K-Medoids, K-Modes,
+CLARANS, BIRCH, Agglomerative.
+Visual Reasoning: Built-in PCA & t-SNE for analyzing
+domain-specific cluster shifts and model confusion
+patterns.
+LLM Integration & Latent Space
+
+--- SLIDE 9 ---
+The Snapshot of Final Completion:
+HRM Construction: Finalizing the 4-level reasoning hierarchy (Lexical → Syntactic →
+Semantic → Pragmatic) using the optimized Attention library.
+Ablation Studies: Addressing the "Medical Dataset Performance Gap" via targeted
+architecture shifts.
+MoE Routing: Implementing soft-attention routing for dynamic expert selection based
+on input complexity.
+Training and Routing
+Step1: Implementing training of multiple machine learning, deep learning, hrm models
+individually on binary, terinary labels on each dataset separately.
+Step2: Validating these models on the datasets separately and getting F1-scores for
+them.
+Step3: Connecting the models based on the proposed mixture of experts architecture,
+baselines (defined in phase-I of project), literature-review-models (defined in phase-I
+of this project) and vadiating them on datasets and comparing F1-scores from the
+step-2.
+Step-4: doing fine-tuning on this MoE (mixture of experts architecture) to finish the
+final ensemble training for all proposed models and comparing the final scores.
+for robustness and cross-domain analysis all datasets are randomly sampled training
+procedure from step-1 to step-4 is applied.
+Final ablation studies are done on the proposed MoE models.
+HRM Integration & Next Steps
+
+--- SLIDE 10 ---
+1.The Core Architecture (HRM) - G. Wang, J. Li, Y. Sun, et al., "Hierarchical reasoning model," arXiv preprint
+arXiv:2501.xxxxx, 2025.
+2.The MoE Framework - N. Shazeer, A. Mirhoseini, K. Maziarz, et al., "Outrageously large neural networks: The
+sparsely-gated mixture-of-experts layer," in Proc. ICLR, 2017.
+3.The Champion Model (STACK1) - D. H. Wolpert, "Stacked generalization," Neural Networks, vol. 5, no. 2, pp.
+241–259, 1992.
+4.Attention Mechanisms - A. Vaswani, N. Shazeer, N. Parmar, et al., "Attention is all you need," in Advances in
+Neural Information Processing Systems, 2017, pp. 5998–6008.
+5.Pragmatic Reasoning (Sarcasm) - A. Joshi, P. Bhattacharyya, and M. J. Carman, "Automatic sarcasm
+detection: A survey," ACM Computing Surveys, vol. 50, no. 5, pp. 73:1–73:22, 2017.
+6.Transformer Experts - J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, "BERT: Pre-training of deep
+bidirectional transformers for language understanding," in Proc. NAACL-HLT, 2019.
+7.Global Context & Domain Adaptation - L. Zhang, S. Wang, and B. Liu, "Deep learning for sentiment analysis:
+A survey," Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, vol. 8, no. 4, p. e1253, 2018.
+8.Image generation & dataset review - Google Gemini 3.1 Pro
+References:

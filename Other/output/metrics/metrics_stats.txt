@@ -1,0 +1,19 @@
+=== TOP OVERALL MODELS (MEAN F1) ===
+m
+transformers_2_labels_B5_E_DL2_RoBERTa_mlp768_1024_       0.807026
+transformers_2_labels_B4_E_DL3_BERT_mlp768_1024_          0.806746
+transformers_2_labels_B3_E_DL1_DistilBERT_mlp768_1024_    0.798878
+Name: f1_macro, dtype: float64
+
+
+=== BEST IMDB ===
+                                                    m  f1_macro
+55  transformers_2_labels_B5_E_DL2_RoBERTa_mlp768_...     0.931
+
+=== BEST AMAZON ===
+                                                     m  f1_macro
+129  transformers_3_labels_B5_E_DL2_RoBERTa_mlp768_...  0.928752
+
+=== BEST TWEETEVAL ===
+                                                    m  f1_macro
+159  transformers_2_labels_B4_E_DL3_BERT_mlp768_1024_  0.534554

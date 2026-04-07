@@ -1,0 +1,47 @@
+{
+  "model_id": "ml_2_labels_E_ML3_DecisionTreeClassifier__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\ml\\2_labels\\E_ML3_DecisionTreeClassifier.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\2-labels\\all-data\\E_ML3_DecisionTreeClassifier.safetensors",
+  "n_classes": 2,
+  "text_mode": false,
+  "safe_stem": "yelp_business",
+  "class_name": "DecisionTreeClassifier",
+  "metrics": {
+    "n_samples": 667,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.5157421289355323,
+    "balanced_accuracy": 0.5,
+    "hamming_loss": 0.48425787106446777,
+    "matthews_corrcoef": 0.0,
+    "cohen_kappa": 0.0,
+    "precision_macro": 0.25787106446776614,
+    "recall_macro": 0.5,
+    "f1_macro": 0.34025717111770526,
+    "jaccard_macro": 0.25787106446776614,
+    "precision_micro": 0.5157421289355323,
+    "recall_micro": 0.5157421289355323,
+    "f1_micro": 0.5157421289355323,
+    "jaccard_micro": 0.3474747474747475,
+    "precision_weighted": 0.26598994355895517,
+    "recall_weighted": 0.5157421289355323,
+    "f1_weighted": 0.350969915635654,
+    "jaccard_weighted": 0.26598994355895517,
+    "confusion_matrix": [
+      [
+        0,
+        323
+      ],
+      [
+        0,
+        344
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "y should be a 1d array, got an array of shape (667, 2) instead."
+  },
+  "original_stem": "yelp_business"
+}

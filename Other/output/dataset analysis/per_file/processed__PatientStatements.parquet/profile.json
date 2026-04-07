@@ -1,0 +1,61 @@
+{
+  "path": "D:\\CAPSTONE\\new\\TEMP\\data\\processed\\PatientStatements.parquet",
+  "relative_to_data_root": "processed/PatientStatements.parquet",
+  "file_size_bytes": 65612,
+  "num_rows_metadata": 2000,
+  "num_row_groups": 1,
+  "compression": "SNAPPY",
+  "column_names": [
+    "text",
+    "sentiment_value"
+  ],
+  "sampled_for_deep_stats": false,
+  "sample_max_rows_cap": 10000,
+  "dedupe_key_columns": null,
+  "deep_stats_row_count": 2000,
+  "deep_stats_mode": "exact_window",
+  "columns_profile": {
+    "text": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 1994
+    },
+    "sentiment_value": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 2
+    }
+  },
+  "inferred_text_column": "text",
+  "inferred_label_column": "sentiment_value",
+  "inferred_features_column": null,
+  "source_stem_column": null,
+  "label_raw_value_counts_top20": {
+    "0": 1000,
+    "1": 1000
+  },
+  "label_distribution_normalized_3": {
+    "0": 1000,
+    "1": 1000,
+    "_skipped_normalization": 0
+  },
+  "label_distribution_normalized_2": {
+    "0": 1000,
+    "1": 1000,
+    "_skipped_normalization": 0
+  },
+  "text_length_stats_sample": {
+    "n_empty_text": 0,
+    "char_len_min": 70,
+    "char_len_max": 159,
+    "char_len_mean": 115.04,
+    "char_len_std": 15.68787604258026,
+    "char_len_p50": 116.0,
+    "char_len_p90": 135.0,
+    "char_len_p95": 140.0,
+    "char_len_p99": 148.0,
+    "word_count_mean": 14.928
+  },
+  "dedupe_rate_key_sample": 0.0030000000000000027,
+  "analysis_error": null
+}

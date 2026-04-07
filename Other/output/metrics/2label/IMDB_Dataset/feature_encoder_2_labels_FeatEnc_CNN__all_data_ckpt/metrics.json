@@ -1,0 +1,47 @@
+{
+  "model_id": "feature_encoder_2_labels_FeatEnc_CNN__all_data_ckpt",
+  "source": "config_scan",
+  "config_path": "D:\\CAPSTONE\\new\\TEMP\\Code\\thesis\\config\\feature_encoder\\2_labels\\FeatEnc_CNN.json",
+  "weight_path": "D:\\CAPSTONE\\new\\TEMP\\checkpoints\\2-labels\\all-data\\FeatEnc_CNN.safetensors",
+  "n_classes": 2,
+  "text_mode": false,
+  "safe_stem": "IMDB_Dataset",
+  "class_name": "FeatureEncoderClassifier",
+  "metrics": {
+    "n_samples": 1000,
+    "labels_present": [
+      0,
+      1
+    ],
+    "accuracy": 0.498,
+    "balanced_accuracy": 0.4989819959279837,
+    "hamming_loss": 0.502,
+    "matthews_corrcoef": -0.01077930013984871,
+    "cohen_kappa": -0.0020320091340606528,
+    "precision_macro": 0.47146541092050676,
+    "recall_macro": 0.4989819959279837,
+    "f1_macro": 0.3393867614159758,
+    "jaccard_macro": 0.2519445370414464,
+    "precision_micro": 0.498,
+    "recall_micro": 0.498,
+    "f1_micro": 0.498,
+    "jaccard_micro": 0.33155792276964047,
+    "precision_weighted": 0.47141136898755465,
+    "recall_weighted": 0.498,
+    "f1_weighted": 0.33873936044216346,
+    "jaccard_weighted": 0.2514564582440434,
+    "confusion_matrix": [
+      [
+        494,
+        5
+      ],
+      [
+        497,
+        4
+      ]
+    ],
+    "roc_auc_ovr_macro": null,
+    "roc_auc_skip_reason": "y should be a 1d array, got an array of shape (1000, 2) instead."
+  },
+  "original_stem": "IMDB_Dataset"
+}

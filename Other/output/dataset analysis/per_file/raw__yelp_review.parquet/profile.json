@@ -1,0 +1,63 @@
+{
+  "path": "D:\\CAPSTONE\\new\\TEMP\\data\\raw\\yelp_review.parquet",
+  "relative_to_data_root": "raw/yelp_review.parquet",
+  "file_size_bytes": 2693319000,
+  "num_rows_metadata": 6990280,
+  "num_row_groups": 28,
+  "compression": "SNAPPY",
+  "column_names": [
+    "text",
+    "sentiment_values"
+  ],
+  "sampled_for_deep_stats": true,
+  "sample_max_rows_cap": 10000,
+  "dedupe_key_columns": null,
+  "deep_stats_row_count": 10000,
+  "deep_stats_mode": "sampled",
+  "columns_profile": {
+    "text": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 10000
+    },
+    "sentiment_values": {
+      "null_count": 0,
+      "null_rate": 0.0,
+      "n_distinct_sample": 3
+    }
+  },
+  "inferred_text_column": "text",
+  "inferred_label_column": "sentiment_values",
+  "inferred_features_column": null,
+  "source_stem_column": null,
+  "label_raw_value_counts_top20": {
+    "1": 7019,
+    "0": 1842,
+    "2": 1139
+  },
+  "label_distribution_normalized_3": {
+    "0": 1842,
+    "1": 7019,
+    "2": 1139,
+    "_skipped_normalization": 0
+  },
+  "label_distribution_normalized_2": {
+    "0": 1842,
+    "1": 7019,
+    "_skipped_normalization": 1139
+  },
+  "text_length_stats_sample": {
+    "n_empty_text": 0,
+    "char_len_min": 89,
+    "char_len_max": 5059,
+    "char_len_mean": 612.0482,
+    "char_len_std": 504.4530737017237,
+    "char_len_p50": 458.0,
+    "char_len_p90": 1182.0,
+    "char_len_p95": 1559.0,
+    "char_len_p99": 2606.0200000000004,
+    "word_count_mean": 111.2285
+  },
+  "dedupe_rate_key_sample": 0.0,
+  "analysis_error": null
+}
