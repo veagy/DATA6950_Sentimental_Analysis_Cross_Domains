@@ -20,4 +20,7 @@ Dataset/processed/
 Dataset/raw/
 Dataset/transformed/
 
+# Thesis build outputs and exported figures
+Other/output/thesis/imgs/
+
 .env
